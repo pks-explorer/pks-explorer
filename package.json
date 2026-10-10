@@ -1,0 +1,19 @@
+{
+  "name": "crime-stats",
+  "private": true,
+  "description": "Visualisierung der Polizeilichen Kriminalstatistik (PKS) des BKA",
+  "workspaces": [
+    "shared",
+    "etl"
+  ],
+  "scripts": {
+    "crawl": "npm run crawl -w etl --",
+    "etl": "npm run etl -w etl --",
+    "typecheck": "tsc -p shared && tsc -p etl"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

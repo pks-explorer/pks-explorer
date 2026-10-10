@@ -1,0 +1,13 @@
+{
+  "name": "@crime-stats/etl",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "tsx src/crawl.ts",
+    "etl": "tsx src/etl.ts"
+  },
+  "dependencies": {
+    "@crime-stats/shared": "*",
+    "exceljs": "^4.4.0"
+  }
+}

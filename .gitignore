@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+*.part
+
+# BKA-Rohdaten: per `npm run crawl` reproduzierbar, nur die Inventur versionieren
+data/raw/**/*
+!data/raw/*/
+!data/raw/*/inventory.json
