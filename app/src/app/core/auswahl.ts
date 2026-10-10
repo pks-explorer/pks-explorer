@@ -5,56 +5,53 @@ import { SCHLUESSEL_INSGESAMT } from '@crime-stats/shared';
 
 export type Darstellung = 'absolut' | 'index';
 
-/** Höchstzahl gleichzeitig verglichener Delikte (= Anzahl Farben der Palette). */
-export const MAX_DELIKTE = 8;
+/** Höchstzahl gleichzeitig angezeigter Linien (= Anzahl Farben der Palette). */
+export const MAX_LINIEN = 8;
 /** Standard-Startjahr: erst ab 1993 sind die Zahlen inkl. neuer Länder vergleichbar. */
 export const STANDARD_VON = 1993;
+export const STANDARD_DATASET = 'bund-faelle-zeitreihe';
+
+/** Query-Parameter, die keine Dimensionsfilter sind. */
+const FESTE_PARAMETER = new Set(['ds', 'k', 'modus', 'd', 'von', 'bis', 'vgl']);
 
 /**
- * Aktuelle Auswahl (Dataset, Delikte, Kennzahl, Zeitraum, Darstellung).
+ * Aktuelle Auswahl (Bereich, Delikte, Kennzahl, Filter, Zeitraum, Darstellung).
  * Einzige Quelle ist die URL (Query-Parameter), damit jede Ansicht als Link teilbar ist.
+ * Dimensionsfilter stehen unter ihrer Dimension-ID, z. B. `?geschlecht=weiblich&alter=14-16`.
  */
 @Injectable({ providedIn: 'root' })
 export class Auswahl {
   private readonly router = inject(Router);
   private readonly params = toSignal(inject(ActivatedRoute).queryParamMap, { requireSync: true });
 
-  readonly datasetId = computed(() => this.params().get('ds') ?? 'bund-faelle-zeitreihe');
-  readonly kennzahl = computed(() => this.params().get('k') ?? 'faelle');
+  readonly datasetId = computed(() => this.params().get('ds') ?? STANDARD_DATASET);
+  readonly kennzahl = computed(() => this.params().get('k'));
   readonly darstellung = computed<Darstellung>(() =>
     this.params().get('modus') === 'index' ? 'index' : 'absolut',
   );
   readonly delikte = computed(() => {
     const d = this.params().get('d');
     const list = d === null ? [SCHLUESSEL_INSGESAMT] : d.split(',').filter(Boolean);
-    return [...new Set(list)].slice(0, MAX_DELIKTE);
+    return [...new Set(list)].slice(0, MAX_LINIEN);
   });
   readonly von = computed(() => toInt(this.params().get('von')));
   readonly bis = computed(() => toInt(this.params().get('bis')));
-
-  /**
-   * Farbslot je Delikt. Die Farbe gehört zum Delikt, nicht zur Position: Beim Entfernen eines Delikts
-   * behalten die übrigen ihre Farbe, neue Delikte bekommen den niedrigsten freien Slot.
-   */
-  private slots = new Map<string, number>();
-  readonly farbSlots = computed(() => {
-    const next = new Map<string, number>();
-    const delikte = this.delikte();
-    for (const k of delikte) {
-      const s = this.slots.get(k);
-      if (s !== undefined) next.set(k, s);
-    }
-    for (const k of delikte) {
-      if (next.has(k)) continue;
-      const used = new Set(next.values());
-      let s = 0;
-      while (used.has(s)) s++;
-      next.set(k, s);
-    }
-    this.slots = next;
-    return next;
+  /** Dimension, deren Werte als eigene Linien verglichen werden (z. B. "geschlecht"). */
+  readonly vergleich = computed(() => this.params().get('vgl'));
+  /** Gewählte Dimensionswerte (alle übrigen Query-Parameter). */
+  readonly filter = computed(() => {
+    const p = this.params();
+    const out: Record<string, string> = {};
+    for (const k of p.keys) if (!FESTE_PARAMETER.has(k)) out[k] = p.get(k)!;
+    return out as Readonly<Record<string, string>>;
   });
 
+  /** Bereich wechseln: Kennzahl, Filter und Vergleich gehören zum Dataset und werden zurückgesetzt. */
+  setDataset(id: string) {
+    const reset: Record<string, null> = { k: null, vgl: null };
+    for (const k of Object.keys(this.filter())) reset[k] = null;
+    this.update({ ...reset, ds: id === STANDARD_DATASET ? null : id });
+  }
   setKennzahl(k: string) {
     this.update({ k });
   }
@@ -64,9 +61,16 @@ export class Auswahl {
   setZeitraum(von: number | null, bis: number | null) {
     this.update({ von, bis });
   }
+  /** Filterwert setzen; `null` = Standardwert der Dimension. */
+  setFilter(dimension: string, wert: string | null) {
+    this.update({ [dimension]: wert });
+  }
+  setVergleich(dimension: string | null) {
+    this.update({ vgl: dimension });
+  }
   addDelikt(schluessel: string) {
     const d = this.delikte();
-    if (d.includes(schluessel) || d.length >= MAX_DELIKTE) return;
+    if (d.includes(schluessel) || d.length >= MAX_LINIEN) return;
     this.update({ d: [...d, schluessel].join(',') });
   }
   removeDelikt(schluessel: string) {

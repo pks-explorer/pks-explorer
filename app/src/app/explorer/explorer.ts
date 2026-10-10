@@ -4,12 +4,14 @@ import {
   computed,
   effect,
   inject,
+  linkedSignal,
   resource,
 } from '@angular/core';
-import type { KennzahlDef } from '@crime-stats/shared';
-import { Auswahl, MAX_DELIKTE, STANDARD_VON, type Darstellung } from '../core/auswahl';
+import type { DimensionDef, Hinweis, KennzahlDef } from '@crime-stats/shared';
+import { Auswahl, MAX_LINIEN, STANDARD_VON, type Darstellung } from '../core/auswahl';
 import { DeliktInfo } from '../core/delikt-info';
-import { PksDataSource } from '../core/pks-data';
+import { StabileSlots } from '../core/farben';
+import { DatasetView, PksDataSource, filterDimensionen, type Filter } from '../core/pks-data';
 import { Theme } from '../core/theme';
 import { DeliktInfoPopover } from './delikt-info-popover';
 import { DeliktPicker } from './delikt-picker';
@@ -30,6 +32,14 @@ const PRESETS: Preset[] = [
 ];
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));
+const wertLabel = (d: DimensionDef, id: string) => d.werte?.find((w) => w.id === id)?.label ?? id;
+
+interface Linie {
+  id: string;
+  schluessel: string;
+  label: string;
+  filter: Filter;
+}
 
 @Component({
   selector: 'app-explorer',
@@ -42,28 +52,76 @@ export class Explorer {
   private readonly data = inject(PksDataSource);
   private readonly theme = inject(Theme);
   protected readonly auswahl = inject(Auswahl);
-  protected readonly maxDelikte = MAX_DELIKTE;
+  protected readonly maxLinien = MAX_LINIEN;
   protected readonly presets = PRESETS;
+  private readonly slots = new StabileSlots();
 
+  private readonly indexRes = resource({ loader: () => this.data.index() });
   private readonly straftatenRes = resource({ loader: () => this.data.straftaten() });
+  private readonly datasetRes = resource({
+    params: () => this.auswahl.datasetId(),
+    loader: ({ params }) => this.data.dataset(params),
+  });
+  /** Lädt die Partitionen der gewählten Delikte nach (nur bei aufgeteilten Datasets). */
+  private readonly ladeRes = resource({
+    params: () => {
+      const ds = this.datasetRes.value();
+      return ds ? { ds, delikte: this.auswahl.delikte() } : undefined;
+    },
+    loader: async ({ params }) => {
+      await params.ds.laden(params.delikte);
+      return params.ds;
+    },
+  });
+  /** Zuletzt vollständig geladener Stand – verhindert Flackern, während nachgeladen wird. */
+  private readonly geladen = linkedSignal<DatasetView | undefined, DatasetView | undefined>({
+    source: () => this.ladeRes.value(),
+    computation: (neu, vorher) => neu ?? vorher?.value,
+  });
 
   constructor() {
     const info = inject(DeliktInfo);
     effect(() => info.setKatalog(this.straftatenRes.value() ?? []));
   }
-  private readonly datasetRes = resource({
-    params: () => this.auswahl.datasetId(),
-    loader: ({ params }) => this.data.dataset(params),
-  });
 
-  readonly fehler = computed(() => this.straftatenRes.error() ?? this.datasetRes.error());
-  readonly laedt = computed(() => this.straftatenRes.isLoading() || this.datasetRes.isLoading());
+  readonly fehler = computed(
+    () =>
+      this.indexRes.error() ??
+      this.straftatenRes.error() ??
+      this.datasetRes.error() ??
+      this.ladeRes.error(),
+  );
+  readonly laedt = computed(() => this.datasetRes.isLoading() || this.ladeRes.isLoading());
 
+  readonly bereiche = computed(() => this.indexRes.value()?.datasets ?? []);
   readonly meta = computed(() => this.datasetRes.value()?.meta);
   readonly kennzahlen = computed(() => this.meta()?.kennzahlen ?? []);
   readonly kennzahl = computed<KennzahlDef | undefined>(
     () => this.kennzahlen().find((k) => k.id === this.auswahl.kennzahl()) ?? this.kennzahlen()[0],
   );
+
+  // --- Filter und Vergleich ---------------------------------------------------------------
+
+  readonly dimensionen = computed(() => {
+    const m = this.meta();
+    return m ? filterDimensionen(m) : [];
+  });
+  /** Gültige Filterwerte je Dimension (ungültige URL-Werte fallen auf den Standard zurück). */
+  readonly filterWerte = computed<Filter>(() => {
+    const roh = this.auswahl.filter();
+    const out: Record<string, string> = {};
+    for (const d of this.dimensionen()) {
+      const w = roh[d.id];
+      out[d.id] = w && d.werte!.some((x) => x.id === w) ? w : (d.standard ?? d.werte![0]!.id);
+    }
+    return out;
+  });
+  readonly vergleichbar = computed(() => this.dimensionen().filter((d) => d.vergleich?.length));
+  readonly vergleichDim = computed(() =>
+    this.vergleichbar().find((d) => d.id === this.auswahl.vergleich()),
+  );
+
+  // --- Zeitraum ---------------------------------------------------------------------------
 
   readonly alleJahre = computed(() => this.meta()?.jahre ?? []);
   readonly zeitraum = computed(() => {
@@ -75,25 +133,95 @@ export class Explorer {
     if (von > bis) [von, bis] = [bis, von];
     return { von, bis, erstes, letztes };
   });
-  readonly jahre = computed(() => {
+  private readonly zeitraumJahre = computed(() => {
     const { von, bis } = this.zeitraum();
     return this.alleJahre().filter((j) => j >= von && j <= bis);
   });
 
+  // --- Delikte ----------------------------------------------------------------------------
+
   /** Katalog, eingeschränkt auf Schlüssel, die im aktuellen Dataset vorkommen. */
   readonly straftaten = computed(() => {
     const ds = this.datasetRes.value();
-    return (this.straftatenRes.value() ?? []).filter((s) => ds?.hasSchluessel(s.schluessel));
+    return (this.straftatenRes.value() ?? []).filter((s) => ds?.hatSchluessel(s.schluessel));
   });
   private readonly straftatByKey = computed(
-    () => new Map(this.straftaten().map((s) => [s.schluessel, s])),
+    () => new Map((this.straftatenRes.value() ?? []).map((s) => [s.schluessel, s])),
+  );
+  private readonly name = (k: string) => this.straftatByKey().get(k)?.name ?? k;
+
+  /** Gewählte Delikte, die es im aktuellen Bereich nicht gibt (z. B. Diebstahl bei den Opfern). */
+  readonly fehlendeDelikte = computed(() => {
+    const ds = this.datasetRes.value();
+    return ds
+      ? this.auswahl
+          .delikte()
+          .filter((k) => !ds.hatSchluessel(k))
+          .map((k) => this.name(k))
+      : [];
+  });
+
+  // --- Linien -----------------------------------------------------------------------------
+
+  private readonly alleLinien = computed<Linie[]>(() => {
+    const ds = this.datasetRes.value();
+    if (!ds) return [];
+    const basis = this.filterWerte();
+    const vgl = this.vergleichDim();
+    const delikte = this.auswahl.delikte().filter((k) => ds.hatSchluessel(k));
+    return delikte.flatMap((schluessel) => {
+      if (!vgl)
+        return [{ id: schluessel, schluessel, label: this.name(schluessel), filter: basis }];
+      return vgl.vergleich!.map((w) => ({
+        id: `${schluessel}|${w}`,
+        schluessel,
+        label:
+          delikte.length > 1
+            ? `${this.name(schluessel)} · ${wertLabel(vgl, w)}`
+            : wertLabel(vgl, w),
+        filter: { ...basis, [vgl.id]: w },
+      }));
+    });
+  });
+  readonly linien = computed(() => this.alleLinien().slice(0, MAX_LINIEN));
+  readonly ausgeblendeteLinien = computed(() => this.alleLinien().length - this.linien().length);
+
+  private readonly linienFarben = computed(() => {
+    const modus = this.theme.modus();
+    const slots = this.slots.zuordnen(this.linien().map((l) => l.id));
+    return new Map([...slots].map(([id, s]) => [id, this.theme.serienFarbe(s, modus)]));
+  });
+  /** Farben für die Auswahl-Chips; beim Vergleich hat ein Delikt mehrere Linien, dann keine Farbe. */
+  readonly deliktFarben = computed(() =>
+    this.vergleichDim() ? new Map<string, string>() : this.linienFarben(),
   );
 
-  readonly farben = computed(() => {
-    const modus = this.theme.modus();
-    return new Map(
-      [...this.auswahl.farbSlots()].map(([k, slot]) => [k, this.theme.serienFarbe(slot, modus)]),
-    );
+  /** Absolute Werte über den gewählten Zeitraum, noch ohne Kürzung. */
+  private readonly rohwerte = computed(() => {
+    const ds = this.geladen();
+    const k = this.kennzahl();
+    if (!ds || !k || ds !== this.datasetRes.value()) return [];
+    const jahre = this.zeitraumJahre();
+    return this.linien().map((l) => {
+      const zr = ds.zeitreihe(l.schluessel, k.id, l.filter);
+      return { linie: l, werte: jahre.map((j) => zr.get(j) ?? null) };
+    });
+  });
+
+  /** Jahre ohne jeden Wert am Anfang/Ende ausblenden (z. B. TVBZ erst ab 2009). */
+  private readonly datenbereich = computed(() => {
+    const roh = this.rohwerte();
+    const n = this.zeitraumJahre().length;
+    const hatWert = (i: number) => roh.some((r) => r.werte[i] !== null);
+    let lo = 0;
+    let hi = n - 1;
+    while (lo < n && !hatWert(lo)) lo++;
+    while (hi > lo && !hatWert(hi)) hi--;
+    return lo < n ? { lo, hi } : null;
+  });
+  readonly jahre = computed(() => {
+    const b = this.datenbereich();
+    return b ? this.zeitraumJahre().slice(b.lo, b.hi + 1) : [];
   });
 
   readonly einheit = computed(() =>
@@ -101,40 +229,65 @@ export class Explorer {
   );
 
   readonly serien = computed<Serie[]>(() => {
-    const ds = this.datasetRes.value();
-    const k = this.kennzahl();
-    if (!ds || !k) return [];
-    const jahre = this.jahre();
-    const farben = this.farben();
-    return this.auswahl
-      .delikte()
-      .filter((s) => ds.hasSchluessel(s))
-      .map((schluessel) => {
-        const zr = ds.zeitreihe(schluessel, k.id);
-        const werte = jahre.map((j) => zr.get(j) ?? null);
-        return {
-          schluessel,
-          label: this.straftatByKey().get(schluessel)?.name ?? schluessel,
-          farbe: farben.get(schluessel) ?? this.theme.serienFarbe(0),
-          werte: this.auswahl.darstellung() === 'index' ? indexiere(werte) : werte,
-        };
-      });
+    const b = this.datenbereich();
+    if (!b) return [];
+    const farben = this.linienFarben();
+    return this.rohwerte().map(({ linie, werte }) => {
+      const ausschnitt = werte.slice(b.lo, b.hi + 1);
+      return {
+        id: linie.id,
+        schluessel: linie.schluessel,
+        label: linie.label,
+        farbe: farben.get(linie.id) ?? this.theme.serienFarbe(0),
+        werte: this.auswahl.darstellung() === 'index' ? indexiere(ausschnitt) : ausschnitt,
+      };
+    });
   });
 
-  readonly hinweise = computed(() => {
+  /** Es gibt Delikte, aber für die gewählte Kombination keine Werte. */
+  readonly keineDaten = computed(
+    () => this.linien().length > 0 && this.rohwerte().length > 0 && !this.datenbereich(),
+  );
+
+  // --- Texte und Hinweise -----------------------------------------------------------------
+
+  /** Gewählte Filter, die vom Standard abweichen, z. B. "Weiblich, 14 bis 15 Jahre". */
+  private readonly filterText = computed(() => {
+    const f = this.filterWerte();
+    const vgl = this.vergleichDim()?.id;
+    return this.dimensionen()
+      .filter((d) => d.id !== vgl && f[d.id] !== d.standard)
+      .map((d) => wertLabel(d, f[d.id]!))
+      .join(', ');
+  });
+
+  readonly hinweise = computed<Hinweis[]>(() => {
     const m = this.meta();
     const k = this.kennzahl();
     if (!m || !k) return [];
-    const { von, bis } = this.zeitraum();
-    return relevanteHinweise(m.hinweise, k.id, von, bis);
+    const j = this.jahre();
+    const von = j[0] ?? this.zeitraum().von;
+    const bis = j.at(-1) ?? this.zeitraum().bis;
+    // Hinweise zu gewählten (oder verglichenen) Dimensionswerten, z. B. "TVBZ ohne Kinder unter 8"
+    const f = this.filterWerte();
+    const vgl = this.vergleichDim();
+    const wertHinweise = this.dimensionen().flatMap((d) => {
+      const ids = d === vgl ? d.vergleich! : [f[d.id]!];
+      return (d.werte ?? [])
+        .filter((w) => ids.includes(w.id) && w.hinweis)
+        .map((w) => ({ text: `${d.label} „${w.label}“: ${w.hinweis}` }));
+    });
+    return [...relevanteHinweise(m.hinweise, k.id, von, bis), ...wertHinweise];
   });
-  readonly markierungen = computed(() =>
-    markierungen(this.hinweise(), this.zeitraum().von, this.zeitraum().bis),
-  );
+  readonly markierungen = computed(() => {
+    const j = this.jahre();
+    return j.length ? markierungen(this.hinweise(), j[0]!, j.at(-1)!) : [];
+  });
 
   /** Bezeichnungsänderungen der gewählten Delikte im Zeitraum – oft ein Hinweis auf geänderte Definitionen. */
   readonly namensaenderungen = computed(() => {
-    const { von, bis } = this.zeitraum();
+    const j = this.jahre();
+    if (!j.length) return [];
     return this.auswahl.delikte().flatMap((k) => {
       const verlauf = this.straftatByKey().get(k)?.namensverlauf ?? [];
       return verlauf
@@ -144,19 +297,41 @@ export class Explorer {
           nachher: n.name,
           schluessel: k,
         }))
-        .filter((c) => c.vorher && c.jahr > von && c.jahr <= bis);
+        .filter((c) => c.vorher && c.jahr > j[0]! && c.jahr <= j.at(-1)!);
     });
   });
 
   readonly titel = computed(() => {
     const k = this.kennzahl();
-    const { von, bis } = this.zeitraum();
-    const zusatz = this.auswahl.darstellung() === 'index' ? ` (Index, ${von} = 100)` : '';
-    return k ? `${k.label}${zusatz}, ${von}–${bis}` : '';
+    if (!k) return '';
+    const j = this.jahre();
+    const von = j[0] ?? this.zeitraum().von;
+    const bis = j.at(-1) ?? this.zeitraum().bis;
+    const teile = [k.label];
+    const ft = this.filterText();
+    if (ft) teile.push(ft);
+    const vgl = this.vergleichDim();
+    if (vgl) teile.push(`nach ${vgl.label}`);
+    const index = this.auswahl.darstellung() === 'index' ? ` (Index, ${von} = 100)` : '';
+    // Bei nur einem verglichenen Delikt steht dessen Name im Titel, die Linien heißen nur "Männlich" usw.
+    const schluessel = new Set(this.linien().map((l) => l.schluessel));
+    const delikt = vgl && schluessel.size === 1 ? `${this.name([...schluessel][0]!)}: ` : '';
+    return `${delikt}${teile.join(' – ')}${index}, ${von}–${bis}`;
   });
 
+  // --- Aktionen ---------------------------------------------------------------------------
+
+  setDataset(id: string) {
+    this.auswahl.setDataset(id);
+  }
   setKennzahl(id: string) {
     this.auswahl.setKennzahl(id);
+  }
+  setFilter(d: DimensionDef, wert: string) {
+    this.auswahl.setFilter(d.id, wert === d.standard ? null : wert);
+  }
+  setVergleich(id: string) {
+    this.auswahl.setVergleich(id || null);
   }
   setVon(v: string) {
     this.auswahl.setZeitraum(Number(v), this.zeitraum().bis);

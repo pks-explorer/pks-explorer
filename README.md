@@ -38,12 +38,15 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 | ID | Quelle | Inhalt |
 |---|---|---|
 | `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle` | Bund, 1987–2024, je Straftatenschlüssel: Fälle, HZ, Versuche, Schusswaffe, Aufklärung, Tatverdächtige |
+| `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009. Aufgeteilt je Schlüssel |
+| `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ. Aufgeteilt je Schlüssel |
 
 ## App
 
 Die gesamte Auswahl steht in der URL und ist damit als Link teilbar, z. B.
-`/?d=------,892000,897000&k=hz&von=2000&bis=2024&modus=index`
-(`d` = Straftatenschlüssel, `k` = Kennzahl, `modus=index` = erstes Jahr = 100).
+`/?ds=bund-tatverdaechtige-zeitreihe&d=892000&k=tv&geschlecht=weiblich&vgl=alter&von=2000`
+(`ds` = Bereich, `d` = Straftatenschlüssel, `k` = Kennzahl, Dimensionsfilter unter ihrer ID,
+`vgl` = Dimension für den Linienvergleich, `modus=index` = erstes Jahr = 100).
 
 Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`); die heutige Implementierung lädt die
 JSON-Dateien und kann später z. B. durch Parquet + DuckDB-WASM ersetzt werden.

@@ -57,6 +57,19 @@ export class StraftatenKatalog {
     m.set(jahr, cleanName(rawName));
   }
 
+  private ergaenzt = new Set<string>();
+
+  /**
+   * Bezeichnung aus einer weiteren Tabelle übernehmen – nur für Schlüssel, die die Haupttabelle (Fälle)
+   * nicht kennt. Bekannte Schlüssel behalten ihre Bezeichnungen (z. B. heißt "------" in den
+   * Opfertabellen "Straftaten insgesamt (Opferdelikte)").
+   */
+  ergaenze(schluessel: string, jahr: number, rawName: string) {
+    if (this.names.has(schluessel) && !this.ergaenzt.has(schluessel)) return;
+    this.ergaenzt.add(schluessel);
+    this.add(schluessel, jahr, rawName);
+  }
+
   build(): Straftat[] {
     const all = new Set(this.order);
     return this.order.map((schluessel) => {

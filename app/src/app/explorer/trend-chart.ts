@@ -26,7 +26,7 @@ const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : 
   template: `
     <!-- Legende dient zugleich als Steuerung: Delikte lassen sich hier direkt entfernen -->
     <ul class="legende" aria-label="Legende">
-      @for (s of serien(); track s.schluessel) {
+      @for (s of serien(); track s.id) {
         <li>
           <span class="eintrag" tabindex="0" [appDeliktInfo]="s.schluessel">
             <span class="key" [style.background]="s.farbe"></span>{{ s.label }}

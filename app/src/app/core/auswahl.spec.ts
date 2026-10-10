@@ -5,6 +5,7 @@ import { Auswahl } from './auswahl';
 describe('Auswahl', () => {
   let auswahl: Auswahl;
   let router: Router;
+  const warten = () => new Promise((r) => setTimeout(r));
 
   beforeEach(async () => {
     TestBed.configureTestingModule({ providers: [provideRouter([{ path: '**', children: [] }])] });
@@ -14,32 +15,33 @@ describe('Auswahl', () => {
   });
 
   it('nutzt Standardwerte ohne Query-Parameter', () => {
+    expect(auswahl.datasetId()).toBe('bund-faelle-zeitreihe');
     expect(auswahl.delikte()).toEqual(['------']);
-    expect(auswahl.kennzahl()).toBe('faelle');
+    expect(auswahl.kennzahl()).toBeNull();
     expect(auswahl.darstellung()).toBe('absolut');
+    expect(auswahl.filter()).toEqual({});
   });
 
-  it('liest die Auswahl aus der URL', async () => {
-    await router.navigateByUrl('/?d=892000,897000&k=hz&von=2000&bis=2020&modus=index');
+  it('liest Auswahl und Dimensionsfilter aus der URL', async () => {
+    await router.navigateByUrl(
+      '/?ds=bund-tatverdaechtige-zeitreihe&d=892000,897000&k=tvbz&von=2009&modus=index&geschlecht=weiblich&alter=14-16&vgl=staatsangehoerigkeit',
+    );
+    expect(auswahl.datasetId()).toBe('bund-tatverdaechtige-zeitreihe');
     expect(auswahl.delikte()).toEqual(['892000', '897000']);
-    expect(auswahl.kennzahl()).toBe('hz');
-    expect([auswahl.von(), auswahl.bis()]).toEqual([2000, 2020]);
-    expect(auswahl.darstellung()).toBe('index');
+    expect(auswahl.kennzahl()).toBe('tvbz');
+    expect(auswahl.von()).toBe(2009);
+    expect(auswahl.filter()).toEqual({ geschlecht: 'weiblich', alter: '14-16' });
+    expect(auswahl.vergleich()).toBe('staatsangehoerigkeit');
   });
 
-  it('Farben bleiben beim Delikt, wenn ein anderes entfernt wird', async () => {
-    await router.navigateByUrl('/?d=a,b,c');
-    expect([...auswahl.farbSlots()]).toEqual([
-      ['a', 0],
-      ['b', 1],
-      ['c', 2],
-    ]);
-    await router.navigateByUrl('/?d=a,c');
-    expect([...auswahl.farbSlots()]).toEqual([
-      ['a', 0],
-      ['c', 2],
-    ]);
-    await router.navigateByUrl('/?d=a,c,d');
-    expect(auswahl.farbSlots().get('d')).toBe(1); // niedrigster freier Slot
+  it('setzt beim Bereichswechsel Kennzahl, Filter und Vergleich zurück, behält aber die Delikte', async () => {
+    await router.navigateByUrl('/?d=892000&k=hz&geschlecht=weiblich&vgl=alter');
+    auswahl.setDataset('bund-opfer-zeitreihe');
+    await warten();
+    expect(auswahl.datasetId()).toBe('bund-opfer-zeitreihe');
+    expect(auswahl.delikte()).toEqual(['892000']);
+    expect(auswahl.kennzahl()).toBeNull();
+    expect(auswahl.filter()).toEqual({});
+    expect(auswahl.vergleich()).toBeNull();
   });
 });

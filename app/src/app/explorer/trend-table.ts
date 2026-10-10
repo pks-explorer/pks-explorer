@@ -25,7 +25,7 @@ import { DeliktInfoDirective } from './delikt-info.directive';
           </tr>
         </thead>
         <tbody>
-          @for (z of zeilen(); track z.serie.schluessel) {
+          @for (z of zeilen(); track z.serie.id) {
             <tr>
               <th scope="row" class="sticky">
                 <div class="cell" tabindex="0" [appDeliktInfo]="z.serie.schluessel">

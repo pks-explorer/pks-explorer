@@ -1,6 +1,9 @@
 import type { Hinweis } from '@crime-stats/shared';
 
 export interface Serie {
+  /** Eindeutig je Linie, z. B. "892000" oder "892000|weiblich" beim Vergleich nach einer Dimension. */
+  id: string;
+  /** Straftatenschlüssel der Linie. */
   schluessel: string;
   label: string;
   farbe: string;

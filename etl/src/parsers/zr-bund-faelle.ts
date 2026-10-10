@@ -241,6 +241,7 @@ export async function parseZrBundFaelle(
     meta: {
       id: 'bund-faelle-zeitreihe',
       titel: 'Bund – Fälle, Aufklärung und Tatverdächtige (Zeitreihe)',
+      bereich: 'Fälle',
       ebene: 'bund',
       quelle: {
         jahrgang,

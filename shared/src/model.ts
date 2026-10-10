@@ -2,8 +2,10 @@
  * Gemeinsames Datenmodell für ETL und App.
  *
  * Jede BKA-Tabelle wird zu einem "Dataset": eine Faktentabelle, deren Spalten aus Dimensionen
- * (jahr, region, schluessel, später z. B. alter/geschlecht) und Kennzahlen (faelle, hz, …) bestehen.
+ * (jahr, region, schluessel, geschlecht, alter, …) und Kennzahlen (faelle, hz, tv, …) bestehen.
  * Physisch werden die Zeilen kompakt als Arrays gespeichert (Spaltenreihenfolge = meta.spalten).
+ * Dimensionen mit `inSpalte` (z. B. Altersgruppen) sind in die Spalten-IDs eingefaltet, damit breite
+ * BKA-Tabellen nicht vervielfacht werden müssen.
  */
 
 /** Räumliche Ebene. */
@@ -18,9 +20,27 @@ export interface KennzahlDef {
   beschreibung?: string;
 }
 
+export interface DimensionWert {
+  id: string;
+  label: string;
+  /** Kurze Erläuterung, z. B. wenn die Gruppe anders abgegrenzt ist als üblich. */
+  hinweis?: string;
+}
+
 export interface DimensionDef {
   id: string;
   label: string;
+  /** Mögliche Werte (für Filter); fehlt bei jahr, region und schluessel. */
+  werte?: DimensionWert[];
+  /** Vorauswahl, z. B. "insgesamt". */
+  standard?: string;
+  /** Werte für "Vergleichen nach": überschneidungsfrei, z. B. männlich/weiblich oder Kinder/Jugendliche/…. */
+  vergleich?: string[];
+  /**
+   * Der Wert steht nicht in einer eigenen Zeilenspalte, sondern ist Teil der Spalten-ID
+   * (spart Platz bei breiten Tabellen, z. B. Altersgruppen). Siehe `spaltenId`.
+   */
+  inSpalte?: boolean;
 }
 
 /** Methodischer Bruch oder Hinweis, optional auf Kennzahlen und einen Zeitraum bezogen. */
@@ -50,15 +70,42 @@ export type Zelle = string | number | null;
 export interface DatasetMeta {
   id: string;
   titel: string;
+  /** Kurzname für die Auswahl in der App, z. B. "Tatverdächtige". */
+  bereich: string;
   ebene: Ebene;
   quelle: Quelle;
   dimensionen: DimensionDef[];
   kennzahlen: KennzahlDef[];
-  /** Spaltenreihenfolge der Zeilen: erst Dimensions-, dann Kennzahl-IDs. */
+  /**
+   * Spaltenreihenfolge der Zeilen: erst die Zeilen-Dimensionen, dann die Wertespalten.
+   * Wertespalten heißen wie die Kennzahl, bei Spalten-Dimensionen ergänzt um deren Werte (siehe `spaltenId`).
+   */
   spalten: string[];
   jahre: number[];
   hinweise: Hinweis[];
+  /** Große Datasets sind je Straftatenschlüssel in eigene Dateien aufgeteilt. */
+  partitionen?: Partitionierung;
 }
+
+export interface Partitionierung {
+  nach: 'schluessel';
+  /** Verzeichnis relativ zu data/processed. */
+  verzeichnis: string;
+  /** Vorhandene Schlüssel (je eine Datei, siehe `partitionsDatei`). */
+  schluessel: string[];
+}
+
+/** Inhalt einer Partitionsdatei: Zeilen im Format von `meta.spalten`. */
+export interface DatasetPartition {
+  zeilen: Zelle[][];
+}
+
+/** ID einer Wertespalte, z. B. "tv|14-16" (Kennzahl tv, Altersgruppe 14–16). */
+export const spaltenId = (kennzahl: string, spaltenWerte: string[] = []) =>
+  [kennzahl, ...spaltenWerte].join('|');
+
+/** Dateiname einer Partition; "*" ist in Dateinamen nicht überall erlaubt. */
+export const partitionsDatei = (schluessel: string) => `${schluessel.replace(/\*/g, 'x')}.json`;
 
 export interface Dataset {
   meta: DatasetMeta;
@@ -118,6 +165,7 @@ export interface Erlaeuterung {
 export interface DatasetIndexEintrag {
   id: string;
   titel: string;
+  bereich: string;
   ebene: Ebene;
   datei: string;
   jahre: number[];
@@ -126,7 +174,8 @@ export interface DatasetIndexEintrag {
 
 /** data/processed/index.json */
 export interface DataIndex {
-  erstellt: string;
+  /** PKS-Jahrgang, aus dem die Daten stammen. */
+  jahrgang: number;
   datasets: DatasetIndexEintrag[];
   /** Datei mit dem Straftatenkatalog (Straftat[]). */
   straftaten: string;

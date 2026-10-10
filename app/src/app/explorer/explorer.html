@@ -4,14 +4,29 @@
     <app-delikt-picker
       [straftaten]="straftaten()"
       [ausgewaehlt]="auswahl.delikte()"
-      [farben]="farben()"
-      [max]="maxDelikte"
+      [farben]="deliktFarben()"
+      [max]="maxLinien"
       (hinzufuegen)="auswahl.addDelikt($event)"
       (entfernen)="auswahl.removeDelikt($event)"
     />
   </aside>
 
   <section class="inhalt" [class.laedt]="laedt()">
+    @if (bereiche().length > 1) {
+      <div class="segmente bereiche" role="group" aria-label="Bereich">
+        @for (b of bereiche(); track b.id) {
+          <button
+            type="button"
+            [class.aktiv]="b.id === auswahl.datasetId()"
+            [attr.aria-pressed]="b.id === auswahl.datasetId()"
+            (click)="setDataset(b.id)"
+          >
+            {{ b.bereich }}
+          </button>
+        }
+      </div>
+    }
+
     <div class="filter" role="group" aria-label="Filter">
       <label class="feld">
         <span>Kennzahl</span>
@@ -21,6 +36,34 @@
           }
         </select>
       </label>
+
+      @for (d of dimensionen(); track d.id) {
+        <label class="feld">
+          <span>{{ d.label }}</span>
+          <select
+            [disabled]="vergleichDim()?.id === d.id"
+            (change)="setFilter(d, $any($event.target).value)"
+          >
+            @for (w of d.werte; track w.id) {
+              <option [value]="w.id" [selected]="w.id === filterWerte()[d.id]">
+                {{ w.label }}
+              </option>
+            }
+          </select>
+        </label>
+      }
+
+      @if (vergleichbar().length) {
+        <label class="feld">
+          <span>Vergleichen nach</span>
+          <select (change)="setVergleich($any($event.target).value)">
+            <option value="" [selected]="!vergleichDim()">–</option>
+            @for (d of vergleichbar(); track d.id) {
+              <option [value]="d.id" [selected]="d.id === vergleichDim()?.id">{{ d.label }}</option>
+            }
+          </select>
+        </label>
+      }
 
       <div class="feld">
         <span>Zeitraum</span>
@@ -89,7 +132,20 @@
         @if (kennzahl()?.beschreibung; as b) {
           <p class="beschreibung">{{ b }}</p>
         }
-        @if (serien().length) {
+        @if (fehlendeDelikte().length) {
+          <p class="beschreibung">
+            In diesem Bereich nicht verfügbar: {{ fehlendeDelikte().join(', ') }}.
+          </p>
+        }
+        @if (ausgeblendeteLinien()) {
+          <p class="beschreibung">
+            {{ ausgeblendeteLinien() }} weitere Linien ausgeblendet – höchstens
+            {{ maxLinien }} gleichzeitig. Entferne Delikte oder wähle einen anderen Vergleich.
+          </p>
+        }
+        @if (keineDaten()) {
+          <p class="leer">Für diese Auswahl liegen im gewählten Zeitraum keine Werte vor.</p>
+        } @else if (serien().length) {
           <app-trend-chart
             [jahre]="jahre()"
             [serien]="serien()"
