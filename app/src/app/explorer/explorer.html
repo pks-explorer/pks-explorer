@@ -95,6 +95,7 @@
             [serien]="serien()"
             [einheit]="einheit()"
             [markierungen]="markierungen()"
+            (entfernen)="auswahl.removeDelikt($event)"
           />
         } @else {
           <p class="leer">Wähle links mindestens ein Delikt aus.</p>

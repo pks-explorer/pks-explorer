@@ -5,6 +5,7 @@ import {
   computed,
   inject,
   input,
+  output,
   signal,
 } from '@angular/core';
 import { NgxEchartsDirective } from 'ngx-echarts';
@@ -23,15 +24,25 @@ const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : 
   imports: [NgxEchartsDirective, DeliktInfoDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    @if (serien().length >= 2) {
-      <ul class="legende" aria-label="Legende">
-        @for (s of serien(); track s.schluessel) {
-          <li tabindex="0" [appDeliktInfo]="s.schluessel">
+    <!-- Legende dient zugleich als Steuerung: Delikte lassen sich hier direkt entfernen -->
+    <ul class="legende" aria-label="Legende">
+      @for (s of serien(); track s.schluessel) {
+        <li>
+          <span class="eintrag" tabindex="0" [appDeliktInfo]="s.schluessel">
             <span class="key" [style.background]="s.farbe"></span>{{ s.label }}
-          </li>
-        }
-      </ul>
-    }
+          </span>
+          <button
+            type="button"
+            class="entfernen"
+            (click)="entfernen.emit(s.schluessel)"
+            [attr.aria-label]="s.label + ' aus dem Diagramm entfernen'"
+            title="Aus dem Diagramm entfernen"
+          >
+            ×
+          </button>
+        </li>
+      }
+    </ul>
     <div
       echarts
       class="chart"
@@ -57,7 +68,27 @@ const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : 
     .legende li {
       display: flex;
       align-items: center;
+      gap: 2px;
+    }
+    .eintrag {
+      display: flex;
+      align-items: center;
       gap: 6px;
+    }
+    .entfernen {
+      width: 22px;
+      height: 22px;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      &:hover {
+        background: var(--hover);
+        color: var(--text-primary);
+      }
     }
     .key {
       width: 16px;
@@ -81,6 +112,7 @@ export class TrendChart {
   readonly serien = input.required<Serie[]>();
   readonly einheit = input.required<Einheit | 'index'>();
   readonly markierungen = input<Markierung[]>([]);
+  readonly entfernen = output<string>();
 
   private readonly theme = inject(Theme);
 
