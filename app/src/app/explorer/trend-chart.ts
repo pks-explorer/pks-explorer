@@ -18,6 +18,9 @@ import { DeliktInfoDirective } from './delikt-info.directive';
 
 const escape = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : s);
+/** Wert ohne vorhandenen Nachbarwert – wird als Linie nicht sichtbar. */
+const einzelpunkt = (werte: (number | null)[], i: number) =>
+  werte[i] != null && werte[i - 1] == null && werte[i + 1] == null;
 
 @Component({
   selector: 'app-trend-chart',
@@ -196,8 +199,11 @@ export class TrendChart {
         data: s.werte,
         color: s.farbe,
         lineStyle: { width: 2 },
-        showSymbol: false,
-        symbolSize: 8,
+        // Werte ohne Nachbarn (z. B. nur ein Jahr) zeichnet eine Linie nicht – dort einen Punkt zeigen
+        showSymbol: true,
+        symbol: 'circle',
+        symbolSize: (_: unknown, p: { dataIndex: number }) =>
+          einzelpunkt(s.werte, p.dataIndex) ? 8 : 0,
         connectNulls: false,
         emphasis: { focus: 'series' },
         endLabel: {

@@ -6,6 +6,7 @@ import {
   markierungen,
   relevanteHinweise,
   veraenderung,
+  vergleichWerte,
   wertHinweise,
 } from './serien';
 
@@ -20,6 +21,29 @@ const GESCHLECHT: DimensionDef = {
     { id: 'weiblich', label: 'Weiblich' },
   ],
 };
+const GESCHLECHT_VGL = { dim: GESCHLECHT, werte: ['maennlich', 'weiblich'] };
+const REGION: DimensionDef = {
+  id: 'region',
+  label: 'Region',
+  standard: 'DE',
+  werte: [
+    { id: 'DE', label: 'Deutschland' },
+    { id: '09', label: 'Bayern', gruppe: 'Länder' },
+    { id: '11', label: 'Berlin', gruppe: 'Länder' },
+  ],
+};
+
+describe('vergleichWerte', () => {
+  it('nimmt die Vorauswahl der Dimension, ohne Vorauswahl den Standardwert', () => {
+    expect(vergleichWerte(GESCHLECHT, null)).toEqual(['maennlich', 'weiblich']);
+    expect(vergleichWerte(REGION, null)).toEqual(['DE']);
+  });
+  it('übernimmt eine eigene Auswahl, aber nur gültige Werte', () => {
+    expect(vergleichWerte(REGION, ['11', 'XX', '09'])).toEqual(['11', '09']);
+    expect(vergleichWerte(REGION, [])).toEqual([]);
+  });
+});
+
 const ALTER: DimensionDef = {
   id: 'alter',
   label: 'Alter',
@@ -47,12 +71,14 @@ describe('linienBilden', () => {
   });
 
   it('beim Vergleich eine Linie je Vergleichswert, bei einem Delikt nur mit Wertname', () => {
-    const l = linienBilden(['a'], { geschlecht: 'insgesamt' }, GESCHLECHT, name);
+    const l = linienBilden(['a'], { geschlecht: 'insgesamt' }, GESCHLECHT_VGL, name);
     expect(l.map((x) => [x.id, x.label, x.filter['geschlecht']])).toEqual([
       ['a|maennlich', 'Männlich', 'maennlich'],
       ['a|weiblich', 'Weiblich', 'weiblich'],
     ]);
-    expect(linienBilden(['a', 'b'], {}, GESCHLECHT, name)[3]!.label).toBe('Delikt b · Weiblich');
+    expect(linienBilden(['a', 'b'], {}, GESCHLECHT_VGL, name)[3]!.label).toBe(
+      'Delikt b · Weiblich',
+    );
   });
 });
 

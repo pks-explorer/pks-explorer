@@ -21,7 +21,9 @@ npm run build                                # Produktions-Build nach app/dist/a
 npm test -w app -- --watch=false             # Unit-Tests der App
 npm run crawl -- --year 2024                 # BKA-Seiten crawlen und PDF/XLSX laden (vorhandene Dateien werden übersprungen)
 npm run crawl -- --year 2024 --skip-crawl    # nur fehlende Dateien laut inventory.json laden
-npm run etl -- --jahrgang 2024               # data/raw → data/processed
+npm run crawl -- --year 2023 --nur "^(LA-F-02|ST-F-01)"   # nur bestimmte Dateien (Muster auf den Dateinamen)
+npm run crawl -- --year 2023 --ohne-download # nur Inventur erstellen
+npm run etl -- --jahrgang 2024               # data/raw → data/processed (Länder/Städte aus allen Jahrgängen unter data/raw)
 npm run typecheck
 npx tsx etl/src/inspect.ts <datei.xlsx> 20   # Struktur einer XLSX-Datei ansehen
 ```
@@ -37,7 +39,7 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 
 | ID | Quelle | Inhalt |
 |---|---|---|
-| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle` | Bund, 1987–2024, je Straftatenschlüssel: Fälle, HZ, Versuche, Schusswaffe, Aufklärung, Tatverdächtige |
+| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle`, je Jahrgang `LA-F-02`, `ST-F-01` | Deutschland ab 1987, dazu 16 Länder und 84 Städte (ab 100.000 Einwohnern, Landeshauptstädte) aus den Jahrgangstabellen: Fälle, HZ, Versuche, Aufklärung, Tatverdächtige. Dimension `region` (`DE`, Länderkennziffer, Gemeindeschlüssel). Aufgeteilt je Schlüssel |
 | `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009. Aufgeteilt je Schlüssel |
 | `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ. Aufgeteilt je Schlüssel |
 
@@ -46,7 +48,7 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 Die gesamte Auswahl steht in der URL und ist damit als Link teilbar, z. B.
 `/?ds=bund-tatverdaechtige-zeitreihe&d=892000&k=tv&geschlecht=weiblich&vgl=alter&von=2000`
 (`ds` = Bereich, `d` = Straftatenschlüssel, `k` = Kennzahl, Dimensionsfilter unter ihrer ID,
-`vgl` = Dimension für den Linienvergleich, `modus=index` = erstes Jahr = 100).
+`vgl` = Dimension für den Linienvergleich, `vglw` = gewählte Vergleichswerte (z. B. Regionen), `modus=index` = erstes Jahr = 100).
 
 Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`); die heutige Implementierung lädt die
 JSON-Dateien und kann später z. B. durch Parquet + DuckDB-WASM ersetzt werden.

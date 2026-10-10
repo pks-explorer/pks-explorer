@@ -7,7 +7,7 @@ import { spaltenId, type Dataset, type DimensionWert, type Zelle } from '@crime-
 import { readZeitreihe } from '../lib/zeitreihe.js';
 import { round, toNumber } from '../lib/xlsx.js';
 import type { StraftatenKatalog } from '../lib/straftaten.js';
-import { BASIS_DIMENSIONEN, GESCHLECHT, GESCHLECHT_KOPF, alsWerte } from '../lib/dimensionen.js';
+import { basisDimensionen, GESCHLECHT, GESCHLECHT_KOPF, alsWerte } from '../lib/dimensionen.js';
 import { hinweisZensus } from '../lib/hinweise.js';
 
 interface AlterDef extends DimensionWert {
@@ -138,7 +138,7 @@ export async function parseZrOpfer(
         stand,
       },
       dimensionen: [
-        ...BASIS_DIMENSIONEN,
+        ...basisDimensionen(),
         {
           id: 'vollendung',
           label: 'Versuch/Vollendung',

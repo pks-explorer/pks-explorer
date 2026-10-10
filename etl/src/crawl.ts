@@ -5,6 +5,8 @@
  *   npm run crawl -- --year 2024                  # crawlen + PDF/XLSX laden
  *   npm run crawl -- --year 2024 --skip-crawl     # vorhandene inventory.json verwenden
  *   npm run crawl -- --year 2024 --types xlsx
+ *   npm run crawl -- --year 2023 --nur "^(LA|ST)-F-"   # nur Dateien, deren Name auf das Muster passt
+ *   npm run crawl -- --year 2023 --ohne-download      # nur Inventur erstellen
  */
 import { mkdir, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -12,6 +14,7 @@ import { parseArgs } from 'node:util';
 import { rawYearDir } from './paths.js';
 
 const HOST = 'https://www.bka.de';
+const TIMEOUT_MS = 180_000;
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36';
 
 const sectionPrefix = (year: number) =>
@@ -30,18 +33,21 @@ interface Inventory {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchWithRetry(url: string, tries = 4): Promise<Response> {
+/** Der BKA-Server antwortet zeitweise mit 504; daher viele Versuche mit wachsender Pause (max. 60 s). */
+async function fetchWithRetry(url: string, tries = 8): Promise<Response> {
   for (let i = 1; ; i++) {
     try {
+      // Timeout gilt für Anfrage und Download; der BKA-Server antwortet zeitweise gar nicht
       const res = await fetch(url, {
         headers: { 'User-Agent': UA, 'Accept-Language': 'de-DE' },
+        signal: AbortSignal.timeout(TIMEOUT_MS),
       });
       if (res.ok) return res;
       throw new Error(`HTTP ${res.status}`);
     } catch (err) {
       if (i >= tries) throw err;
       console.warn(`  retry ${i} ${url}: ${(err as Error).message}`);
-      await sleep(2000 * i);
+      await sleep(Math.min(60_000, 5000 * i));
     }
   }
 }
@@ -123,11 +129,18 @@ const exists = (p: string) =>
     () => false,
   );
 
-async function download(year: number, inv: Inventory, types: string[], concurrency: number) {
+/** Welche Dateien geladen werden: nach Endung und optional nach Muster im Dateinamen. */
+interface DownloadFilter {
+  types: string[];
+  nur?: RegExp;
+}
+
+async function download(year: number, inv: Inventory, filter: DownloadFilter, concurrency: number) {
   const jobs: { url: string; dest: string }[] = [];
   for (const [filePath, d] of Object.entries(inv.downloads)) {
     const ext = path.extname(filePath).slice(1).toLowerCase();
-    if (!types.includes(ext)) continue;
+    if (!filter.types.includes(ext)) continue;
+    if (filter.nur && !filter.nur.test(path.basename(decodeURIComponent(filePath)))) continue;
     for (const page of d.pages) jobs.push({ url: d.url, dest: targetPath(year, page, filePath) });
   }
   let done = 0,
@@ -163,7 +176,9 @@ const { values } = parseArgs({
   options: {
     year: { type: 'string', default: '2024' },
     types: { type: 'string', default: 'pdf,xlsx' },
+    nur: { type: 'string' },
     'skip-crawl': { type: 'boolean', default: false },
+    'ohne-download': { type: 'boolean', default: false },
     concurrency: { type: 'string', default: '4' },
   },
 });
@@ -180,5 +195,19 @@ if (values['skip-crawl']) {
   console.log(
     `pages=${Object.keys(inv.pages).length} downloads=${Object.keys(inv.downloads).length}`,
   );
+  const fehlgeschlagen = Object.entries(inv.pages).filter(([, p]) => p.error);
+  if (fehlgeschlagen.length) {
+    console.error(
+      `WARNUNG: ${fehlgeschlagen.length} Seiten nicht erreichbar – Inventur unvollständig:`,
+    );
+    for (const [url] of fehlgeschlagen) console.error(`  ${decodeURIComponent(url)}`);
+    process.exitCode = 1;
+  }
 }
-await download(year, inv, values.types.split(','), Number(values.concurrency));
+if (!values['ohne-download']) {
+  const filter = {
+    types: values.types.split(','),
+    nur: values.nur ? new RegExp(values.nur, 'i') : undefined,
+  };
+  await download(year, inv, filter, Number(values.concurrency));
+}

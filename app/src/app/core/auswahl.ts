@@ -12,7 +12,7 @@ export const STANDARD_VON = 1993;
 export const STANDARD_DATASET = 'bund-faelle-zeitreihe';
 
 /** Query-Parameter, die keine Dimensionsfilter sind. */
-const FESTE_PARAMETER = new Set(['ds', 'k', 'modus', 'd', 'von', 'bis', 'vgl']);
+const FESTE_PARAMETER = new Set(['ds', 'k', 'modus', 'd', 'von', 'bis', 'vgl', 'vglw']);
 
 /**
  * Aktuelle Auswahl (Bereich, Delikte, Kennzahl, Filter, Zeitraum, Darstellung).
@@ -38,6 +38,11 @@ export class Auswahl {
   readonly bis = computed(() => toInt(this.params().get('bis')));
   /** Dimension, deren Werte als eigene Linien verglichen werden (z. B. "geschlecht"). */
   readonly vergleich = computed(() => this.params().get('vgl'));
+  /** Selbst gewählte Vergleichswerte (z. B. Regionen); `null` = Vorauswahl der Dimension. */
+  readonly vergleichWerte = computed(() => {
+    const w = this.params().get('vglw');
+    return w === null ? null : w.split(',').filter(Boolean);
+  });
   /** Gewählte Dimensionswerte (alle übrigen Query-Parameter). */
   readonly filter = computed(() => {
     const p = this.params();
@@ -48,7 +53,7 @@ export class Auswahl {
 
   /** Bereich wechseln: Kennzahl, Filter und Vergleich gehören zum Dataset und werden zurückgesetzt. */
   setDataset(id: string) {
-    const reset: Record<string, null> = { k: null, vgl: null };
+    const reset: Record<string, null> = { k: null, vgl: null, vglw: null };
     for (const k of Object.keys(this.filter())) reset[k] = null;
     this.update({ ...reset, ds: id === STANDARD_DATASET ? null : id });
   }
@@ -65,8 +70,12 @@ export class Auswahl {
   setFilter(dimension: string, wert: string | null) {
     this.update({ [dimension]: wert });
   }
+  /** Dimension für den Linienvergleich; eigene Werteauswahl wird dabei zurückgesetzt. */
   setVergleich(dimension: string | null) {
-    this.update({ vgl: dimension });
+    this.update({ vgl: dimension, vglw: null });
+  }
+  setVergleichWerte(werte: readonly string[]) {
+    this.update({ vglw: werte.join(',') });
   }
   addDelikt(schluessel: string) {
     const d = this.delikte();

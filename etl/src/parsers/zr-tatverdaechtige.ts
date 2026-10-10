@@ -8,7 +8,7 @@ import path from 'node:path';
 import { spaltenId, type Dataset, type DimensionWert, type Zelle } from '@crime-stats/shared';
 import { readZeitreihe } from '../lib/zeitreihe.js';
 import { round, toNumber } from '../lib/xlsx.js';
-import { BASIS_DIMENSIONEN, GESCHLECHT, alsWerte } from '../lib/dimensionen.js';
+import { basisDimensionen, GESCHLECHT, alsWerte } from '../lib/dimensionen.js';
 import {
   HINWEIS_GEBIETSSTAND,
   hinweisTatverdaechtigenzaehlung,
@@ -213,7 +213,7 @@ export async function parseZrTatverdaechtige(
         stand,
       },
       dimensionen: [
-        ...BASIS_DIMENSIONEN,
+        ...basisDimensionen(),
         {
           id: 'geschlecht',
           label: 'Geschlecht',

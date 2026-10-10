@@ -1,0 +1,109 @@
+{
+ "pages": {
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html": {
+   "title": "PKS-Tabellen und Interpretationshilfen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/ThematischeGliederung/tabellenthema_node.html": {
+   "error": true
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/Zeitreihen/zeitreihen_node.html": {
+   "error": true
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html": {
+   "error": true
+  }
+ },
+ "downloads": {
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Wichtige-Hinweise-zur-Interpretation.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Wichtige-Hinweise-zur-Interpretation.pdf?__blob=publicationFile&v=4",
+   "text": "PKS 2023 – Wichtige Hinweise zur Interpretation der Daten (PDF, 331KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Straftatenkatalog.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Straftatenkatalog.pdf?__blob=publicationFile&v=4",
+   "text": "PKS 2023 – Straftatenkatalog aktuell (PDF, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Straftatenkatalog-Historie.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Straftatenkatalog-Historie.pdf?__blob=publicationFile&v=4",
+   "text": "PKS 2023 – Straftatenkatalog (4-stellig) - Historie bis 2023 (PDF, 831KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 – Übersicht Summenschlüssel (PDF, 930KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Ausgewaehlte-Straftaten-fuer-Kreise-und-Staedte.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Ausgewaehlte-Straftaten-fuer-Kreise-und-Staedte.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 – Ausgewählte Straftaten/-gruppen für Kreis- und Städtedaten (PDF, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 – Tabellenbeschreibung (PDF, 17MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Hinweise-zu-den-Zeitreihen.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/01_div_Dok/Hinweise-zu-den-Zeitreihen.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 – Hinweise zu den Zeitreihen (PDF, 13MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Aenderungsnachweis/pks2023Aenderungsnachweis.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Aenderungsnachweis/pks2023Aenderungsnachweis.pdf?__blob=publicationFile&v=10",
+   "text": "PKS 2023 - Änderungsnachweis V6.0 (PDF, 226KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Richtlinien.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Richtlinien.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 - Richtlinien für die Führung der Polizeilichen Kriminalstatistik (PDF, 4MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-2-Tabellenuebersicht.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-2-Tabellenuebersicht.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 - Richtlinien - Anlage 2 - Tabellenübersicht (PDF, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-3-Definitionskatalog.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-3-Definitionskatalog.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 - Richtlinien - Anlage 3 - Definitionskatalog (PDF, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-4-Ablaufdiagramm-PKS-Erfassung.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-4-Ablaufdiagramm-PKS-Erfassung.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 - Richtlinien - Anlage 4 - Ablaufdiagramm PKS-Erfassung (PDF, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-5-Beispielsammlung.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2023/Interpretation/02_Rili/Anlage-5-Beispielsammlung.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2023 - Richtlinien - Anlage 5 - Beispielsammlung (PDF, 11MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2023/PKSTabellen/pksTabellen_node.html"
+   ]
+  }
+ }
+}

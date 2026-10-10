@@ -5,15 +5,22 @@
  */
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import { PROCESSED_DIR, rawYearDir } from './paths.js';
+import { PROCESSED_DIR, RAW_DIR, rawYearDir } from './paths.js';
 import { Ausgabe } from './lib/ausgabe.js';
-import { downloadUrl, findeDatei, findeDateien } from './lib/dateien.js';
+import {
+  downloadUrl,
+  findeDatei,
+  findeDateiOptional,
+  findeDateien,
+  vorhandeneJahrgaenge,
+} from './lib/dateien.js';
 import { ergaenzeErlaeuterungen } from './lib/erlaeuterungen.js';
 import { StraftatenKatalog } from './lib/straftaten.js';
 import { parseDefinitionskatalog } from './parsers/definitionen-pdf.js';
 import { parseStraftatenkatalog } from './parsers/katalog-pdf.js';
 import { parseSummenschluessel } from './parsers/summenschluessel-pdf.js';
 import { parseZrBundFaelle } from './parsers/zr-bund-faelle.js';
+import { ergaenzeRegionen, type RegionaleQuelle } from './parsers/regionale-faelle.js';
 import { parseZrOpfer } from './parsers/zr-opfer.js';
 import { parseZrTatverdaechtige } from './parsers/zr-tatverdaechtige.js';
 
@@ -42,9 +49,20 @@ const ausgabe = new Ausgabe(PROCESSED_DIR, jahrgang);
 // Fälle zuerst: Sie bestimmen die Bezeichnungen im Straftatenkatalog.
 const faelle = await findeDatei(raw, /^T01-ZR-Bund-F(ä|ae)lle.*\.xlsx$/i);
 console.log(`Lese ${path.relative(raw, faelle)}`);
-await ausgabe.dataset(
-  await parseZrBundFaelle(faelle, jahrgang, katalog, await downloadUrl(raw, faelle)),
-);
+const faelleDs = await parseZrBundFaelle(faelle, jahrgang, katalog, await downloadUrl(raw, faelle));
+
+// Länder und Städte aus den Jahrgangstabellen aller vorhandenen Jahrgänge bis zum aktuellen
+console.log('Lese Länder und Städte (LA-F-02, ST-F-01)');
+const regionalQuellen: RegionaleQuelle[] = [];
+for (const jahr of (await vorhandeneJahrgaenge(RAW_DIR)).filter((j) => j <= jahrgang)) {
+  regionalQuellen.push({
+    jahr,
+    laender: await findeDateiOptional(rawYearDir(jahr), /^LA-F-02-T01-Laender-Faelle-HZ.*\.xlsx$/i),
+    staedte: await findeDateiOptional(rawYearDir(jahr), /^ST-F-01-T01-Staedte-Faelle-HZ.*\.xlsx$/i),
+  });
+}
+await ergaenzeRegionen(faelleDs, regionalQuellen);
+await ausgabe.dataset(faelleDs, { partitioniert: true });
 
 console.log('Lese Tatverdächtige (ZR-TV, ZR-BZ T20/T40/T50)');
 await ausgabe.dataset(

@@ -33,3 +33,21 @@ export async function downloadUrl(rawDir: string, datei: string): Promise<string
   }
   return undefined;
 }
+
+/** Wie `findeDatei`, aber `undefined`, wenn es keine passende Datei gibt. */
+export async function findeDateiOptional(dir: string, muster: RegExp): Promise<string | undefined> {
+  try {
+    return await findeDatei(dir, muster);
+  } catch {
+    return undefined;
+  }
+}
+
+/** PKS-Jahrgänge, für die Rohdaten vorliegen (Ordner data/raw/<jahr>), aufsteigend. */
+export async function vorhandeneJahrgaenge(rawRoot: string): Promise<number[]> {
+  const eintraege = await readdir(rawRoot, { withFileTypes: true });
+  return eintraege
+    .filter((e) => e.isDirectory() && /^\d{4}$/.test(e.name))
+    .map((e) => Number(e.name))
+    .sort((a, b) => a - b);
+}

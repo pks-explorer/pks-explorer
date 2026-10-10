@@ -12,7 +12,9 @@ import {
   markierungen,
   relevanteHinweise,
   wertHinweise,
+  vergleichWerte,
   wertLabel,
+  type Vergleich,
   type Serie,
 } from './serien';
 
@@ -92,10 +94,14 @@ export class ExplorerZustand {
     }
     return out;
   });
-  readonly vergleichbar = computed(() => this.dimensionen().filter((d) => d.vergleich?.length));
+  readonly vergleichbar = computed(() => this.dimensionen().filter((d) => d.werte!.length > 1));
   readonly vergleichDim = computed(() =>
     this.vergleichbar().find((d) => d.id === this.auswahl.vergleich()),
   );
+  readonly vergleich = computed<Vergleich | undefined>(() => {
+    const dim = this.vergleichDim();
+    return dim ? { dim, werte: vergleichWerte(dim, this.auswahl.vergleichWerte()) } : undefined;
+  });
 
   readonly alleJahre = computed(() => this.meta()?.jahre ?? []);
   readonly zeitraum = computed(() => {
@@ -136,12 +142,19 @@ export class ExplorerZustand {
 
   // --- Linien und Werte -------------------------------------------------------------------
 
-  private readonly alleLinien = computed(() => {
+  /** Gewählte Delikte, die es im aktuellen Bereich gibt. */
+  readonly delikteImBereich = computed(() => {
     const ds = this.datasetRes.value();
-    if (!ds) return [];
-    const delikte = this.auswahl.delikte().filter((k) => ds.hatSchluessel(k));
-    return linienBilden(delikte, this.filterWerte(), this.vergleichDim(), this.name);
+    return ds ? this.auswahl.delikte().filter((k) => ds.hatSchluessel(k)) : [];
   });
+  /** Wie viele Vergleichswerte wählbar sind, damit es höchstens MAX_LINIEN Linien werden. */
+  readonly maxVergleichWerte = computed(() =>
+    Math.max(1, Math.floor(MAX_LINIEN / Math.max(1, this.delikteImBereich().length))),
+  );
+
+  private readonly alleLinien = computed(() =>
+    linienBilden(this.delikteImBereich(), this.filterWerte(), this.vergleich(), this.name),
+  );
   readonly linien = computed(() => this.alleLinien().slice(0, MAX_LINIEN));
   readonly ausgeblendeteLinien = computed(() => this.alleLinien().length - this.linien().length);
 
@@ -216,7 +229,7 @@ export class ExplorerZustand {
     const { von, bis } = this.anzeigeZeitraum();
     return [
       ...relevanteHinweise(m.hinweise, k.id, von, bis),
-      ...wertHinweise(this.dimensionen(), this.filterWerte(), this.vergleichDim(), k.id),
+      ...wertHinweise(this.dimensionen(), this.filterWerte(), this.vergleich(), k.id),
     ];
   });
   readonly markierungen = computed(() => {

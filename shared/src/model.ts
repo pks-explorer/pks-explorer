@@ -27,6 +27,8 @@ export interface DimensionWert {
   hinweis?: string;
   /** Kennzahlen, für die der Hinweis gilt; fehlt = alle. */
   hinweisKennzahlen?: string[];
+  /** Gruppe für die Auswahl, z. B. "Länder" oder "Städte". */
+  gruppe?: string;
 }
 
 export interface DimensionDef {
@@ -36,7 +38,10 @@ export interface DimensionDef {
   werte?: DimensionWert[];
   /** Vorauswahl, z. B. "insgesamt". */
   standard?: string;
-  /** Werte für "Vergleichen nach": überschneidungsfrei, z. B. männlich/weiblich oder Kinder/Jugendliche/…. */
+  /**
+   * Vorauswahl für "Vergleichen nach": überschneidungsfreie Werte, z. B. männlich/weiblich oder
+   * Kinder/Jugendliche/…. Fehlt sie (z. B. bei Regionen), wählt man die Werte selbst.
+   */
   vergleich?: string[];
   /**
    * Der Wert steht nicht in einer eigenen Zeilenspalte, sondern ist Teil der Spalten-ID

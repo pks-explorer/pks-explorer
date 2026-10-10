@@ -7,7 +7,7 @@
 import type { Dataset, KennzahlDef, Zelle } from '@crime-stats/shared';
 import { round, toNumber } from '../lib/xlsx.js';
 import { readZeitreihe } from '../lib/zeitreihe.js';
-import { BASIS_DIMENSIONEN } from '../lib/dimensionen.js';
+import { basisDimensionen } from '../lib/dimensionen.js';
 import {
   HINWEIS_GEBIETSSTAND,
   HINWEIS_REGISTRIERTE_KRIMINALITAET,
@@ -105,6 +105,12 @@ const HZ_Z22: KennzahlDef = {
     'HZ auf Basis Zensus 2022; erst ab 2024 verfügbar, mit Vorjahren nur eingeschränkt vergleichbar.',
 };
 
+/** Nachkommastellen je Kennzahl – auch für die Länder- und Städtetabellen derselben Kennzahlen. */
+export const STELLEN: Record<string, number> = {
+  ...Object.fromEntries(KENNZAHLEN.map((k) => [k.id, k.stellen])),
+  [HZ_Z22.id]: 2,
+};
+
 export async function parseZrBundFaelle(
   datei: string,
   jahrgang: number,
@@ -157,7 +163,7 @@ export async function parseZrBundFaelle(
       bereich: 'Fälle',
       ebene: 'bund',
       quelle: { jahrgang, datei: t.datei, url, stand: t.stand },
-      dimensionen: BASIS_DIMENSIONEN,
+      dimensionen: basisDimensionen(),
       kennzahlen,
       spalten: ['jahr', 'region', 'schluessel', ...kennzahlen.map((k) => k.id)],
       jahre: [...new Set(rows.map((z) => z[0] as number))].sort((a, b) => a - b),

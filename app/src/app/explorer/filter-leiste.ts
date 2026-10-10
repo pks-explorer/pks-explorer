@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import type { DimensionDef } from '@crime-stats/shared';
 import { Auswahl } from '../core/auswahl';
 import { ExplorerZustand } from './explorer-zustand';
+import { WerteAuswahl, nachGruppe } from './werte-auswahl';
 
 interface Preset {
   label: string;
@@ -20,6 +21,7 @@ const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(mi
 /** Bereich, Kennzahl, Dimensionsfilter, Vergleich, Zeitraum und Darstellung – schreibt in die URL. */
 @Component({
   selector: 'app-filter-leiste',
+  imports: [WerteAuswahl],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './filter-leiste.html',
   styleUrl: './filter-leiste.scss',
@@ -28,6 +30,10 @@ export class FilterLeiste {
   protected readonly auswahl = inject(Auswahl);
   protected readonly z = inject(ExplorerZustand);
   protected readonly presets = PRESETS;
+
+  protected gruppiert(d: DimensionDef) {
+    return nachGruppe(d.werte ?? []);
+  }
 
   protected setFilter(d: DimensionDef, wert: string) {
     this.auswahl.setFilter(d.id, wert === d.standard ? null : wert);

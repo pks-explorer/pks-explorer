@@ -36,22 +36,35 @@ export const wertLabel = (d: DimensionDef, id: string) =>
 export function linienBilden(
   delikte: readonly string[],
   filter: Filter,
-  vergleich: DimensionDef | undefined,
+  vergleich: Vergleich | undefined,
   name: (schluessel: string) => string,
 ): Linie[] {
   return delikte.flatMap((schluessel) => {
-    if (!vergleich?.vergleich)
-      return [{ id: schluessel, schluessel, label: name(schluessel), filter }];
-    return vergleich.vergleich.map((w) => ({
+    if (!vergleich) return [{ id: schluessel, schluessel, label: name(schluessel), filter }];
+    const { dim, werte } = vergleich;
+    return werte.map((w) => ({
       id: `${schluessel}|${w}`,
       schluessel,
-      label:
-        delikte.length > 1
-          ? `${name(schluessel)} · ${wertLabel(vergleich, w)}`
-          : wertLabel(vergleich, w),
-      filter: { ...filter, [vergleich.id]: w },
+      label: delikte.length > 1 ? `${name(schluessel)} · ${wertLabel(dim, w)}` : wertLabel(dim, w),
+      filter: { ...filter, [dim.id]: w },
     }));
   });
+}
+
+/** Dimension, deren Werte als eigene Linien gezeigt werden, mit den gewählten Werten. */
+export interface Vergleich {
+  dim: DimensionDef;
+  werte: readonly string[];
+}
+
+/**
+ * Vergleichswerte: eigene Auswahl aus der URL (nur gültige Werte), sonst die Vorauswahl der Dimension,
+ * sonst ihr Standardwert – dann wählt man weitere Werte selbst dazu.
+ */
+export function vergleichWerte(dim: DimensionDef, gewaehlt: readonly string[] | null): string[] {
+  const gueltig = new Set(dim.werte?.map((w) => w.id));
+  if (gewaehlt) return gewaehlt.filter((w) => gueltig.has(w));
+  return dim.vergleich ?? (dim.standard ? [dim.standard] : []);
 }
 
 /** Bereich der Jahre (Indizes), in dem mindestens eine Reihe einen Wert hat; null = keine Werte. */
@@ -105,11 +118,11 @@ export function relevanteHinweise(
 export function wertHinweise(
   dimensionen: DimensionDef[],
   filter: Filter,
-  vergleich: DimensionDef | undefined,
+  vergleich: Vergleich | undefined,
   kennzahl: string,
 ): Hinweis[] {
   return dimensionen.flatMap((d) => {
-    const ids = d === vergleich ? (d.vergleich ?? []) : [filter[d.id]];
+    const ids = d === vergleich?.dim ? vergleich.werte : [filter[d.id]];
     return (d.werte ?? [])
       .filter((w) => ids.includes(w.id) && w.hinweis)
       .filter((w) => !w.hinweisKennzahlen || w.hinweisKennzahlen.includes(kennzahl))

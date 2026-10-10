@@ -30,8 +30,22 @@
         [disabled]="z.vergleichDim()?.id === d.id"
         (change)="setFilter(d, $any($event.target).value)"
       >
-        @for (w of d.werte; track w.id) {
-          <option [value]="w.id" [selected]="w.id === z.filterWerte()[d.id]">{{ w.label }}</option>
+        @for (g of gruppiert(d); track g.gruppe) {
+          @if (g.gruppe) {
+            <optgroup [label]="g.gruppe">
+              @for (w of g.werte; track w.id) {
+                <option [value]="w.id" [selected]="w.id === z.filterWerte()[d.id]">
+                  {{ w.label }}
+                </option>
+              }
+            </optgroup>
+          } @else {
+            @for (w of g.werte; track w.id) {
+              <option [value]="w.id" [selected]="w.id === z.filterWerte()[d.id]">
+                {{ w.label }}
+              </option>
+            }
+          }
         }
       </select>
     </label>
@@ -47,6 +61,18 @@
         }
       </select>
     </label>
+  }
+
+  @if (z.vergleich(); as v) {
+    <div class="feld">
+      <span>{{ v.dim.label }}: Auswahl</span>
+      <app-werte-auswahl
+        [dim]="v.dim"
+        [gewaehlt]="v.werte"
+        [max]="z.maxVergleichWerte()"
+        (aendern)="auswahl.setVergleichWerte($event)"
+      />
+    </div>
   }
 
   <div class="feld">
