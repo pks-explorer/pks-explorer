@@ -1,8 +1,1929 @@
 {
  "pages": {
   "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/pksTabellen_node.html": {
-   "error": true
+   "title": "PKS-Tabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/R%C3%A4umlicheGliederung/tabellenraum_node.html": {
+   "title": "PKS Tabellen - Räumliche Gliederung"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/ThematischeGliederung/tabellenthema_node.html": {
+   "title": "PKS Tabellen - Thematische Gliederung"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html": {
+   "title": "PKS 2021 - Zeitreihen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html": {
+   "title": "PKS 2021 - Bevölkerungsdaten"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html": {
+   "title": "PKS 2021 Bund Falltabellen - PKS 2021 Bund - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html": {
+   "title": "PKS 2021 Bund - Tatverdächtige insgesamt - PKS 2021 Bund - Tatverdächtige insgesamt"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html": {
+   "title": "PKS 2021 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes - PKS 2021 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html": {
+   "title": "PKS 2021 Bund-Opfertabellen - PKS 2021 Bund - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html": {
+   "title": "PKS 2021 Bund - Belastungszahlen - PKS 2021 Bund - Belastungszahlen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html": {
+   "title": "PKS 2021 - Länder Falltabellen - PKS 2021 Länder - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html": {
+   "title": "PKS 2021 - Länder Tatverdächtigentabellen - PKS 2021 Länder - Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html": {
+   "title": "PKS 2021 - Länder Opfertabellen - PKS 2021 Länder - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html": {
+   "title": "PKS 2021 - Kreis Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html": {
+   "title": "PKS 2021 - Kreise Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html": {
+   "title": "PKS 2021 - Kreise Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html": {
+   "title": "PKS 2021 - Städte Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html": {
+   "title": "PKS 2021 - Städte Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html": {
+   "title": "PKS 2021 - Städte Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html": {
+   "title": "PKS 2021 Bund Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html": {
+   "title": "PKS 2021 Bund - Tatverdächtige insgesamt"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet_node.html": {
+   "title": "PKS 2021 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen_node.html": {
+   "title": "PKS 2021 Bund-Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen_node.html": {
+   "title": "PKS 2021 Bund - Belastungszahlen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen_node.html": {
+   "title": "PKS 2021 - Länder Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV_node.html": {
+   "title": "PKS 2021 - Länder Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen_node.html": {
+   "title": "PKS 2021 - Länder Opfertabellen"
   }
  },
- "downloads": {}
+ "downloads": {
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf?__blob=publicationFile&v=6",
+   "text": "PKS 2021 – Tabellenbeschreibung (PDF, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Straftatenkatalog.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Straftatenkatalog.pdf?__blob=publicationFile&v=5",
+   "text": "PKS 2021 – Straftatenkatalog aktuell (PDF, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf?__blob=publicationFile&v=7",
+   "text": "PKS 2021 – Übersicht Summenschlüssel (PDF, 330KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Faelle/ZR-F-01-T01-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Faelle/ZR-F-01-T01-Faelle_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-ZR-Bund-Fälle (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Faelle/ZR-F-01-T01-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Faelle/ZR-F-01-T01-Faelle_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-ZR-Bund-Fälle (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-ZR-Bund-TV-insg (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-ZR-Bund-TV-insg (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-ZR-Bund-TV-männl (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-ZR-Bund-TV-männl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "20-ZR-Bund-TV-weibl (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_csv.csv?__blob=publicationFile&v=4",
+   "text": "20-ZR-Bund-TV-weibl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TV-insg-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_csv.csv?__blob=publicationFile&v=5",
+   "text": "T40-ZR-Bund-TV-insg-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TV-männl-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TV-männl-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TV-weibl-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TV-weibl-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-ZR-Bund-TV-insg-NDTV (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_csv.csv?__blob=publicationFile&v=5",
+   "text": "T50-ZR-Bund-TV-insg-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-ZR-Bund-TV-männl-NDTV (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_csv.csv?__blob=publicationFile&v=6",
+   "text": "T50-ZR-Bund-TV-männl-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-ZR-Bund-TV-weibl-NDTV (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_csv.csv?__blob=publicationFile&v=5",
+   "text": "T50-ZR-Bund-TV-weibl-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-insg (xlsx, 270KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-Versuch (xlsx, 245KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-Versuch (csv, 258KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-vollendet (xlsx, 271KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-vollendet (csv, 286KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T92-ZR-Bund-insg (xlsx, 316KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-insg (csv, 300KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T92-ZR-Bund-Versuch (xlsx, 276KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-Versuch (csv, 268KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T92-ZR-Bund-vollendet (xlsx, 309KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-vollendet (csv, 298KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-ZR-Bund-TVBZ-insg (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TVBZ-insg (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-männl (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TVBZ-männl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-weibl (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TVBZ-weibl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T91-ZR-Bund-OGZ-insg (xlsx, 316KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-insg (csv, 287KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-OGZ-Versuch (xlsx, 263KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-Versuch (csv, 259KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-OGZ-vollendet (xlsx, 310KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-vollendet (csv, 285KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Bund-TVBZ (xlsx, 42KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Bund-TVBZ (PDF, 177KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Bund-OGZ (xlsx, 86KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Bund-OGZ (PDF, 71KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/03-LA-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/03-LA-BV-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Bund-Land-HZ (xlsx, 17KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/03-LA-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/03-LA-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Bund-Land-HZ (PDF, 65KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/04-KR-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/04-KR-BV-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Kreis-HZ (xlsx, 48KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/04-KR-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/04-KR-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Kreis-HZ (PDF, 206KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/05-ST-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/05-ST-BV-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Stadt-HZ (xlsx, 26KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/05-ST-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Sonst_Tabellen/05-ST-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Stadt-HZ (PDF, 96KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/SonstigeTabellen/sonstigeTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-01-T01-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-01-T01-Faelle_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-Fälle (xlsx, 156KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-01-T01-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-01-T01-Faelle_csv.csv?__blob=publicationFile&v=5",
+   "text": "T01-Bund-Fälle (csv, 150KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-02-T01-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-02-T01-Fallentw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-Fallentwicklung (xlsx, 173KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-02-T01-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-02-T01-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Fallentwicklung (csv, 128KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Bund-vollendete-Fälle (xlsx, 144KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Bund-vollendete-Fälle (csv, 143KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-Tatortverteilung (xlsx, 122KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatortverteilung (csv, 106KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-Tatzeit-vor-2021 (xlsx, 179KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatzeit-vor-2021 (csv, 160KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-06-T12-aufgeklaert_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-06-T12-aufgeklaert_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T12-Bund-aufgeklärte Fälle (xlsx, 115KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-06-T12-aufgeklaert_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-06-T12-aufgeklaert_csv.csv?__blob=publicationFile&v=3",
+   "text": "T12-Bund-aufgeklärte Fälle (csv, 123KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-07-T07-Schaden_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-07-T07-Schaden_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T07-Bund-Schaden (xlsx, 62KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-07-T07-Schaden_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-07-T07-Schaden_csv.csv?__blob=publicationFile&v=3",
+   "text": "T07-Bund-Schaden (csv, 57KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-08-T08-Tatzeit_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-08-T08-Tatzeit_xls.xlsx?__blob=publicationFile&v=2",
+   "text": "T08-Bund-Tatzeit (xlsx, 142KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-08-T08-Tatzeit_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-08-T08-Tatzeit_csv.csv?__blob=publicationFile&v=2",
+   "text": "T08-Bund-Tatzeit (csv, 165KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-09-T02-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-09-T02-Wikri_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T02-Bund–Wikri-Fälle (xlsx, 50KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-09-T02-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-09-T02-Wikri_csv.csv?__blob=publicationFile&v=3",
+   "text": "T02-Bund–Wikri-Fälle (csv, 39KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T02-Bund-Wikri–Fallentwicklung (xlsx, 59KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T02-Bund-Wikri–Fallentwicklung (csv, 34KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T09-Bund-Wikri-Schaden (xlsx, 23KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_csv.csv?__blob=publicationFile&v=3",
+   "text": "T09-Bund-Wikri-Schaden (csv, 11KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-12-T05-TM-Internet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-12-T05-TM-Internet_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T05-Bund-TM-Internet-Fälle (xlsx, 133KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-12-T05-TM-Internet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-12-T05-TM-Internet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fälle (csv, 128KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T05-Bund-TM-Internet-Fallentwicklung (xlsx, 122KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fallentwicklung (csv, 110KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-14-T03-Faelle-BP_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-14-T03-Faelle-BP_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-Bundespolizei-Fälle (xlsx, 127KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-14-T03-Faelle-BP_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Faelle/BU-F-14-T03-Faelle-BP_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Bundespolizei-Fälle (csv, 125KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-01-T20-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-01-T20-TV_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV (xlsx, 688KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-01-T20-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-01-T20-TV_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV (csv, 434KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Bund-TV-Alkohol (xlsx, 334KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV-Alkohol (csv, 394KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV-vollendete-Fälle (xlsx, 405KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-vollendete-Fälle (csv, 438KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV - ab-60-Jahre (xlsx, 215KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV - ab-60-Jahre (csv, 316KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV-Mehrfach (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Bund-TV-Mehrfach-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Bund-TV-Mehrfach-Alkohol (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-Alkohol (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T21-Bund (xlsx, 545KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_csv.csv?__blob=publicationFile&v=3",
+   "text": "T21-Bund (csv, 425KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T22-Bund (xlsx, 377KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_csv.csv?__blob=publicationFile&v=3",
+   "text": "T22-Bund (csv, 362KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T231-Bund (xlsx, 164KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_csv.csv?__blob=publicationFile&v=4",
+   "text": "T231-Bund (csv, 131KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T232-Bund (xlsx, 230KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_csv.csv?__blob=publicationFile&v=4",
+   "text": "T232-Bund (csv, 199KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Bund-TV-deu (xlsx, 402KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TV-deu (csv, 431KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TV-deu-ab-60-Jahre (xlsx, 213KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-ab-60-Jahre (csv, 314KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TV-deu-Mehrfach (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-Mehrfach (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TV-deu-Mehrfach-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-Mehrfach-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T28-Bund (xlsx, 507KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T28-Bund (csv, 414KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Bund-TV-NDTV (xlsx, 385KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Bund-TV-NDTV (csv, 417KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Bund-TV-NDTV-ab-60-Jahre (xlsx, 202KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-ab-60-Jahre (csv, 307KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Bund-TV-NDTV-Mehrfach (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Bund-TV-NDTV-Mehrfach-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T29-Bund (xlsx, 484KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T29-Bund (csv, 411KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T62-Bund (xlsx, 807KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_csv.csv?__blob=publicationFile&v=4",
+   "text": "T62-Bund (csv, 527KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T61-Bund (xlsx, 281KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv?__blob=publicationFile&v=5",
+   "text": "T61-Bund (csv, 330KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T51-Bund (xlsx, 338KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_csv.csv?__blob=publicationFile&v=4",
+   "text": "T51-Bund (csv, 391KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T53-Bund (xlsx, 324KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_csv.csv?__blob=publicationFile&v=5",
+   "text": "T53-Bund (csv, 386KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T54-Bund (xlsx, 337KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_csv.csv?__blob=publicationFile&v=4",
+   "text": "T54-Bund (csv, 390KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T55-Bund (xlsx, 341KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_csv.csv?__blob=publicationFile&v=4",
+   "text": "T55-Bund (csv, 391KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-01-T91-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-01-T91-Opfer_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Bund-Opfer (xlsx, 101KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-01-T91-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-01-T91-Opfer_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer (csv, 95KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-02-T91-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-02-T91-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Bund-Opfer-Alter-erw (xlsx, 183KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-02-T91-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-02-T91-Alter-erw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer-Alter-erw (csv, 151KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Bund-Opfer-ab-60-Jahre (xlsx, 85KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer-ab-60-Jahre (csv, 88KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T911-Bund (xlsx, 397KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_csv.csv?__blob=publicationFile&v=3",
+   "text": "T911-Bund (csv, 231KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-05-T92-O-TV-Bez_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-05-T92-O-TV-Bez_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T92-Bund (xlsx, 77KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-05-T92-O-TV-Bez_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-05-T92-O-TV-Bez_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-Bund (csv, 82KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-06-T921-O-TV-Partner_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-06-T921-O-TV-Partner_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T921-Bund (xlsx, 72KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-06-T921-O-TV-Partner_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-06-T921-O-TV-Partner_csv.csv?__blob=publicationFile&v=3",
+   "text": "T921-Bund (csv, 77KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-07-T922-O-TV-Familie_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-07-T922-O-TV-Familie_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T922-Bund (xlsx, 90KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-07-T922-O-TV-Familie_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-07-T922-O-TV-Familie_csv.csv?__blob=publicationFile&v=3",
+   "text": "T922-Bund (csv, 89KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-08-T923-O-TV-informell_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-08-T923-O-TV-informell_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T923-Bund (xlsx, 61KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-08-T923-O-TV-informell_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-08-T923-O-TV-informell_csv.csv?__blob=publicationFile&v=3",
+   "text": "T923-Bund (csv, 69KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T93-Bund (xlsx, 80KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_csv.csv?__blob=publicationFile&v=3",
+   "text": "T93-Bund (csv, 82KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T931-Bund (xlsx, 78KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_csv.csv?__blob=publicationFile&v=3",
+   "text": "T931-Bund (csv, 81KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T932-Bund (xlsx, 62KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_csv.csv?__blob=publicationFile&v=4",
+   "text": "T932-Bund (csv, 70KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T933-Bund (xlsx, 78KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_csv.csv?__blob=publicationFile&v=4",
+   "text": "T933-Bund (csv, 81KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-13-T94-Opferspezifik_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-13-T94-Opferspezifik_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T94-Bund (xlsx, 71KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-13-T94-Opferspezifik_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-13-T94-Opferspezifik_csv.csv?__blob=publicationFile&v=3",
+   "text": "T94-Bund (csv, 75KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T941-Bund (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_csv.csv?__blob=publicationFile&v=3",
+   "text": "T941-Bund (csv, 82KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T942-Bund (xlsx, 72KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_csv.csv?__blob=publicationFile&v=3",
+   "text": "T942-Bund (csv, 75KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T943-Bund (xlsx, 93KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_csv.csv?__blob=publicationFile&v=3",
+   "text": "T943-Bund (csv, 90KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Bund-HZ (xlsx, 120KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_csv.csv?__blob=publicationFile&v=5",
+   "text": "T01-Bund-HZ (csv, 91KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TVBZ-deu (xlsx, 737KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TVBZ-deu (csv, 377KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-OGZ (xlsx, 171KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-OGZ (csv, 97KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-01-T01-Laender-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-01-T01-Laender-Faelle_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fälle (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-01-T01-Laender-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-01-T01-Laender-Faelle_csv.csv?__blob=publicationFile&v=6",
+   "text": "T01-Land-Fälle (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fälle-HZ (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_csv.csv?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fälle-HZ (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-03-T01-Laender-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-03-T01-Laender-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fallentw (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-03-T01-Laender-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-03-T01-Laender-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Land-Fallentw (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-04-T07-Laender-Schaden_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-04-T07-Laender-Schaden_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T07-Land-Schaden (xlsx, 673KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-04-T07-Laender-Schaden_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-04-T07-Laender-Schaden_csv.csv?__blob=publicationFile&v=4",
+   "text": "T07-Land-Schaden (csv, 948KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land-Wikri-Fälle (xlsx, 493KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land-Wikri-Fälle (csv, 691KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land–Wikri-Fälle-HZ (xlsx, 338KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land–Wikri-Fälle-HZ (csv, 585KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land-Wikri-Fallentwicklung (xlsx, 370KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land-Wikri-Fallentwicklung (csv, 608KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T09-Land-Wikri-Schaden (xlsx, 153KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_csv.csv?__blob=publicationFile&v=4",
+   "text": "T09-Land-Wikri-Schaden (csv, 178KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T05-Land-TM-Internet-Fälle-HZ (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T05-Land-TM-Internet-Fälle-HZ (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T05-Land-TM-Internet-Fallentwicklung (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T05-Land-TM-Internet-Fallentwicklung (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Land-TV (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Land-TV (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Land-TV - ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Land-TV - ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Land-TV-deu (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Land-TV-deu (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Land-TV-deu-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Land-TV-deu-ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Land-TV-NDTV (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Land-TV-NDTV (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Land-TV-NDTV-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Land-TV-NDTV-ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx?__blob=publicationFile&v=7",
+   "text": "T61-Land (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv?__blob=publicationFile&v=6",
+   "text": "T61-Land (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-01-T91-Laender-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-01-T91-Laender-Opfer_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Land-Opfer (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-01-T91-Laender-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-01-T91-Laender-Opfer_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer-Alter-erw (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Land-Opfer-Alter-erw (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Land-Opfer-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer-ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Kreis-Fälle-HZ (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Kreis-Fälle-HZ (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Kreis-TV (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Kreis-TV (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Kreis-TV - ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Kreis-TV - ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Kreis-TV-deu (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Kreis-TV-deu (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Kreis-TV-deu-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Kreis-TV-deu-ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Kreis-TV-NDTV (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Kreis-TV-NDTV (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Kreis-TV-NDTV-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Kreis-TV-NDTV-ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Kreis-Opfer (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer-Alter-erw (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Kreis-Opfer-Alter-erw (csv, 4MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer-ab-60-Jahre (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Kreis-Opfer-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T01-Stadt-Fälle-HZ (xlsx, 370KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Stadt-Fälle-HZ (csv, 435KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Stadt-TV (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Stadt-TV (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Stadt-TV - ab-60-Jahre (xlsx, 622KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Stadt-TV - ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Stadt-TV-deu (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Stadt-TV-deu (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Stadt-TV-deu-ab-60-Jahre (xlsx, 610KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Stadt-TV-deu-ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Stadt-TV-NDTV (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Stadt-TV-NDTV (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Stadt-TV-NDTV-ab-60-Jahre (xlsx, 577KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Stadt-TV-NDTV-ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer (xlsx, 539KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Stadt-Opfer (csv, 602KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer-Alter-erw (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Stadt-Opfer-Alter-erw (csv, 898KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer-ab-60-Jahre (xlsx, 476KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2021/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Stadt-Opfer-ab-60-Jahre (csv, 563KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2021/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  }
+ }
 }

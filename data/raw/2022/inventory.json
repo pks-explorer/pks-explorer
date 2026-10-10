@@ -1,0 +1,2004 @@
+{
+ "pages": {
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/pksTabellen_node.html": {
+   "title": "PKS-Tabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/R%C3%A4umlicheGliederung/tabellenraum_node.html": {
+   "title": "PKS Tabellen - Räumliche Gliederung"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/ThematischeGliederung/tabellenthema_node.html": {
+   "title": "PKS Tabellen - Thematische Gliederung"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html": {
+   "title": "PKS 2022 - Zeitreihen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html": {
+   "title": "PKS 2022 - Bevölkerungsdaten"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html": {
+   "title": "PKS 2022 Bund Falltabellen - PKS 2022 Bund - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html": {
+   "title": "PKS 2021 Bund - Tatverdächtige insgesamt - PKS 2022 Bund - Tatverdächtige insgesamt"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html": {
+   "title": "PKS 2022 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes - PKS 2022 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html": {
+   "title": "PKS 2022 Bund-Opfertabellen - PKS 2022 Bund - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html": {
+   "title": "PKS 2022 Bund - Belastungszahlen - PKS 2022 Bund - Belastungszahlen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html": {
+   "title": "PKS-Tabellen - PKS 2022 Länder - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html": {
+   "title": "PKS 2022 - Länder Tatverdächtigentabellen - PKS 2022 Länder - Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html": {
+   "title": "PKS-Tabellen - PKS 2022 Länder - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen.html": {
+   "title": "PKS 2022 - Kreis Falltabellen - PKS 2022 Kreis - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html": {
+   "title": "PKS 2022 - Kreise Tatverdächtigentabellen - PKS 2022 Kreise - Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html": {
+   "title": "PKS 2022 - Kreise Opfertabellen - PKS 2022 Kreise - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen.html": {
+   "title": "PKS 2022 - Städte Falltabellen - PKS 2022 Städte - Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html": {
+   "title": "PKS 2022 - Städte Tatverdächtigentabellen - PKS 2022 Städte - Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html": {
+   "title": "PKS 2021 - Städte Opfertabellen - PKS 2022 Städte - Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html": {
+   "title": "PKS 2022 Bund Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html": {
+   "title": "PKS 2021 Bund - Tatverdächtige insgesamt"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet_node.html": {
+   "title": "PKS 2022 Bund – Tatverdächtige deutsch/nichtdeutsch/nach Nationalitäten/nach Anlass des Aufenthaltes"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen_node.html": {
+   "title": "PKS 2022 Bund-Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen_node.html": {
+   "title": "PKS 2022 Bund - Belastungszahlen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV_node.html": {
+   "title": "PKS 2022 - Länder Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html": {
+   "title": "PKS 2022 - Kreis Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html": {
+   "title": "PKS 2022 - Kreise Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html": {
+   "title": "PKS 2022 - Kreise Opfertabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html": {
+   "title": "PKS 2022 - Städte Falltabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html": {
+   "title": "PKS 2022 - Städte Tatverdächtigentabellen"
+  },
+  "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html": {
+   "title": "PKS 2021 - Städte Opfertabellen"
+  }
+ },
+ "downloads": {
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Tabellenbeschreibung.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2022 – Tabellenbeschreibung (PDF, 17MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Straftatenkatalog.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Straftatenkatalog.pdf?__blob=publicationFile&v=5",
+   "text": "PKS 2022 – Straftatenkatalog aktuell (PDF, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/01_div_Dok/Uebersicht-Summenschluessel.pdf?__blob=publicationFile&v=3",
+   "text": "PKS 2022 – Übersicht Summenschlüssel (PDF, 929KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/pksTabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Faelle/ZR-F-01-T01-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Faelle/ZR-F-01-T01-Faelle_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-ZR-Bund-Fälle (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Faelle/ZR-F-01-T01-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Faelle/ZR-F-01-T01-Faelle_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-ZR-Bund-Fälle (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-ZR-Bund-TV-insg (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-01-T20-TV-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-ZR-Bund-TV-insg (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-ZR-Bund-TV-männl (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-02-T20-TV-maennlich_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-ZR-Bund-TV-männl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "20-ZR-Bund-TV-weibl (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-03-T20-TV-weiblich_csv.csv?__blob=publicationFile&v=3",
+   "text": "20-ZR-Bund-TV-weibl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-insg-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-04-T40-TV-insg-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-insg-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-männl-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-05-T40-TV-maennlich-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-männl-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-weibl-deu (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-06-T40-TV-weiblich-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-ZR-Bund-TV-weibl-deu (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-ZR-Bund-TV-insg-NDTV (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-07-T50-TV-insg-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-ZR-Bund-TV-insg-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-ZR-Bund-TV-männl-NDTV (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-08-T50-TV-maennlich-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-ZR-Bund-TV-männl-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-ZR-Bund-TV-weibl-NDTV (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Tatverdaechtige/ZR-TV-09-T50-TV-weiblich-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-ZR-Bund-TV-weibl-NDTV (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-insg (xlsx, 284KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-01-T91-Straftaten-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-insg (csv, 306KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-Versuch (xlsx, 256KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-02-T91-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-Versuch (csv, 270KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-vollendet (xlsx, 286KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-03-T91-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-vollendet (csv, 303KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-insg (xlsx, 329KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-04-T92-O-TV-Bez-Straftaten-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-insg (csv, 314KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-Versuch (xlsx, 313KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-05-T92-O-TV-Bez-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-Versuch (csv, 306KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-vollendet (xlsx, 323KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Opfer/ZR-O-06-T92-O-TV-Bez-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-ZR-Bund-vollendet (csv, 312KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-insg (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-01-T40-TVBZ-insg-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-insg (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-männl (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-02-T40-TVBZ-maennlich-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-männl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-weibl (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-03-T40-TVBZ-weiblich-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-ZR-Bund-TVBZ-weibl (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-insg (xlsx, 341KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-04-T91-OGZ-Straftaten-insg_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-insg (csv, 300KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T91-ZR-Bund-OGZ-Versuch (xlsx, 282KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-05-T91-OGZ-Straftaten-Versuche_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-OGZ-Versuch (csv, 271KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-ZR-Bund-OGZ-vollendet (xlsx, 335KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Interpretation/Belastungszahlen/ZR-BZ-06-T91-OGZ-Straftaten-vollendet_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-ZR-Bund-OGZ-vollendet (csv, 298KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Zeitreihen/zeitreihen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Bund-TVBZ (xlsx, 43KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/01-BU-BV-TVBZ-deu-ab-1987_pdf.pdf?__blob=publicationFile&v=4",
+   "text": "BV-Bund-TVBZ (PDF, 185KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "BV-Bund-OGZ (xlsx, 86KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/02-BU-BV-OGZ-insg-ab-2000_pdf.pdf?__blob=publicationFile&v=4",
+   "text": "BV-Bund-OGZ (PDF, 77KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/03-LA-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/03-LA-BV-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "BV-Bund-Land-HZ (xlsx, 17KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/03-LA-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/03-LA-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Bund-Land-HZ (PDF, 55KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/04-KR-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/04-KR-BV-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "BV-Kreis-HZ (xlsx, 47KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/04-KR-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/04-KR-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Kreis-HZ (PDF, 170KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/05-ST-BV-insg_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/05-ST-BV-insg_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "BV-Stadt-HZ (xlsx, 17KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/05-ST-BV-insg_pdf.pdf": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Sonst_Tabellen/05-ST-BV-insg_pdf.pdf?__blob=publicationFile&v=3",
+   "text": "BV-Stadt-HZ (PDF, 101KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/Bev%C3%B6lkerungszahlen/bevoelkerungsdaten_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-01-T01-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-01-T01-Faelle_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Fälle (xlsx, 162KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-01-T01-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-01-T01-Faelle_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Fälle (csv, 157KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-02-T01-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-02-T01-Fallentw_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Fallentwicklung (xlsx, 165KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-02-T01-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-02-T01-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Fallentwicklung (csv, 133KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-vollendete-Fälle (xlsx, 150KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-03-T01-vollendete-Faelle_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-vollendete-Fälle (csv, 149KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatortverteilung (xlsx, 127KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-04-T01-Tatortverteilung-Prozent_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatortverteilung (csv, 112KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatzeit-vor-2022 (xlsx, 186KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-05-T01-Tatzeit-vor-Berichtsjahr_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Tatzeit-vor-2022 (csv, 167KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-06-T12-aufgeklaert_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-06-T12-aufgeklaert_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T12-Bund-aufgeklärte Fälle (xlsx, 119KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-06-T12-aufgeklaert_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-06-T12-aufgeklaert_csv.csv?__blob=publicationFile&v=3",
+   "text": "T12-Bund-aufgeklärte Fälle (csv, 128KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-07-T07-Schaden_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-07-T07-Schaden_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T07-Bund-Schaden (xlsx, 62KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-07-T07-Schaden_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-07-T07-Schaden_csv.csv?__blob=publicationFile&v=3",
+   "text": "T07-Bund-Schaden (csv, 57KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-08-T08-Tatzeit_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-08-T08-Tatzeit_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T08-Bund-Tatzeit (xlsx, 139KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-08-T08-Tatzeit_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-08-T08-Tatzeit_csv.csv?__blob=publicationFile&v=4",
+   "text": "T08-Bund-Tatzeit (csv, 161KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-09-T02-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-09-T02-Wikri_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T02-Bund–Wikri-Fälle (xlsx, 53KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-09-T02-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-09-T02-Wikri_csv.csv?__blob=publicationFile&v=3",
+   "text": "T02-Bund–Wikri-Fälle (csv, 43KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T02-Bund-Wikri–Fallentwicklung (xlsx, 54KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-10-T02-Wikri-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T02-Bund-Wikri–Fallentwicklung (csv, 37KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T09-Bund-Wikri-Schaden (xlsx, 23KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-11-T09-Schaden-Wikri_csv.csv?__blob=publicationFile&v=3",
+   "text": "T09-Bund-Wikri-Schaden (csv, 11KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-12-T05-TM-Internet_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-12-T05-TM-Internet_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fälle (xlsx, 139KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-12-T05-TM-Internet_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-12-T05-TM-Internet_csv.csv?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fälle (csv, 134KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fallentwicklung (xlsx, 128KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-13-T05-TM-Internet-Fallentw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T05-Bund-TM-Internet-Fallentwicklung (csv, 116KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-14-T03-Faelle-BP_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-14-T03-Faelle-BP_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Bundespolizei-Fälle (xlsx, 131KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-14-T03-Faelle-BP_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Faelle/BU-F-14-T03-Faelle-BP_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-Bundespolizei-Fälle (csv, 131KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundFalltabellen/bundfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-01-T20-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-01-T20-TV_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV (xlsx, 718KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-01-T20-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-01-T20-TV_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV (csv, 459KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Alkohol (xlsx, 355KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-02-T20-TV-Alkohol_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Alkohol (csv, 417KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-vollendete-Fälle (xlsx, 424KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-03-T20-TV-vollendete-Faelle_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-vollendete-Fälle (csv, 458KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV - ab-60-Jahre (xlsx, 223KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-04-T20-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV - ab-60-Jahre (csv, 332KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-05-T20-Mehrfach-TV_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-06-T20-Mehrfach-TV-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-Alkohol (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-07-T20-Mehrfach-TV-Alkohol_csv.csv?__blob=publicationFile&v=3",
+   "text": "T20-Bund-TV-Mehrfach-Alkohol (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T21-Bund (xlsx, 421KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-08-T21-Tatort-Wohnsitz_csv.csv?__blob=publicationFile&v=3",
+   "text": "T21-Bund (csv, 449KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T22-Bund (xlsx, 301KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-09-T22-Sonst-Angaben_csv.csv?__blob=publicationFile&v=3",
+   "text": "T22-Bund (csv, 382KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T231-Bund (xlsx, 130KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-10-T231-Vollstreckung-Rettung_csv.csv?__blob=publicationFile&v=3",
+   "text": "T231-Bund (csv, 135KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T232-Bund (xlsx, 181KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-11-T232-TV-Alter-Vollstreckung-Rettung_csv.csv?__blob=publicationFile&v=3",
+   "text": "T232-Bund (csv, 204KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTV/bundTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu (xlsx, 416KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-12-T40-TV-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu (csv, 450KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-ab-60-Jahre (xlsx, 220KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-13-T40-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-ab-60-Jahre (csv, 330KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-Mehrfach (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-14-T40-Mehrfach-TV-deutsch_csv.csv?__blob=publicationFile&v=5",
+   "text": "T40-Bund-TV-deu-Mehrfach (csv, 4MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TV-deu-Mehrfach-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-15-T40-Mehrfach-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Bund-TV-deu-Mehrfach-ab-60-Jahre (csv, 4MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T28-Bund (xlsx, 397KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-16-T28-Tatort-Wohnsitz-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T28-Bund (csv, 437KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV (xlsx, 401KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-17-T50-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV (csv, 438KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-ab-60-Jahre (xlsx, 210KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-18-T50-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-ab-60-Jahre (csv, 323KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-19-T50-Mehrfach-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-20-T50-Mehrfach-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T50-Bund-TV-NDTV-Mehrfach-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T29-Bund (xlsx, 403KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-21-T29-Tatort-Wohnsitz-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T29-Bund (csv, 434KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T62-Bund (xlsx, 937KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-22-T62-TV-Staatsangehoerigkeiten_csv.csv?__blob=publicationFile&v=4",
+   "text": "T62-Bund (csv, 563KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T61-Bund (xlsx, 270KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-23-T61-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv?__blob=publicationFile&v=5",
+   "text": "T61-Bund (csv, 352KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T51-Bund (xlsx, 346KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-24-T51-TV-Tuerkei_csv.csv?__blob=publicationFile&v=3",
+   "text": "T51-Bund (csv, 407KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T53-Bund (xlsx, 332KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-25-T53-TV-Italien_csv.csv?__blob=publicationFile&v=3",
+   "text": "T53-Bund (csv, 401KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T54-Bund (xlsx, 345KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-26-T54-TV-Polen_csv.csv?__blob=publicationFile&v=3",
+   "text": "T54-Bund (csv, 404KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T55-Bund (xlsx, 350KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Tatverdaechtige/BU-TV-27-T55-TV-Rumaenien_csv.csv?__blob=publicationFile&v=4",
+   "text": "T55-Bund (csv, 406KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-01-T91-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-01-T91-Opfer_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer (xlsx, 104KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-01-T91-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-01-T91-Opfer_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer (csv, 102KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-02-T91-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-02-T91-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Bund-Opfer-Alter-erw (xlsx, 191KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-02-T91-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-02-T91-Alter-erw_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer-Alter-erw (csv, 161KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer-ab-60-Jahre (xlsx, 89KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-03-T91-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-Bund-Opfer-ab-60-Jahre (csv, 94KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T911-Bund (xlsx, 371KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-04-T911-O-Staatsangehoerigkeiten_csv.csv?__blob=publicationFile&v=3",
+   "text": "T911-Bund (csv, 236KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-05-T92-O-TV-Bez_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-05-T92-O-TV-Bez_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T92-Bund (xlsx, 82KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-05-T92-O-TV-Bez_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-05-T92-O-TV-Bez_csv.csv?__blob=publicationFile&v=3",
+   "text": "T92-Bund (csv, 88KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-06-T921-O-TV-Partner_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-06-T921-O-TV-Partner_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T921-Bund (xlsx, 75KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-06-T921-O-TV-Partner_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-06-T921-O-TV-Partner_csv.csv?__blob=publicationFile&v=3",
+   "text": "T921-Bund (csv, 82KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-07-T922-O-TV-Familie_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-07-T922-O-TV-Familie_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T922-Bund (xlsx, 96KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-07-T922-O-TV-Familie_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-07-T922-O-TV-Familie_csv.csv?__blob=publicationFile&v=3",
+   "text": "T922-Bund (csv, 95KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-08-T923-O-TV-informell_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-08-T923-O-TV-informell_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T923-Bund (xlsx, 65KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-08-T923-O-TV-informell_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-08-T923-O-TV-informell_csv.csv?__blob=publicationFile&v=3",
+   "text": "T923-Bund (csv, 75KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T93-Bund (xlsx, 85KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-09-T93-O-TV-raeumlich-sozial_csv.csv?__blob=publicationFile&v=3",
+   "text": "T93-Bund (csv, 88KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T931-Bund (xlsx, 83KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-10-T931-O-TV-raeumlich-sozial-a_csv.csv?__blob=publicationFile&v=3",
+   "text": "T931-Bund (csv, 87KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T932-Bund (xlsx, 65KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-11-T932-O-TV-raeumlich-sozial-b_csv.csv?__blob=publicationFile&v=3",
+   "text": "T932-Bund (csv, 75KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T933-Bund (xlsx, 78KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-12-T933-O-TV-raeumlich-sozial-c_csv.csv?__blob=publicationFile&v=3",
+   "text": "T933-Bund (csv, 87KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-13-T94-Opferspezifik_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-13-T94-Opferspezifik_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T94-Bund (xlsx, 76KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-13-T94-Opferspezifik_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-13-T94-Opferspezifik_csv.csv?__blob=publicationFile&v=3",
+   "text": "T94-Bund (csv, 81KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T941-Bund (xlsx, 92KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-14-T941-Beeintraechtigung_csv.csv?__blob=publicationFile&v=3",
+   "text": "T941-Bund (csv, 89KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T942-Bund (xlsx, 76KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-15-T942-Beruf-Taetigkeit-1_csv.csv?__blob=publicationFile&v=3",
+   "text": "T942-Bund (csv, 81KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T943-Bund (xlsx, 98KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Opfer/BU-O-16-T943-Beruf-Taetigkeit-2_csv.csv?__blob=publicationFile&v=3",
+   "text": "T943-Bund (csv, 96KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundOpfertabellen/bundopfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T01-Bund-HZ (xlsx, 125KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-01-T01-HZ-pro-Tatortgemeindeklasse_csv.csv?__blob=publicationFile&v=3",
+   "text": "T01-Bund-HZ (csv, 96KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TVBZ-deu (xlsx, 763KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-02-T40-TVBZ-deutsch_csv.csv?__blob=publicationFile&v=3",
+   "text": "T40-Bund-TVBZ-deu (csv, 394KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_xls.xlsx?__blob=publicationFile&v=3",
+   "text": "T91-OGZ (xlsx, 176KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Bund/Belastungszahlen/BU-BZ-03-T91-OGZ_csv.csv?__blob=publicationFile&v=3",
+   "text": "T91-OGZ (csv, 104KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/BundBelastungszahlen/bundBelastungszahlen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-01-T01-Laender-Faelle_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-01-T01-Laender-Faelle_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fälle (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-01-T01-Laender-Faelle_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-01-T01-Laender-Faelle_csv.csv?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fälle (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T01-Land-Fälle-HZ (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-02-T01-Laender-Faelle-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Land-Fälle-HZ (csv, 802KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-03-T01-Laender-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-03-T01-Laender-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Land-Fallentw (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-03-T01-Laender-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-03-T01-Laender-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Land-Fallentw (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-04-T07-Laender-Schaden_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-04-T07-Laender-Schaden_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T07-Land-Schaden (xlsx, 17MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-04-T07-Laender-Schaden_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-04-T07-Laender-Schaden_csv.csv?__blob=publicationFile&v=4",
+   "text": "T07-Land-Schaden (csv, 952KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land-Wikri-Fälle (xlsx, 531KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-05-T02-Laender-Faelle-Wikri_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land-Wikri-Fälle (csv, 757KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land–Wikri-Fälle-HZ (xlsx, 187KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-06-T02-Laender-Faelle-Wikri-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land–Wikri-Fälle-HZ (csv, 276KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T02-Land-Wikri-Fallentwicklung (xlsx, 471KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-07-T02-Laender-Wikri-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T02-Land-Wikri-Fallentwicklung (csv, 705KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T09-Land-Wikri-Schaden (xlsx, 152KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-08-T09-Laender-Schaden-Wikri_csv.csv?__blob=publicationFile&v=4",
+   "text": "T09-Land-Wikri-Schaden (csv, 181KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T05-Land-TM-Internet-Fälle-HZ (xlsx, 464KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-09-T05-Laender-Faelle-TM-Internet-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T05-Land-TM-Internet-Fälle-HZ (csv, 743KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T05-Land-TM-Internet-Fallentwicklung (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Faelle/LA-F-10-T05-Laender-TM-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T05-Land-TM-Internet-Fallentwicklung (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandFalltabellen/landFalltabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Land-TV (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-01-T20-Laender-TV_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Land-TV (csv, 8MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Land-TV - ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-02-T20-Laender-TV-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Land-TV - ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Land-TV-deu (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-03-T40-Laender-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Land-TV-deu (csv, 8MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Land-TV-deu-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-04-T40-Laender-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Land-TV-deu-ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Land-TV-NDTV (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-05-T50-Laender-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Land-TV-NDTV (csv, 8MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Land-TV-NDTV-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-06-T50-Laender-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Land-TV-NDTV-ab-60-Jahre (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T61-Land (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Tatverdaechtige/LA-TV-07-T61-Laender-TV-nichtdeutsch-Aufenthaltsanlass_csv.csv?__blob=publicationFile&v=6",
+   "text": "T61-Land (csv, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandTV/landTV.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-01-T91-Laender-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-01-T91-Laender-Opfer_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Land-Opfer (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-01-T91-Laender-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-01-T91-Laender-Opfer_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Land-Opfer-Alter-erw (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-02-T91-Laender-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer-Alter-erw (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Land-Opfer-ab-60-Jahre (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Land/Opfer/LA-O-03-T91-Laender-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Land-Opfer-ab-60-Jahre (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/LandOpfertabellen/landOpfertabellen.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Kreis-Fälle-HZ (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-01-T01-Kreise-Faelle-HZ_csv.csv?__blob=publicationFile&v=5",
+   "text": "T01-Kreis-Fälle-HZ (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-02-T01-Kreise-Fallentw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-02-T01-Kreise-Fallentw_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T01-Kreis-Fallentwicklung (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-02-T01-Kreise-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Faelle/KR-F-02-T01-Kreise-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Kreis-Fallentwicklung (csv, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisFalltabellen/kreisfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Kreis-TV (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-01-T20-Kreise-TV_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Kreis-TV (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T20-Kreis-TV - ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-02-T20-Kreise-TV-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Kreis-TV - ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Kreis-TV-deu (xlsx, 6MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-03-T40-Kreise-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Kreis-TV-deu (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T40-Kreis-TV-deu-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-04-T40-Kreise-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Kreis-TV-deu-ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Kreis-TV-NDTV (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-05-T50-Kreise-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Kreis-TV-NDTV (csv, 7MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T50-Kreis-TV-NDTV-ab-60-Jahre (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Tatverdaechtige/KR-TV-06-T50-Kreise-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Kreis-TV-NDTV-ab-60-Jahre (csv, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisTV/kreisTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Kreis-Opfer (xlsx, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-01-T91-Kreise-Opfer_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer-Alter-erw (xlsx, 5MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-02-T91-Kreise-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Kreis-Opfer-Alter-erw (csv, 4MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Kreis-Opfer-ab-60-Jahre (xlsx, 2MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Kreis/Opfer/KR-O-03-T91-Kreise-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=5",
+   "text": "T91-Kreis-Opfer-ab-60-Jahre (csv, 3MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/KreisOpfertabellen/kreisOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T01-Stadt-Fälle-HZ (xlsx, 479KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-01-T01-Staedte-Faelle-HZ_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Stadt-Fälle-HZ (csv, 475KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-02-T01-Staedte-Fallentw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Faelle/ST-F-02-T01-Staedte-Fallentw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T01-Stadt-Fallentwicklung (csv, 447KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtFalltabellen/stadtfalltabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Stadt-TV (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-01-T20-Staedte-TV_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Stadt-TV (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T20-Stadt-TV - ab-60-Jahre (xlsx, 632KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-02-T20-Staedte-TV-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T20-Stadt-TV - ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Stadt-TV-deu (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-03-T40-Staedte-TV-deutsch_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Stadt-TV-deu (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T40-Stadt-TV-deu-ab-60-Jahre (xlsx, 620KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-04-T40-Staedte-TV-deutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T40-Stadt-TV-deu-ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T50-Stadt-TV-NDTV (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-05-T50-Staedte-TV-nichtdeutsch_csv.csv?__blob=publicationFile&v=5",
+   "text": "T50-Stadt-TV-NDTV (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T50-Stadt-TV-NDTV-ab-60-Jahre (xlsx, 601KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Tatverdaechtige/ST-TV-06-T50-Staedte-TV-nichtdeutsch-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T50-Stadt-TV-NDTV-ab-60-Jahre (csv, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtTV/stadtTV_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Stadt-Opfer (xlsx, 745KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-01-T91-Staedte-Opfer_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer (csv, 614KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_xls.xlsx?__blob=publicationFile&v=6",
+   "text": "T91-Stadt-Opfer-Alter-erw (xlsx, 1MB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-02-T91-Staedte-Opfer-Alter-erw_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer-Alter-erw (csv, 917KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_xls.xlsx": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_xls.xlsx?__blob=publicationFile&v=5",
+   "text": "T91-Stadt-Opfer-ab-60-Jahre (xlsx, 513KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  },
+  "/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_csv.csv": {
+   "url": "https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/PolizeilicheKriminalstatistik/2022/Stadt/Opfer/ST-O-03-T91-Staedte-Opfer-ab-60J_csv.csv?__blob=publicationFile&v=4",
+   "text": "T91-Stadt-Opfer-ab-60-Jahre (csv, 572KB)",
+   "pages": [
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen.html",
+    "https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2022/PKSTabellen/StadtOpfertabellen/stadtOpfertabellen_node.html"
+   ]
+  }
+ }
+}

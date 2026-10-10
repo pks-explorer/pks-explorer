@@ -141,7 +141,9 @@ async function download(year: number, inv: Inventory, filter: DownloadFilter, co
     const ext = path.extname(filePath).slice(1).toLowerCase();
     if (!filter.types.includes(ext)) continue;
     if (filter.nur && !filter.nur.test(path.basename(decodeURIComponent(filePath)))) continue;
-    for (const page of d.pages) jobs.push({ url: d.url, dest: targetPath(year, page, filePath) });
+    // mehrere Seiten können in denselben Ordner zeigen – jedes Ziel nur einmal laden
+    const ziele = new Set(d.pages.map((page) => targetPath(year, page, filePath)));
+    for (const dest of ziele) jobs.push({ url: d.url, dest });
   }
   let done = 0,
     skipped = 0,

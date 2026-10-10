@@ -56,10 +56,13 @@ export class TrendTable {
   readonly zeilen = computed(() =>
     this.serien().map((serie) => {
       const delta = veraenderung(serie.werte);
+      // Beginnt die Reihe später als der Zeitraum (z. B. Länder ab 2019), das Startjahr nennen
+      const start = serie.werte.findIndex((v) => v !== null);
+      const ab = delta !== null && start > 0 ? ` (ab ${this.jahre()[start]})` : '';
       return {
         serie,
         werte: serie.werte.map((v) => formatWert(v, this.einheit())),
-        deltaText: formatVeraenderung(delta),
+        deltaText: formatVeraenderung(delta) + ab,
       };
     }),
   );

@@ -33,31 +33,32 @@ interface Optionen {
 
 /** Spaltenköpfe der Länder-Tabelle je Kennzahl; ältere Jahrgänge haben z. B. nur eine HZ-Spalte. */
 const LAND_SPALTEN: Record<string, RegExp> = {
-  faelle: /^Anzahl erfasste Fälle$/,
-  hz: /^HZ( \(Zensus 11\))?$/,
+  faelle: /^(Anzahl )?erfasste Fälle$/,
+  hz: /^HZ( \(Zensus 11\)| nach Zensus)?$/,
   hz_z22: /^HZ \(Zensus 22\)$/,
   versuche: /Versuche \| Anzahl$/,
   versuche_anteil: /Versuche \| in %$/,
-  aufgeklaert: /^Aufklärung \| Anzahl Fälle$/,
+  aufgeklaert: /^Aufklärung \| (Anzahl Fälle|Anzahl|Fälle)$/,
   aq: /^Aufklärung \| (AQ|in %)/,
-  tv: /^Tatver-?dächtige insgesamt$/,
+  tv: /^Tatver-?dächtige insg(esamt|\.)$/,
   tv_nichtdeutsch: /^Nichtdeutsche Tat-?verdächtige \| Anzahl$/,
-  tv_nichtdeutsch_anteil: /^Nichtdeutsche Tat-?verdächtige \| Anteil/,
+  tv_nichtdeutsch_anteil: /^Nichtdeutsche Tat-?verdächtige \| (Anteil|in %)/,
 };
 
 /** Spaltenköpfe der Städte-Tabelle je Kennzahl. */
 const STADT_SPALTEN: Record<string, RegExp> = {
-  faelle: /^Anzahl erfasste Fälle$/,
+  faelle: /^(Anzahl )?erfasste Fälle$/,
   hz: /^HZ/,
   versuche: /Versuche \| Anzahl$/,
   versuche_anteil: /Versuche \| in %$/,
   schusswaffe_gedroht: /Schusswaffe \| gedroht$/,
   schusswaffe_geschossen: /Schusswaffe \| ge-?schossen$/,
-  aufgeklaert: /^Aufklärung \| Anzahl Fälle$/,
+  aufgeklaert: /^Aufklärung \| (Anzahl Fälle|Anzahl|Fälle)$/,
   aq: /^Aufklärung \| (AQ|in %)/,
-  tv: /^Tatverdächtige \| insgesamt$/,
-  tv_nichtdeutsch: /^Nichtdeutsche Tatverdächtige \| Anzahl$/,
-  tv_nichtdeutsch_anteil: /^Nichtdeutsche Tatverdächtige \| Anteil/,
+  // 2019: "Tat-verdächtige insgesamt", Unterspalten mit Vorsatz "von Spalte 13 | …"
+  tv: /^(Tatverdächtige \| insgesamt|Tat-verdächtige insgesamt)$/,
+  tv_nichtdeutsch: /Nichtdeutsche Tatverdächtige \| Anzahl$/,
+  tv_nichtdeutsch_anteil: /Nichtdeutsche Tatverdächtige \| (Anteil|in %)/,
 };
 
 /** Ordnet die Kennzahl-Spalten des Datasets den Spalten der BKA-Tabelle zu (fehlende bleiben leer). */
