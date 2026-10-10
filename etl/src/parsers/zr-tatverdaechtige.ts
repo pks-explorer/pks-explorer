@@ -5,15 +5,15 @@
  * die Altersgruppen stehen in den Spalten.
  */
 import path from 'node:path';
-import {
-  spaltenId,
-  type Dataset,
-  type DimensionWert,
-  type Hinweis,
-  type Zelle,
-} from '@crime-stats/shared';
+import { spaltenId, type Dataset, type DimensionWert, type Zelle } from '@crime-stats/shared';
 import { readZeitreihe } from '../lib/zeitreihe.js';
 import { round, toNumber } from '../lib/xlsx.js';
+import { BASIS_DIMENSIONEN, GESCHLECHT, alsWerte } from '../lib/dimensionen.js';
+import {
+  HINWEIS_GEBIETSSTAND,
+  hinweisTatverdaechtigenzaehlung,
+  hinweisZensus,
+} from '../lib/hinweise.js';
 
 interface AlterDef extends DimensionWert {
   /** Spaltenkopf in den Anzahl-Tabellen. */
@@ -36,6 +36,7 @@ export const ALTER_TV: AlterDef[] = [
     tv: /^Tatver-dächtige insgesamt \| Anzahl$/,
     tvbz: /^TVBZ insgesamt ohne Kinder unter 8 Jahre$/,
     hinweis: 'TVBZ ohne Kinder unter 8 Jahren.',
+    hinweisKennzahlen: ['tvbz'],
   },
   { id: '0-6', label: 'unter 6 Jahre', tv: /^Kinder \| bis unter 6 \| Anzahl$/, tvbz: null },
   spanne(6, 8, false),
@@ -48,6 +49,7 @@ export const ALTER_TV: AlterDef[] = [
     tv: /Kinder unter 14 \| Anzahl$/,
     tvbz: /Kinder 8<14$/,
     hinweis: 'TVBZ nur 8 bis 13 Jahre.',
+    hinweisKennzahlen: ['tvbz'],
   },
   spanne(14, 16),
   spanne(16, 18),
@@ -69,6 +71,7 @@ export const ALTER_TV: AlterDef[] = [
     tv: /^Tatverdächtige unter 21 \| Anzahl$/,
     tvbz: /^TVBZ Personen 8 bis unter 21$/,
     hinweis: 'TVBZ nur 8 bis 20 Jahre.',
+    hinweisKennzahlen: ['tvbz'],
   },
   spanne(21, 23),
   spanne(23, 25),
@@ -96,11 +99,6 @@ export const ALTER_TV: AlterDef[] = [
   },
 ];
 
-const GESCHLECHT: DimensionWert[] = [
-  { id: 'insgesamt', label: 'Alle' },
-  { id: 'maennlich', label: 'Männlich' },
-  { id: 'weiblich', label: 'Weiblich' },
-];
 const STAATSANGEHOERIGKEIT: DimensionWert[] = [
   { id: 'insgesamt', label: 'Alle' },
   { id: 'deutsch', label: 'Deutsch' },
@@ -112,29 +110,14 @@ const STAATSANGEHOERIGKEIT: DimensionWert[] = [
   },
 ];
 
-const HINWEISE: Hinweis[] = [
-  {
-    text: '1987–1990: nur früheres Bundesgebiet. 1991–1992: Erfassung in den neuen Ländern noch unvollständig, Vergleiche erst ab 1993 sinnvoll.',
-    bisJahr: 1992,
-    abJahr: 1993,
-    bruch: true,
-  },
-  {
-    text: 'Ab 2009 „echte“ Tatverdächtigenzählung (jede Person je Delikt und Jahr nur einmal) – nicht mit den Vorjahren vergleichbar.',
-    kennzahlen: ['tv'],
-    abJahr: 2009,
-    bruch: true,
-  },
+const HINWEISE = [
+  HINWEIS_GEBIETSSTAND,
+  hinweisTatverdaechtigenzaehlung(['tv']),
   {
     text: 'Tatverdächtigenbelastungszahl (TVBZ): in Deutschland ansässige Tatverdächtige je 100.000 Einwohner der jeweiligen Gruppe, ohne Kinder unter 8 Jahren; erst ab 2009 verfügbar.',
     kennzahlen: ['tvbz'],
   },
-  {
-    text: 'TVBZ ab 2013 auf Basis Zensus 2011. 2024 ebenfalls auf Basis Zensus 2011 (vergleichbar mit 2013–2023); das BKA weist zusätzlich Werte auf Basis Zensus 2022 aus.',
-    kennzahlen: ['tvbz'],
-    abJahr: 2013,
-    bruch: true,
-  },
+  hinweisZensus('tvbz', 'TVBZ'),
   { text: 'Tatverdächtige sind ermittelte, nicht verurteilte Personen.' },
 ];
 
@@ -230,9 +213,7 @@ export async function parseZrTatverdaechtige(
         stand,
       },
       dimensionen: [
-        { id: 'jahr', label: 'Jahr' },
-        { id: 'region', label: 'Region' },
-        { id: 'schluessel', label: 'Straftatenschlüssel' },
+        ...BASIS_DIMENSIONEN,
         {
           id: 'geschlecht',
           label: 'Geschlecht',
@@ -243,7 +224,7 @@ export async function parseZrTatverdaechtige(
         {
           id: 'staatsangehoerigkeit',
           label: 'Staatsangehörigkeit',
-          werte: STAATSANGEHOERIGKEIT,
+          werte: alsWerte(STAATSANGEHOERIGKEIT),
           standard: 'insgesamt',
           vergleich: ['deutsch', 'nichtdeutsch'],
         },
@@ -253,11 +234,7 @@ export async function parseZrTatverdaechtige(
           inSpalte: true,
           standard: 'insgesamt',
           vergleich: ['kinder', 'jugendliche', 'heranwachsende', 'erwachsene'],
-          werte: ALTER_TV.map(({ id, label, hinweis }) => ({
-            id,
-            label,
-            ...(hinweis ? { hinweis } : {}),
-          })),
+          werte: alsWerte(ALTER_TV),
         },
       ],
       kennzahlen: [

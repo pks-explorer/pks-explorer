@@ -25,6 +25,8 @@ export interface DimensionWert {
   label: string;
   /** Kurze Erläuterung, z. B. wenn die Gruppe anders abgegrenzt ist als üblich. */
   hinweis?: string;
+  /** Kennzahlen, für die der Hinweis gilt; fehlt = alle. */
+  hinweisKennzahlen?: string[];
 }
 
 export interface DimensionDef {

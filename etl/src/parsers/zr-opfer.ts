@@ -3,16 +3,12 @@
  * (ZR-BZ-04…06). Je Datei: Straftaten insgesamt / Versuche / vollendet; Alter und Geschlecht in den Spalten.
  */
 import path from 'node:path';
-import {
-  spaltenId,
-  type Dataset,
-  type DimensionWert,
-  type Hinweis,
-  type Zelle,
-} from '@crime-stats/shared';
+import { spaltenId, type Dataset, type DimensionWert, type Zelle } from '@crime-stats/shared';
 import { readZeitreihe } from '../lib/zeitreihe.js';
 import { round, toNumber } from '../lib/xlsx.js';
 import type { StraftatenKatalog } from '../lib/straftaten.js';
+import { BASIS_DIMENSIONEN, GESCHLECHT, GESCHLECHT_KOPF, alsWerte } from '../lib/dimensionen.js';
+import { hinweisZensus } from '../lib/hinweise.js';
 
 interface AlterDef extends DimensionWert {
   opfer: RegExp;
@@ -59,19 +55,13 @@ export const ALTER_OPFER: AlterDef[] = [
   },
 ];
 
-const GESCHLECHT: (DimensionWert & { kopf: RegExp })[] = [
-  { id: 'insgesamt', label: 'Alle', kopf: /\| (insgesamt|insges\.|insg\.)$/ },
-  { id: 'maennlich', label: 'Männlich', kopf: /\| (männlich|männl\.)$/ },
-  { id: 'weiblich', label: 'Weiblich', kopf: /\| (weiblich|weibl\.)$/ },
-];
-
 const VOLLENDUNG: DimensionWert[] = [
   { id: 'insgesamt', label: 'Versuche und vollendete Taten' },
   { id: 'versuch', label: 'Nur Versuche' },
   { id: 'vollendet', label: 'Nur vollendete Taten' },
 ];
 
-const HINWEISE: Hinweis[] = [
+const HINWEISE = [
   {
     text: 'Opfer werden nur bei bestimmten Delikten erfasst (Opferdelikte, z. B. Tötungs-, Sexual- und Rohheitsdelikte). „Straftaten insgesamt“ der Opferdelikte erst ab 2009.',
   },
@@ -79,12 +69,7 @@ const HINWEISE: Hinweis[] = [
     text: 'Opfergefährdungszahl (OGZ): Opfer je 100.000 Einwohner der jeweiligen Gruppe.',
     kennzahlen: ['ogz'],
   },
-  {
-    text: 'OGZ ab 2013 auf Basis Zensus 2011. 2024 ebenfalls auf Basis Zensus 2011 (vergleichbar mit 2013–2023); das BKA weist zusätzlich Werte auf Basis Zensus 2022 aus.',
-    kennzahlen: ['ogz'],
-    abJahr: 2013,
-    bruch: true,
-  },
+  hinweisZensus('ogz', 'OGZ'),
 ];
 
 const vollendungAus = (datei: string) =>
@@ -112,7 +97,9 @@ export async function parseZrOpfer(
       GESCHLECHT.map((g) => {
         const alterMuster = kennzahl === 'opfer' ? a.opfer : a.ogz;
         // beide Bedingungen unabhängig prüfen ("Opfer | insgesamt" teilt sich den Trenner)
-        const muster = new RegExp(`(?=${alterMuster.source})(?=.*${g.kopf.source})`);
+        const muster = new RegExp(
+          `(?=${alterMuster.source})(?=.*${GESCHLECHT_KOPF[g.id]!.source})`,
+        );
         return { spalte: t.spalte(muster), ziel: idx.get(spaltenId(kennzahl, [a.id, g.id]))! };
       }),
     );
@@ -151,9 +138,7 @@ export async function parseZrOpfer(
         stand,
       },
       dimensionen: [
-        { id: 'jahr', label: 'Jahr' },
-        { id: 'region', label: 'Region' },
-        { id: 'schluessel', label: 'Straftatenschlüssel' },
+        ...BASIS_DIMENSIONEN,
         {
           id: 'vollendung',
           label: 'Versuch/Vollendung',
@@ -167,7 +152,7 @@ export async function parseZrOpfer(
           inSpalte: true,
           standard: 'insgesamt',
           vergleich: ['kinder', 'jugendliche', 'heranwachsende', '21-60', '60+'],
-          werte: ALTER_OPFER.map(({ id, label }) => ({ id, label })),
+          werte: alsWerte(ALTER_OPFER),
         },
         {
           id: 'geschlecht',
@@ -175,7 +160,7 @@ export async function parseZrOpfer(
           inSpalte: true,
           standard: 'insgesamt',
           vergleich: ['maennlich', 'weiblich'],
-          werte: GESCHLECHT.map(({ id, label }) => ({ id, label })),
+          werte: GESCHLECHT,
         },
       ],
       kennzahlen: [
