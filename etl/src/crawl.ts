@@ -33,7 +33,9 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 async function fetchWithRetry(url: string, tries = 4): Promise<Response> {
   for (let i = 1; ; i++) {
     try {
-      const res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'de-DE' } });
+      const res = await fetch(url, {
+        headers: { 'User-Agent': UA, 'Accept-Language': 'de-DE' },
+      });
       if (res.ok) return res;
       throw new Error(`HTTP ${res.status}`);
     } catch (err) {
@@ -83,10 +85,19 @@ async function crawl(year: number): Promise<Inventory> {
       const abs = new URL(decodeEntities(m[1]!), url);
       if (abs.host !== 'www.bka.de') continue;
       if (abs.searchParams.get('__blob') === 'publicationFile') {
-        const text = decodeEntities(m[2]!.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-        const d = (inv.downloads[abs.pathname] ??= { url: abs.toString(), text, pages: [] });
+        const text = decodeEntities(m[2]!.replace(/<[^>]+>/g, ' '))
+          .replace(/\s+/g, ' ')
+          .trim();
+        const d = (inv.downloads[abs.pathname] ??= {
+          url: abs.toString(),
+          text,
+          pages: [],
+        });
         if (!d.pages.includes(url)) d.pages.push(url);
-      } else if (decodeURIComponent(abs.pathname).startsWith(prefix) && abs.pathname.endsWith('.html')) {
+      } else if (
+        decodeURIComponent(abs.pathname).startsWith(prefix) &&
+        abs.pathname.endsWith('.html')
+      ) {
         const n = normalizePage(abs);
         if (!seen.has(n)) queue.push(n);
       }
@@ -99,10 +110,18 @@ async function crawl(year: number): Promise<Inventory> {
 /** Zielpfad: <jahr>/<Pfad der verlinkenden Seite relativ zu PKS<jahr>/>/<Dateiname> */
 function targetPath(year: number, pageUrl: string, filePath: string): string {
   const pagePath = decodeURIComponent(new URL(pageUrl).pathname).slice(sectionPrefix(year).length);
-  return path.join(rawYearDir(year), path.dirname(pagePath), path.basename(decodeURIComponent(filePath)));
+  return path.join(
+    rawYearDir(year),
+    path.dirname(pagePath),
+    path.basename(decodeURIComponent(filePath)),
+  );
 }
 
-const exists = (p: string) => stat(p).then(() => true, () => false);
+const exists = (p: string) =>
+  stat(p).then(
+    () => true,
+    () => false,
+  );
 
 async function download(year: number, inv: Inventory, types: string[], concurrency: number) {
   const jobs: { url: string; dest: string }[] = [];
@@ -111,17 +130,24 @@ async function download(year: number, inv: Inventory, types: string[], concurren
     if (!types.includes(ext)) continue;
     for (const page of d.pages) jobs.push({ url: d.url, dest: targetPath(year, page, filePath) });
   }
-  let done = 0, skipped = 0, failed = 0;
+  let done = 0,
+    skipped = 0,
+    failed = 0;
   const worker = async () => {
     for (let job = jobs.shift(); job; job = jobs.shift()) {
-      if (await exists(job.dest)) { skipped++; continue; }
+      if (await exists(job.dest)) {
+        skipped++;
+        continue;
+      }
       try {
         const buf = Buffer.from(await (await fetchWithRetry(job.url)).arrayBuffer());
         await mkdir(path.dirname(job.dest), { recursive: true });
         await writeFile(job.dest + '.part', buf);
         await rename(job.dest + '.part', job.dest);
         done++;
-        console.log(`OK   ${path.relative(rawYearDir(year), job.dest)} (${Math.round(buf.length / 1024)} KB)`);
+        console.log(
+          `OK   ${path.relative(rawYearDir(year), job.dest)} (${Math.round(buf.length / 1024)} KB)`,
+        );
       } catch (err) {
         failed++;
         console.error(`FAIL ${job.url}: ${(err as Error).message}`);
@@ -151,6 +177,8 @@ if (values['skip-crawl']) {
   inv = await crawl(year);
   await mkdir(rawYearDir(year), { recursive: true });
   await writeFile(invFile, JSON.stringify(inv, null, 1));
-  console.log(`pages=${Object.keys(inv.pages).length} downloads=${Object.keys(inv.downloads).length}`);
+  console.log(
+    `pages=${Object.keys(inv.pages).length} downloads=${Object.keys(inv.downloads).length}`,
+  );
 }
 await download(year, inv, values.types.split(','), Number(values.concurrency));

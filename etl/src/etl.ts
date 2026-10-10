@@ -10,6 +10,26 @@ import type { DataIndex, Dataset } from '@crime-stats/shared';
 import { PROCESSED_DIR, rawYearDir } from './paths.js';
 import { StraftatenKatalog } from './lib/straftaten.js';
 import { parseZrBundFaelle } from './parsers/zr-bund-faelle.js';
+import { parseStraftatenkatalog } from './parsers/katalog-pdf.js';
+import { parseDefinitionskatalog } from './parsers/definitionen-pdf.js';
+import { parseSummenschluessel } from './parsers/summenschluessel-pdf.js';
+import { ergaenzeErlaeuterungen } from './lib/erlaeuterungen.js';
+
+/** Optionale Quelle: fehlt die Datei, wird nur gewarnt. */
+async function optional<T>(
+  dir: string,
+  pattern: RegExp,
+  parse: (file: string) => Promise<T>,
+): Promise<T | undefined> {
+  try {
+    const file = await findFile(dir, pattern);
+    console.log(`Lese ${path.relative(dir, file)}`);
+    return await parse(file);
+  } catch (err) {
+    console.warn(`  übersprungen: ${(err as Error).message}`);
+    return undefined;
+  }
+}
 
 async function findFile(dir: string, pattern: RegExp): Promise<string> {
   const entries = await readdir(dir, { recursive: true });
@@ -21,7 +41,9 @@ async function findFile(dir: string, pattern: RegExp): Promise<string> {
 /** Original-Download-URL aus der Inventur (falls vorhanden). */
 async function sourceUrl(jahrgang: number, file: string): Promise<string | undefined> {
   try {
-    const inv = JSON.parse(await readFile(path.join(rawYearDir(jahrgang), 'inventory.json'), 'utf-8'));
+    const inv = JSON.parse(
+      await readFile(path.join(rawYearDir(jahrgang), 'inventory.json'), 'utf-8'),
+    );
     const name = path.basename(file);
     for (const [p, d] of Object.entries<{ url: string }>(inv.downloads)) {
       if (path.basename(decodeURIComponent(p)) === name) return d.url;
@@ -30,7 +52,9 @@ async function sourceUrl(jahrgang: number, file: string): Promise<string | undef
   return undefined;
 }
 
-const { values } = parseArgs({ options: { jahrgang: { type: 'string', default: '2024' } } });
+const { values } = parseArgs({
+  options: { jahrgang: { type: 'string', default: '2024' } },
+});
 const jahrgang = Number(values.jahrgang);
 const raw = rawYearDir(jahrgang);
 
@@ -39,19 +63,42 @@ const datasets: Dataset[] = [];
 
 const zrFaelle = await findFile(raw, /^T01-ZR-Bund-F(ä|ae)lle.*\.xlsx$/i);
 console.log(`Lese ${path.relative(raw, zrFaelle)}`);
-datasets.push(await parseZrBundFaelle(zrFaelle, jahrgang, katalog, await sourceUrl(jahrgang, zrFaelle)));
+datasets.push(
+  await parseZrBundFaelle(zrFaelle, jahrgang, katalog, await sourceUrl(jahrgang, zrFaelle)),
+);
 
 await mkdir(PROCESSED_DIR, { recursive: true });
-const index: DataIndex = { erstellt: new Date().toISOString(), datasets: [], straftaten: 'straftaten.json' };
+const index: DataIndex = {
+  erstellt: new Date().toISOString(),
+  datasets: [],
+  straftaten: 'straftaten.json',
+};
 
 for (const ds of datasets) {
   const datei = `${ds.meta.id}.json`;
   await writeFile(path.join(PROCESSED_DIR, datei), JSON.stringify(ds));
-  index.datasets.push({ id: ds.meta.id, titel: ds.meta.titel, ebene: ds.meta.ebene, datei, jahre: ds.meta.jahre, kennzahlen: ds.meta.kennzahlen });
-  console.log(`  → ${datei}: ${ds.zeilen.length} Zeilen, ${ds.meta.jahre[0]}–${ds.meta.jahre.at(-1)}`);
+  index.datasets.push({
+    id: ds.meta.id,
+    titel: ds.meta.titel,
+    ebene: ds.meta.ebene,
+    datei,
+    jahre: ds.meta.jahre,
+    kennzahlen: ds.meta.kennzahlen,
+  });
+  console.log(
+    `  → ${datei}: ${ds.zeilen.length} Zeilen, ${ds.meta.jahre[0]}–${ds.meta.jahre.at(-1)}`,
+  );
 }
 
 const straftaten = katalog.build();
+const erlaeutert = ergaenzeErlaeuterungen(straftaten, {
+  jahrgang,
+  katalog: await optional(raw, /^Straftatenkatalog\.pdf$/i, parseStraftatenkatalog),
+  definitionen: await optional(raw, /Definitionskatalog\.pdf$/i, parseDefinitionskatalog),
+  summen: await optional(raw, /^Uebersicht-Summenschluessel\.pdf$/i, parseSummenschluessel),
+});
 await writeFile(path.join(PROCESSED_DIR, index.straftaten), JSON.stringify(straftaten, null, 1));
 await writeFile(path.join(PROCESSED_DIR, 'index.json'), JSON.stringify(index, null, 2));
-console.log(`  → straftaten.json: ${straftaten.length} Schlüssel`);
+console.log(
+  `  → straftaten.json: ${straftaten.length} Schlüssel, davon ${erlaeutert} mit Erläuterung`,
+);

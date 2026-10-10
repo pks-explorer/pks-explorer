@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input, output, signal } from '@angular/core';
 import { SCHLUESSEL_INSGESAMT, type Straftat } from '@crime-stats/shared';
+import { DeliktInfoDirective } from './delikt-info.directive';
 
 interface Knoten {
   straftat: Straftat;
@@ -17,6 +18,7 @@ const norm = (s: string) =>
 
 @Component({
   selector: 'app-delikt-picker',
+  imports: [DeliktInfoDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './delikt-picker.html',
   styleUrl: './delikt-picker.scss',

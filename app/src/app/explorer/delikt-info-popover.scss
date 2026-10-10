@@ -1,0 +1,86 @@
+.popover {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.name {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+.code {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+.amtlich {
+  font-style: italic;
+}
+
+p {
+  margin: 0;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+li {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 8px;
+}
+.frueher li {
+  grid-template-columns: 76px 1fr;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+.quelle {
+  padding-top: 6px;
+  border-top: 1px solid var(--grid);
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.popover.abgeschnitten {
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 32px), transparent);
+}

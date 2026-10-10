@@ -79,6 +79,40 @@ export interface Straftat {
   summenschluessel: boolean;
   /** Verlauf der Bezeichnung, chronologisch; nur vorhanden, wenn sie sich geändert hat. */
   namensverlauf?: { vonJahr: number; bisJahr: number; name: string }[];
+  /** Erläuterungen aus Straftatenkatalog, Summenschlüssel-Übersicht und Definitionskatalog des BKA. */
+  erlaeuterung?: Erlaeuterung;
+}
+
+export interface SchluesselVerweis {
+  schluessel: string;
+  name: string;
+  /** Bestandteil wird abgezogen (z. B. "Straftaten insgesamt ohne 725000"). */
+  ohne?: boolean;
+}
+
+export interface Definition {
+  titel: string;
+  /** Schlüssel(-muster) der Definition, z. B. "5181**"; kann auch einen Unterschlüssel betreffen. */
+  schluessel: string[];
+  /** Absätze. */
+  text: string[];
+}
+
+export interface Erlaeuterung {
+  /** Amtliche Bezeichnung im Straftatenkatalog (mit Paragrafen). */
+  katalogName?: string;
+  /** Beschreibung der Zusammensetzung eines Summenschlüssels. */
+  zusammensetzung?: string;
+  /** Enthaltene Schlüssel: Bestandteile eines Summenschlüssels bzw. direkte Unterschlüssel laut Katalog. */
+  umfasst?: SchluesselVerweis[];
+  /** Begriffsdefinitionen aus dem Definitionskatalog (Anlage 3 der PKS-Richtlinien). */
+  definitionen?: Definition[];
+  /** Erfassungsmerkmale, z. B. "Opfererfassung". */
+  merkmale?: string[];
+  /** Änderung gegenüber dem Vorjahr laut Straftatenkatalog. */
+  aenderung?: string;
+  /** Herkunft der Angaben, z. B. "Straftatenkatalog 2024". */
+  quellen: string[];
 }
 
 export interface DatasetIndexEintrag {

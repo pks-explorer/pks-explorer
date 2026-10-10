@@ -19,7 +19,11 @@ export function cellValue(v: ExcelJS.CellValue): string | number | null {
 }
 
 /** Alle Zellwerte einer Zeile (0-basiert). */
-export function rowValues(ws: ExcelJS.Worksheet, r: number, cols = ws.columnCount): (string | number | null)[] {
+export function rowValues(
+  ws: ExcelJS.Worksheet,
+  r: number,
+  cols = ws.columnCount,
+): (string | number | null)[] {
   const row = ws.getRow(r);
   return Array.from({ length: cols }, (_, c) => cellValue(row.getCell(c + 1).value));
 }

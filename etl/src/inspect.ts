@@ -8,9 +8,13 @@ await wb.xlsx.readFile(file);
 for (const ws of wb.worksheets) {
   console.log(`=== Blatt "${ws.name}" (${ws.rowCount} Zeilen x ${ws.columnCount} Spalten)`);
   for (let r = 1; r <= Math.min(ws.rowCount, Number(rows)); r++) {
-    const vals = (ws.getRow(r).values as unknown[]).slice(1).map((v) =>
-      v && typeof v === 'object' && 'richText' in v ? (v as { richText: { text: string }[] }).richText.map((t) => t.text).join('') : v,
-    );
+    const vals = (ws.getRow(r).values as unknown[])
+      .slice(1)
+      .map((v) =>
+        v && typeof v === 'object' && 'richText' in v
+          ? (v as { richText: { text: string }[] }).richText.map((t) => t.text).join('')
+          : v,
+      );
     console.log(r, JSON.stringify(vals));
   }
 }

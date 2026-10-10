@@ -1,8 +1,8 @@
 <div class="gewaehlt" aria-live="polite">
   @for (s of gewaehlteStraftaten(); track s.schluessel) {
-    <span class="chip">
+    <span class="chip" [appDeliktInfo]="s.schluessel">
       <span class="key" [style.background]="farben().get(s.schluessel)"></span>
-      <span class="chip-label" [title]="s.name">{{ s.name }}</span>
+      <span class="chip-label">{{ s.name }}</span>
       <button
         type="button"
         class="chip-x"
@@ -37,6 +37,7 @@
       <button
         type="button"
         class="eintrag"
+        [appDeliktInfo]="t.straftat.schluessel"
         [attr.aria-pressed]="istGewaehlt(t.straftat.schluessel)"
         [class.aktiv]="istGewaehlt(t.straftat.schluessel)"
         [disabled]="voll() && !istGewaehlt(t.straftat.schluessel)"
@@ -77,6 +78,7 @@
           <button
             type="button"
             class="eintrag"
+            [appDeliktInfo]="k.straftat.schluessel"
             [attr.aria-pressed]="istGewaehlt(k.straftat.schluessel)"
             [class.aktiv]="istGewaehlt(k.straftat.schluessel)"
             [disabled]="voll() && !istGewaehlt(k.straftat.schluessel)"

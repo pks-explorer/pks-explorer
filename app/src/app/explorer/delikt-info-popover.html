@@ -1,0 +1,89 @@
+@if (inhalt(); as i) {
+  @if (position(); as p) {
+    <div
+      #box
+      class="popover"
+      role="tooltip"
+      [id]="info.popoverId"
+      [style.left.px]="p.left"
+      [style.width.px]="p.breite"
+      [style.top.px]="p.top"
+      [style.bottom.px]="p.bottom"
+      [style.max-height.px]="p.maxHoehe"
+    >
+      <div class="kopf">
+        <span class="name">{{ i.name }}</span>
+        <span class="code">{{ i.schluessel }}</span>
+      </div>
+      @if (i.katalogName) {
+        <p class="amtlich">{{ i.katalogName }}</p>
+      }
+
+      @for (d of i.definitionen; track d.titel) {
+        <section>
+          <h3>
+            {{ d.titel }} <span class="code">Schlüssel {{ d.schluessel }}</span>
+          </h3>
+          @for (t of d.text; track $index) {
+            <p>{{ t }}</p>
+          }
+        </section>
+      }
+
+      @if (i.zusammensetzung) {
+        <p>{{ i.zusammensetzung }}</p>
+      }
+      @if (i.umfasst.length) {
+        <section>
+          <h3>{{ i.umfasstTitel }}</h3>
+          <ul>
+            @for (u of i.umfasst; track u.schluessel) {
+              <li>
+                <span class="code">{{ u.schluessel }}</span>
+                <span>
+                  @if (u.ohne) {
+                    <strong>abzüglich </strong>
+                  }
+                  {{ u.name }}</span
+                >
+              </li>
+            }
+          </ul>
+          @if (i.weitere) {
+            <p class="muted">… und {{ i.weitere }} weitere</p>
+          }
+        </section>
+      }
+
+      @if (i.merkmale.length || i.aenderung) {
+        <p class="muted">
+          @if (i.merkmale.length) {
+            Mit {{ i.merkmale.join(' und ') }}.
+          }
+          {{ i.aenderung }}
+        </p>
+      }
+      @if (i.frueher.length) {
+        <section>
+          <h3>Frühere Bezeichnungen</h3>
+          <ul class="frueher">
+            @for (f of i.frueher; track f.vonJahr) {
+              <li>
+                <span class="code">{{ f.vonJahr }}–{{ f.bisJahr }}</span> <span>{{ f.name }}</span>
+              </li>
+            }
+          </ul>
+        </section>
+      }
+      @if (i.nichtImKatalog) {
+        <p class="muted">
+          Im aktuellen Straftatenkatalog nicht mehr enthalten – keine Erläuterung verfügbar.
+        </p>
+      }
+
+      @if (i.quellen.length) {
+        <p class="quelle">Quelle: BKA, {{ i.quellen.join(' · ') }}</p>
+      }
+    </div>
+  }
+}

@@ -13,19 +13,22 @@ import type { Einheit } from '@crime-stats/shared';
 import { Theme } from '../core/theme';
 import { formatAchse, formatWert } from '../core/format';
 import type { Markierung, Serie } from './serien';
+import { DeliktInfoDirective } from './delikt-info.directive';
 
 const escape = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : s);
 
 @Component({
   selector: 'app-trend-chart',
-  imports: [NgxEchartsDirective],
+  imports: [NgxEchartsDirective, DeliktInfoDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (serien().length >= 2) {
       <ul class="legende" aria-label="Legende">
         @for (s of serien(); track s.schluessel) {
-          <li><span class="key" [style.background]="s.farbe"></span>{{ s.label }}</li>
+          <li tabindex="0" [appDeliktInfo]="s.schluessel">
+            <span class="key" [style.background]="s.farbe"></span>{{ s.label }}
+          </li>
         }
       </ul>
     }

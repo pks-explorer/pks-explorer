@@ -16,7 +16,7 @@ const significant = (k: string) => k.replace(/0+$/, '') || '0';
 /** Platzhalter-Schlüssel `a` deckt `b` ab, wenn jede Stelle gleich oder in `a` ein "*" ist. */
 const covers = (a: string, b: string) => a !== b && [...a].every((c, i) => c === '*' || c === b[i]);
 const stars = (k: string) => [...k].filter((c) => c === '*').length;
-const leadingFixed = (k: string) => k.search(/\*/) === -1 ? k.length : k.search(/\*/);
+const leadingFixed = (k: string) => (k.search(/\*/) === -1 ? k.length : k.search(/\*/));
 
 /** Spezifischster Platzhalter-Schlüssel (z. B. 4***00), der `k` abdeckt. */
 function coveringWildcard(k: string, all: Set<string>): string | undefined {

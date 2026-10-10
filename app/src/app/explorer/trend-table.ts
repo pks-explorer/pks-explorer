@@ -2,9 +2,11 @@ import { ChangeDetectionStrategy, Component, computed, input } from '@angular/co
 import type { Einheit } from '@crime-stats/shared';
 import { formatVeraenderung, formatWert } from '../core/format';
 import { veraenderung, type Serie } from './serien';
+import { DeliktInfoDirective } from './delikt-info.directive';
 
 @Component({
   selector: 'app-trend-table',
+  imports: [DeliktInfoDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="toolbar">
@@ -26,9 +28,9 @@ import { veraenderung, type Serie } from './serien';
           @for (z of zeilen(); track z.serie.schluessel) {
             <tr>
               <th scope="row" class="sticky">
-                <div class="cell">
+                <div class="cell" tabindex="0" [appDeliktInfo]="z.serie.schluessel">
                   <span class="key" [style.background]="z.serie.farbe"></span>
-                  <span class="label" [title]="z.serie.label">{{ z.serie.label }}</span>
+                  <span class="label">{{ z.serie.label }}</span>
                   <span class="code">{{ z.serie.schluessel }}</span>
                 </div>
               </th>

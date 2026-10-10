@@ -1,8 +1,17 @@
-import { ChangeDetectionStrategy, Component, computed, inject, resource } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  effect,
+  inject,
+  resource,
+} from '@angular/core';
 import type { KennzahlDef } from '@crime-stats/shared';
 import { Auswahl, MAX_DELIKTE, STANDARD_VON, type Darstellung } from '../core/auswahl';
+import { DeliktInfo } from '../core/delikt-info';
 import { PksDataSource } from '../core/pks-data';
 import { Theme } from '../core/theme';
+import { DeliktInfoPopover } from './delikt-info-popover';
 import { DeliktPicker } from './delikt-picker';
 import { indexiere, markierungen, relevanteHinweise, type Serie } from './serien';
 import { TrendChart } from './trend-chart';
@@ -24,7 +33,7 @@ const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(mi
 
 @Component({
   selector: 'app-explorer',
-  imports: [DeliktPicker, TrendChart, TrendTable],
+  imports: [DeliktPicker, DeliktInfoPopover, TrendChart, TrendTable],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './explorer.html',
   styleUrl: './explorer.scss',
@@ -37,6 +46,11 @@ export class Explorer {
   protected readonly presets = PRESETS;
 
   private readonly straftatenRes = resource({ loader: () => this.data.straftaten() });
+
+  constructor() {
+    const info = inject(DeliktInfo);
+    effect(() => info.setKatalog(this.straftatenRes.value() ?? []));
+  }
   private readonly datasetRes = resource({
     params: () => this.auswahl.datasetId(),
     loader: ({ params }) => this.data.dataset(params),
