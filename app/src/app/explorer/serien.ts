@@ -1,4 +1,5 @@
-import type { Hinweis } from '@crime-stats/shared';
+import type { DimensionDef, Hinweis } from '@crime-stats/shared';
+import type { Filter } from '../core/pks-data';
 
 export interface Serie {
   /** Eindeutig je Linie, z. B. "892000" oder "892000|weiblich" beim Vergleich nach einer Dimension. */
@@ -11,10 +12,60 @@ export interface Serie {
   werte: (number | null)[];
 }
 
+/** Eine anzuzeigende Linie, bevor Werte und Farbe feststehen. */
+export interface Linie {
+  id: string;
+  schluessel: string;
+  label: string;
+  filter: Filter;
+}
+
 /** Markierung eines methodischen Bruchs im Diagramm. */
 export interface Markierung {
   jahr: number;
   text: string;
+}
+
+export const wertLabel = (d: DimensionDef, id: string) =>
+  d.werte?.find((w) => w.id === id)?.label ?? id;
+
+/**
+ * Eine Linie je Delikt – oder beim Vergleich je Delikt und Vergleichswert. Bei nur einem Delikt
+ * heißen die Linien nur wie der Vergleichswert ("Männlich"), sonst "Delikt · Männlich".
+ */
+export function linienBilden(
+  delikte: readonly string[],
+  filter: Filter,
+  vergleich: DimensionDef | undefined,
+  name: (schluessel: string) => string,
+): Linie[] {
+  return delikte.flatMap((schluessel) => {
+    if (!vergleich?.vergleich)
+      return [{ id: schluessel, schluessel, label: name(schluessel), filter }];
+    return vergleich.vergleich.map((w) => ({
+      id: `${schluessel}|${w}`,
+      schluessel,
+      label:
+        delikte.length > 1
+          ? `${name(schluessel)} · ${wertLabel(vergleich, w)}`
+          : wertLabel(vergleich, w),
+      filter: { ...filter, [vergleich.id]: w },
+    }));
+  });
+}
+
+/** Bereich der Jahre (Indizes), in dem mindestens eine Reihe einen Wert hat; null = keine Werte. */
+export function datenbereich(
+  reihen: (number | null)[][],
+  anzahl: number,
+): { lo: number; hi: number } | null {
+  const hatWert = (i: number) => reihen.some((r) => r[i] !== null && r[i] !== undefined);
+  let lo = 0;
+  while (lo < anzahl && !hatWert(lo)) lo++;
+  if (lo === anzahl) return null;
+  let hi = anzahl - 1;
+  while (hi > lo && !hatWert(hi)) hi--;
+  return { lo, hi };
 }
 
 /** Index mit erstem vorhandenem Wert im Zeitraum = 100. */
@@ -44,6 +95,25 @@ export function relevanteHinweise(
     if (h.abJahr !== undefined && h.abJahr > bis) return false;
     if (h.bisJahr !== undefined && h.bisJahr < von) return false;
     return true;
+  });
+}
+
+/**
+ * Hinweise zu gewählten oder verglichenen Dimensionswerten, z. B. „Alter ‚Kinder‘: TVBZ nur 8 bis 13 Jahre“ –
+ * nur, wenn sie für die Kennzahl gelten.
+ */
+export function wertHinweise(
+  dimensionen: DimensionDef[],
+  filter: Filter,
+  vergleich: DimensionDef | undefined,
+  kennzahl: string,
+): Hinweis[] {
+  return dimensionen.flatMap((d) => {
+    const ids = d === vergleich ? (d.vergleich ?? []) : [filter[d.id]];
+    return (d.werte ?? [])
+      .filter((w) => ids.includes(w.id) && w.hinweis)
+      .filter((w) => !w.hinweisKennzahlen || w.hinweisKennzahlen.includes(kennzahl))
+      .map((w) => ({ text: `${d.label} „${w.label}“: ${w.hinweis}` }));
   });
 }
 

@@ -2,155 +2,47 @@
   <aside class="seite">
     <h2 class="abschnitt">Delikte vergleichen</h2>
     <app-delikt-picker
-      [straftaten]="straftaten()"
+      [straftaten]="z.straftaten()"
       [ausgewaehlt]="auswahl.delikte()"
-      [farben]="deliktFarben()"
+      [farben]="z.deliktFarben()"
       [max]="maxLinien"
       (hinzufuegen)="auswahl.addDelikt($event)"
       (entfernen)="auswahl.removeDelikt($event)"
     />
   </aside>
 
-  <section class="inhalt" [class.laedt]="laedt()">
-    @if (bereiche().length > 1) {
-      <div class="segmente bereiche" role="group" aria-label="Bereich">
-        @for (b of bereiche(); track b.id) {
-          <button
-            type="button"
-            [class.aktiv]="b.id === auswahl.datasetId()"
-            [attr.aria-pressed]="b.id === auswahl.datasetId()"
-            (click)="setDataset(b.id)"
-          >
-            {{ b.bereich }}
-          </button>
-        }
-      </div>
-    }
+  <section class="inhalt" [class.laedt]="z.laedt()">
+    <app-filter-leiste />
 
-    <div class="filter" role="group" aria-label="Filter">
-      <label class="feld">
-        <span>Kennzahl</span>
-        <select [value]="kennzahl()?.id" (change)="setKennzahl($any($event.target).value)">
-          @for (k of kennzahlen(); track k.id) {
-            <option [value]="k.id" [selected]="k.id === kennzahl()?.id">{{ k.label }}</option>
-          }
-        </select>
-      </label>
-
-      @for (d of dimensionen(); track d.id) {
-        <label class="feld">
-          <span>{{ d.label }}</span>
-          <select
-            [disabled]="vergleichDim()?.id === d.id"
-            (change)="setFilter(d, $any($event.target).value)"
-          >
-            @for (w of d.werte; track w.id) {
-              <option [value]="w.id" [selected]="w.id === filterWerte()[d.id]">
-                {{ w.label }}
-              </option>
-            }
-          </select>
-        </label>
-      }
-
-      @if (vergleichbar().length) {
-        <label class="feld">
-          <span>Vergleichen nach</span>
-          <select (change)="setVergleich($any($event.target).value)">
-            <option value="" [selected]="!vergleichDim()">–</option>
-            @for (d of vergleichbar(); track d.id) {
-              <option [value]="d.id" [selected]="d.id === vergleichDim()?.id">{{ d.label }}</option>
-            }
-          </select>
-        </label>
-      }
-
-      <div class="feld">
-        <span>Zeitraum</span>
-        <div class="zeitraum">
-          <select aria-label="Von" (change)="setVon($any($event.target).value)">
-            @for (j of alleJahre(); track j) {
-              <option [value]="j" [selected]="j === zeitraum().von">{{ j }}</option>
-            }
-          </select>
-          <span aria-hidden="true">–</span>
-          <select aria-label="Bis" (change)="setBis($any($event.target).value)">
-            @for (j of alleJahre(); track j) {
-              <option [value]="j" [selected]="j === zeitraum().bis">{{ j }}</option>
-            }
-          </select>
-        </div>
-      </div>
-
-      <div class="feld">
-        <span>Schnellwahl</span>
-        <div class="segmente">
-          @for (p of presets; track p.label) {
-            <button
-              type="button"
-              [class.aktiv]="presetAktiv(p)"
-              [attr.aria-pressed]="presetAktiv(p)"
-              (click)="setPreset(p)"
-            >
-              {{ p.label }}
-            </button>
-          }
-        </div>
-      </div>
-
-      <div class="feld">
-        <span>Darstellung</span>
-        <div class="segmente">
-          <button
-            type="button"
-            [class.aktiv]="auswahl.darstellung() === 'absolut'"
-            [attr.aria-pressed]="auswahl.darstellung() === 'absolut'"
-            (click)="setDarstellung('absolut')"
-          >
-            Absolut
-          </button>
-          <button
-            type="button"
-            [class.aktiv]="auswahl.darstellung() === 'index'"
-            [attr.aria-pressed]="auswahl.darstellung() === 'index'"
-            (click)="setDarstellung('index')"
-            title="Erstes Jahr = 100 – macht Delikte unterschiedlicher Größe vergleichbar"
-          >
-            Index
-          </button>
-        </div>
-      </div>
-    </div>
-
-    @if (fehler(); as f) {
+    @if (z.fehler(); as f) {
       <div class="karte fehler" role="alert">
         Daten konnten nicht geladen werden: {{ f.message }}
       </div>
-    } @else if (meta()) {
+    } @else if (z.meta(); as meta) {
       <article class="karte">
-        <h2 class="titel">{{ titel() }}</h2>
-        @if (kennzahl()?.beschreibung; as b) {
+        <h2 class="titel">{{ z.titel() }}</h2>
+        @if (z.kennzahl()?.beschreibung; as b) {
           <p class="beschreibung">{{ b }}</p>
         }
-        @if (fehlendeDelikte().length) {
+        @if (z.fehlendeDelikte().length) {
           <p class="beschreibung">
-            In diesem Bereich nicht verfügbar: {{ fehlendeDelikte().join(', ') }}.
+            In diesem Bereich nicht verfügbar: {{ z.fehlendeDelikte().join(', ') }}.
           </p>
         }
-        @if (ausgeblendeteLinien()) {
+        @if (z.ausgeblendeteLinien()) {
           <p class="beschreibung">
-            {{ ausgeblendeteLinien() }} weitere Linien ausgeblendet – höchstens
-            {{ maxLinien }} gleichzeitig. Entferne Delikte oder wähle einen anderen Vergleich.
+            {{ z.ausgeblendeteLinien() }} weitere Linien ausgeblendet – höchstens {{ maxLinien }}
+            gleichzeitig. Entferne Delikte oder wähle einen anderen Vergleich.
           </p>
         }
-        @if (keineDaten()) {
+        @if (z.keineDaten()) {
           <p class="leer">Für diese Auswahl liegen im gewählten Zeitraum keine Werte vor.</p>
-        } @else if (serien().length) {
+        } @else if (z.serien().length) {
           <app-trend-chart
-            [jahre]="jahre()"
-            [serien]="serien()"
-            [einheit]="einheit()"
-            [markierungen]="markierungen()"
+            [jahre]="z.jahre()"
+            [serien]="z.serien()"
+            [einheit]="z.einheit()"
+            [markierungen]="z.markierungen()"
             (entfernen)="auswahl.removeDelikt($event)"
           />
         } @else {
@@ -158,48 +50,32 @@
         }
       </article>
 
-      @if (hinweise().length || namensaenderungen().length) {
-        <article class="karte hinweise">
+      @if (z.hinweise().length || z.namensaenderungen().length) {
+        <article class="karte">
           <h2 class="abschnitt">Hinweise zur Vergleichbarkeit</h2>
-          <ul>
-            @for (h of hinweise(); track h.text) {
-              <li [class.bruch]="h.bruch">
-                @if (h.bruch && h.abJahr) {
-                  <span class="badge">Bruch {{ h.abJahr }}</span>
-                }
-                {{ h.text }}
-              </li>
-            }
-            @for (n of namensaenderungen(); track n.schluessel + n.jahr) {
-              <li>
-                <span class="badge">{{ n.jahr }}</span>
-                Bezeichnung von {{ n.schluessel }} geändert: „{{ n.vorher }}“ → „{{ n.nachher }}“.
-                Der Deliktsumfang kann sich dabei geändert haben.
-              </li>
-            }
-          </ul>
+          <app-hinweis-liste />
         </article>
       }
 
-      @if (serien().length) {
+      @if (z.serien().length) {
         <article class="karte">
           <h2 class="abschnitt">Tabelle</h2>
           <app-trend-table
-            [jahre]="jahre()"
-            [serien]="serien()"
-            [einheit]="einheit()"
-            [kennzahlLabel]="titel()"
+            [jahre]="z.jahre()"
+            [serien]="z.serien()"
+            [einheit]="z.einheit()"
+            [kennzahlLabel]="z.titel()"
           />
         </article>
       }
 
       <footer class="quelle">
-        Quelle: Bundeskriminalamt, Polizeiliche Kriminalstatistik {{ meta()!.quelle.jahrgang }},
-        {{ meta()!.quelle.datei }}
-        @if (meta()!.quelle.stand) {
-          ({{ meta()!.quelle.stand }})
+        Quelle: Bundeskriminalamt, Polizeiliche Kriminalstatistik {{ meta.quelle.jahrgang }},
+        {{ meta.quelle.datei }}
+        @if (meta.quelle.stand) {
+          ({{ meta.quelle.stand }})
         }
-        @if (meta()!.quelle.url; as url) {
+        @if (meta.quelle.url; as url) {
           · <a [href]="url" target="_blank" rel="noopener">Originaltabelle</a>
         }
       </footer>

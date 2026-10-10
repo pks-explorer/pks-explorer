@@ -1,0 +1,107 @@
+@if (z.bereiche().length > 1) {
+  <div class="segmente bereiche" role="group" aria-label="Bereich">
+    @for (b of z.bereiche(); track b.id) {
+      <button
+        type="button"
+        [class.aktiv]="b.id === auswahl.datasetId()"
+        [attr.aria-pressed]="b.id === auswahl.datasetId()"
+        (click)="auswahl.setDataset(b.id)"
+      >
+        {{ b.bereich }}
+      </button>
+    }
+  </div>
+}
+
+<div class="filter" role="group" aria-label="Filter">
+  <label class="feld">
+    <span>Kennzahl</span>
+    <select (change)="auswahl.setKennzahl($any($event.target).value)">
+      @for (k of z.kennzahlen(); track k.id) {
+        <option [value]="k.id" [selected]="k.id === z.kennzahl()?.id">{{ k.label }}</option>
+      }
+    </select>
+  </label>
+
+  @for (d of z.dimensionen(); track d.id) {
+    <label class="feld">
+      <span>{{ d.label }}</span>
+      <select
+        [disabled]="z.vergleichDim()?.id === d.id"
+        (change)="setFilter(d, $any($event.target).value)"
+      >
+        @for (w of d.werte; track w.id) {
+          <option [value]="w.id" [selected]="w.id === z.filterWerte()[d.id]">{{ w.label }}</option>
+        }
+      </select>
+    </label>
+  }
+
+  @if (z.vergleichbar().length) {
+    <label class="feld">
+      <span>Vergleichen nach</span>
+      <select (change)="setVergleich($any($event.target).value)">
+        <option value="" [selected]="!z.vergleichDim()">–</option>
+        @for (d of z.vergleichbar(); track d.id) {
+          <option [value]="d.id" [selected]="d.id === z.vergleichDim()?.id">{{ d.label }}</option>
+        }
+      </select>
+    </label>
+  }
+
+  <div class="feld">
+    <span>Zeitraum</span>
+    <div class="zeitraum">
+      <select aria-label="Von" (change)="setVon($any($event.target).value)">
+        @for (j of z.alleJahre(); track j) {
+          <option [value]="j" [selected]="j === z.zeitraum().von">{{ j }}</option>
+        }
+      </select>
+      <span aria-hidden="true">–</span>
+      <select aria-label="Bis" (change)="setBis($any($event.target).value)">
+        @for (j of z.alleJahre(); track j) {
+          <option [value]="j" [selected]="j === z.zeitraum().bis">{{ j }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <div class="feld">
+    <span>Schnellwahl</span>
+    <div class="segmente">
+      @for (p of presets; track p.label) {
+        <button
+          type="button"
+          [class.aktiv]="presetAktiv(p)"
+          [attr.aria-pressed]="presetAktiv(p)"
+          (click)="setPreset(p)"
+        >
+          {{ p.label }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <div class="feld">
+    <span>Darstellung</span>
+    <div class="segmente">
+      <button
+        type="button"
+        [class.aktiv]="auswahl.darstellung() === 'absolut'"
+        [attr.aria-pressed]="auswahl.darstellung() === 'absolut'"
+        (click)="auswahl.setDarstellung('absolut')"
+      >
+        Absolut
+      </button>
+      <button
+        type="button"
+        [class.aktiv]="auswahl.darstellung() === 'index'"
+        [attr.aria-pressed]="auswahl.darstellung() === 'index'"
+        (click)="auswahl.setDarstellung('index')"
+        title="Erstes Jahr = 100 – macht Delikte unterschiedlicher Größe vergleichbar"
+      >
+        Index
+      </button>
+    </div>
+  </div>
+</div>

@@ -43,67 +43,6 @@
   color: var(--text-primary);
 }
 
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  align-items: flex-end;
-}
-.feld {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 12px;
-  color: var(--text-muted);
-  > span {
-    font-weight: 600;
-  }
-}
-select {
-  padding: 6px 8px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--surface-1);
-  color: var(--text-primary);
-  font: inherit;
-  font-size: 14px;
-  max-width: 100%;
-}
-.zeitraum {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-secondary);
-}
-
-.segmente {
-  display: inline-flex;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  button {
-    padding: 6px 10px;
-    border: 0;
-    border-right: 1px solid var(--border);
-    background: var(--surface-1);
-    color: var(--text-secondary);
-    font: inherit;
-    font-size: 13px;
-    cursor: pointer;
-    &:last-child {
-      border-right: 0;
-    }
-    &:hover {
-      background: var(--hover);
-    }
-    &.aktiv {
-      background: var(--selected);
-      color: var(--text-primary);
-      font-weight: 600;
-    }
-  }
-}
-
 .karte {
   display: flex;
   flex-direction: column;
@@ -134,36 +73,10 @@ select {
   border-color: var(--critical);
 }
 
-.hinweise ul {
-  margin: 0;
-  padding-left: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-.badge {
-  display: inline-block;
-  padding: 0 6px;
-  margin-right: 4px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-primary);
-  font-variant-numeric: tabular-nums;
-}
-
 .quelle {
   color: var(--text-muted);
   font-size: 12px;
 }
 a {
   color: var(--link);
-}
-
-.bereiche button {
-  padding: 8px 16px;
-  font-size: 14px;
 }
