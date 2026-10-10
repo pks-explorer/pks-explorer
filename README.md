@@ -9,13 +9,16 @@ data/raw/<jahrgang>/   BKA-Originale (PDF/XLSX), Ordner = URL-Pfad der BKA-Seite
 data/processed/        generierte Datasets (JSON) für die App
 shared/                gemeinsames Datenmodell (TypeScript)
 etl/                   Crawler, Downloader und XLSX-Parser (Node + TypeScript)
-app/                   Angular-App (folgt)
+app/                   Angular-App (Explorer: Delikte, Kennzahl, Zeitraum wählen → Diagramm + Tabelle)
 ```
 
 ## Befehle
 
 ```bash
 npm install
+npm start                                    # App unter http://localhost:4200 (kopiert vorher data/processed → app/public/data)
+npm run build                                # Produktions-Build nach app/dist/app
+npm test -w app -- --watch=false             # Unit-Tests der App
 npm run crawl -- --year 2024                 # BKA-Seiten crawlen und PDF/XLSX laden (vorhandene Dateien werden übersprungen)
 npm run crawl -- --year 2024 --skip-crawl    # nur fehlende Dateien laut inventory.json laden
 npm run etl -- --jahrgang 2024               # data/raw → data/processed
@@ -35,3 +38,12 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 | ID | Quelle | Inhalt |
 |---|---|---|
 | `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle` | Bund, 1987–2024, je Straftatenschlüssel: Fälle, HZ, Versuche, Schusswaffe, Aufklärung, Tatverdächtige |
+
+## App
+
+Die gesamte Auswahl steht in der URL und ist damit als Link teilbar, z. B.
+`/?d=------,892000,897000&k=hz&von=2000&bis=2024&modus=index`
+(`d` = Straftatenschlüssel, `k` = Kennzahl, `modus=index` = erstes Jahr = 100).
+
+Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`); die heutige Implementierung lädt die
+JSON-Dateien und kann später z. B. durch Parquet + DuckDB-WASM ersetzt werden.

@@ -1,0 +1,97 @@
+<div class="gewaehlt" aria-live="polite">
+  @for (s of gewaehlteStraftaten(); track s.schluessel) {
+    <span class="chip">
+      <span class="key" [style.background]="farben().get(s.schluessel)"></span>
+      <span class="chip-label" [title]="s.name">{{ s.name }}</span>
+      <button
+        type="button"
+        class="chip-x"
+        (click)="entfernen.emit(s.schluessel)"
+        [attr.aria-label]="s.name + ' entfernen'"
+      >
+        ×
+      </button>
+    </span>
+  } @empty {
+    <p class="leer">Noch kein Delikt gewählt.</p>
+  }
+</div>
+@if (voll()) {
+  <p class="hint">
+    Maximal {{ max() }} Delikte gleichzeitig – entferne eines, um ein weiteres hinzuzufügen.
+  </p>
+}
+
+<input
+  type="search"
+  class="suche"
+  placeholder="Delikt oder Schlüssel suchen …"
+  aria-label="Delikt suchen"
+  [value]="suche()"
+  (input)="suche.set($any($event.target).value)"
+/>
+
+<div class="liste" role="group" aria-label="Straftaten">
+  @if (suche().trim()) {
+    @for (t of treffer(); track t.straftat.schluessel) {
+      <button
+        type="button"
+        class="eintrag"
+        [attr.aria-pressed]="istGewaehlt(t.straftat.schluessel)"
+        [class.aktiv]="istGewaehlt(t.straftat.schluessel)"
+        [disabled]="voll() && !istGewaehlt(t.straftat.schluessel)"
+        (click)="umschalten(t.straftat)"
+      >
+        <span class="check" aria-hidden="true">{{
+          istGewaehlt(t.straftat.schluessel) ? '✓' : ''
+        }}</span>
+        <span class="text">
+          <span class="name">{{ t.straftat.name }}</span>
+          @if (t.pfad) {
+            <span class="pfad">{{ t.pfad }}</span>
+          }
+        </span>
+        <span class="code">{{ t.straftat.schluessel }}</span>
+      </button>
+    } @empty {
+      <p class="leer">Keine Treffer.</p>
+    }
+  } @else {
+    @for (gruppe of baum(); track gruppe.titel) {
+      <div class="gruppe">{{ gruppe.titel }}</div>
+      @for (k of gruppe.knoten; track k.straftat.schluessel) {
+        <div class="zeile" [style.padding-left.px]="k.tiefe * 14">
+          @if (k.hatKinder) {
+            <button
+              type="button"
+              class="toggle"
+              (click)="aufklappen(k.straftat.schluessel)"
+              [attr.aria-expanded]="k.offen"
+              [attr.aria-label]="(k.offen ? 'Zuklappen: ' : 'Aufklappen: ') + k.straftat.name"
+            >
+              {{ k.offen ? '▾' : '▸' }}
+            </button>
+          } @else {
+            <span class="toggle-platz"></span>
+          }
+          <button
+            type="button"
+            class="eintrag"
+            [attr.aria-pressed]="istGewaehlt(k.straftat.schluessel)"
+            [class.aktiv]="istGewaehlt(k.straftat.schluessel)"
+            [disabled]="voll() && !istGewaehlt(k.straftat.schluessel)"
+            (click)="umschalten(k.straftat)"
+          >
+            <span class="check" aria-hidden="true">{{
+              istGewaehlt(k.straftat.schluessel) ? '✓' : ''
+            }}</span>
+            <span class="text"
+              ><span class="name">{{ k.straftat.name }}</span></span
+            >
+            <span class="code">{{ k.straftat.schluessel }}</span>
+          </button>
+        </div>
+      }
+    }
+  }
+</div>

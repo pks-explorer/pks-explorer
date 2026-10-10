@@ -1,0 +1,91 @@
+:host {
+  display: block;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.hint {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  width: max-content;
+  min-width: 100%;
+}
+
+th,
+td {
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--grid);
+  white-space: nowrap;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: left;
+}
+tbody tr:last-child > * {
+  border-bottom: none;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sticky {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface-1);
+  border-right: 1px solid var(--grid);
+  max-width: 320px;
+}
+thead .sticky {
+  z-index: 2;
+  background: var(--surface-2);
+}
+
+tbody th {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key {
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  flex: none;
+}
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.code {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}

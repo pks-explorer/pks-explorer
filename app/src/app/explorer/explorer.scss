@@ -1,0 +1,164 @@
+:host {
+  display: block;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.seite {
+  position: sticky;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media (max-width: 900px) {
+    position: static;
+  }
+}
+
+.inhalt {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  transition: opacity 150ms;
+  &.laedt {
+    opacity: 0.6;
+  }
+}
+
+.abschnitt {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: flex-end;
+}
+.feld {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  > span {
+    font-weight: 600;
+  }
+}
+select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-1);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 14px;
+  max-width: 100%;
+}
+.zeitraum {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.segmente {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  button {
+    padding: 6px 10px;
+    border: 0;
+    border-right: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    &:last-child {
+      border-right: 0;
+    }
+    &:hover {
+      background: var(--hover);
+    }
+    &.aktiv {
+      background: var(--selected);
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+.karte {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-1);
+  min-width: 0;
+}
+.titel {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.beschreibung {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+.leer {
+  color: var(--text-muted);
+  margin: 0;
+}
+.fehler {
+  color: var(--text-primary);
+  border-color: var(--critical);
+}
+
+.hinweise ul {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.badge {
+  display: inline-block;
+  padding: 0 6px;
+  margin-right: 4px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.quelle {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+a {
+  color: var(--link);
+}
