@@ -7,3 +7,6 @@ dist/
 data/raw/**/*
 !data/raw/*/
 !data/raw/*/inventory.json
+
+# Aufbereitete Daten: per `npm run etl` reproduzierbar, nicht versioniert
+data/processed/

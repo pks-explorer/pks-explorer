@@ -6,7 +6,7 @@ Visualisierung der Polizeilichen Kriminalstatistik (PKS) des BKA.
 
 ```
 data/raw/<jahrgang>/   BKA-Originale (PDF/XLSX), Ordner = URL-Pfad der BKA-Seite; inventory.json = alle Seiten + Download-Links
-data/processed/        generierte Datasets (JSON) für die App
+data/processed/        generierte Datasets (JSON) für die App – nicht versioniert, per `npm run etl` erzeugen
 shared/                gemeinsames Datenmodell (TypeScript)
 etl/                   Crawler, Downloader und XLSX-Parser (Node + TypeScript)
 app/                   Angular-App (Explorer: Delikte, Kennzahl, Zeitraum wählen → Diagramm + Tabelle)
