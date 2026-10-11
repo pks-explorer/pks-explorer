@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { ExplorerZustand } from './explorer-zustand';
+import { ExplorerZustand } from '../../core/services/explorer-zustand';
 
 /** Hinweise zur Vergleichbarkeit: methodische Brüche, Gruppenabgrenzungen und Bezeichnungsänderungen. */
 @Component({

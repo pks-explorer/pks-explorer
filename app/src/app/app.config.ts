@@ -10,7 +10,7 @@ import { GridComponent, MarkLineComponent, TooltipComponent } from 'echarts/comp
 import { LabelLayout } from 'echarts/features';
 import { SVGRenderer } from 'echarts/renderers';
 import { routes } from './app.routes';
-import { ParquetPksDataSource, PksDataSource } from './core/pks-data';
+import { ParquetPksDataSource, PksDataSource } from './core/services/pks-data';
 
 echarts.use([
   LineChart,

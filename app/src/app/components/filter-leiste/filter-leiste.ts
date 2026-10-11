@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import type { DimensionDef } from '@crime-stats/shared';
-import { Auswahl } from '../core/auswahl';
-import { ExplorerZustand } from './explorer-zustand';
-import { WerteAuswahl, nachGruppe } from './werte-auswahl';
+import { Auswahl } from '../../core/services/auswahl';
+import { ExplorerZustand } from '../../core/services/explorer-zustand';
+import { WerteAuswahl, nachGruppe } from '../werte-auswahl/werte-auswahl';
 
 interface Preset {
   label: string;

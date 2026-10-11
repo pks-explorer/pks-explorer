@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import type { Einheit } from '@crime-stats/shared';
-import { formatVeraenderung, formatWert } from '../core/format';
-import { veraenderung, type Serie } from './serien';
-import { DeliktInfoDirective } from './delikt-info.directive';
+import { formatVeraenderung, formatWert } from '../../core/utils/format';
+import type { Serie } from '../../core/models/serie';
+import { veraenderung } from '../../core/utils/serien';
+import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive';
 
 @Component({
   selector: 'app-trend-table',

@@ -11,10 +11,10 @@ import {
 import { NgxEchartsDirective } from 'ngx-echarts';
 import type { EChartsCoreOption } from 'echarts/core';
 import type { Einheit } from '@crime-stats/shared';
-import { Theme } from '../core/theme';
-import { formatAchse, formatWert } from '../core/format';
-import type { Markierung, Serie } from './serien';
-import { DeliktInfoDirective } from './delikt-info.directive';
+import { Theme } from '../../core/services/theme';
+import { formatAchse, formatWert } from '../../core/utils/format';
+import type { Markierung, Serie } from '../../core/models/serie';
+import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive';
 
 const escape = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const kurz = (s: string, n = 28) => (s.length > n ? s.slice(0, n - 1) + '…' : s);

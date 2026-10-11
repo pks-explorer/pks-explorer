@@ -8,11 +8,13 @@ import {
   type Resource,
 } from '@angular/core';
 import type { Hinweis, KennzahlDef } from '@crime-stats/shared';
-import { Auswahl, MAX_LINIEN, STANDARD_VON } from '../core/auswahl';
-import { DeliktInfo } from '../core/delikt-info';
-import { StabileSlots } from '../core/farben';
-import { DatasetView, PksDataSource, filterDimensionen, type Filter } from '../core/pks-data';
-import { Theme } from '../core/theme';
+import { Auswahl, MAX_LINIEN, STANDARD_VON } from './auswahl';
+import { DeliktInfo } from './delikt-info';
+import { StabileSlots } from '../utils/farben';
+import { DatasetView, filterDimensionen, type Filter } from '../models/dataset-view';
+import type { Linie, Serie, Vergleich } from '../models/serie';
+import { PksDataSource } from './pks-data';
+import { Theme } from './theme';
 import {
   datenbereich,
   indexiere,
@@ -22,10 +24,7 @@ import {
   wertHinweise,
   vergleichWerte,
   wertLabel,
-  type Vergleich,
-  type Linie,
-  type Serie,
-} from './serien';
+} from '../utils/serien';
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));
 

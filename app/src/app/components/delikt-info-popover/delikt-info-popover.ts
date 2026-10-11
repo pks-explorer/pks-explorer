@@ -7,7 +7,7 @@ import {
   inject,
   viewChild,
 } from '@angular/core';
-import { DeliktInfo } from '../core/delikt-info';
+import { DeliktInfo } from '../../core/services/delikt-info';
 
 const MAX_UMFASST = 8;
 const MAX_DEFINITION_ZEICHEN = 700;

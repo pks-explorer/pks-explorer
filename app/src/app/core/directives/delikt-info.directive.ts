@@ -1,5 +1,5 @@
 import { Directive, ElementRef, OnDestroy, computed, inject, input } from '@angular/core';
-import { DeliktInfo } from '../core/delikt-info';
+import { DeliktInfo } from '../services/delikt-info';
 
 const VERZOEGERUNG_MS = 350;
 

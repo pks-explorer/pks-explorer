@@ -1,5 +1,5 @@
 import type { DatasetMeta, Zelle } from '@crime-stats/shared';
-import { DatasetView, type SpaltenLeser } from './pks-data';
+import { DatasetView, type SpaltenLeser } from './dataset-view';
 
 /** Kleines Dataset: Schlüssel "A" mit zwei Jahren × zwei Geschlechtern, Altersgruppe als Spalten-Dimension. */
 const META: DatasetMeta = {

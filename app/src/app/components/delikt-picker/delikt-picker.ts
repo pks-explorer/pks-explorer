@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input, output, signal } from '@angular/core';
 import { SCHLUESSEL_INSGESAMT, type Straftat } from '@crime-stats/shared';
-import { DeliktInfoDirective } from './delikt-info.directive';
+import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive';
 
 interface Knoten {
   straftat: Straftat;

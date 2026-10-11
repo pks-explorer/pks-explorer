@@ -1,12 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Auswahl, MAX_LINIEN } from '../core/auswahl';
-import { DeliktInfoPopover } from './delikt-info-popover';
-import { DeliktPicker } from './delikt-picker';
-import { ExplorerZustand } from './explorer-zustand';
-import { FilterLeiste } from './filter-leiste';
-import { HinweisListe } from './hinweis-liste';
-import { TrendChart } from './trend-chart';
-import { TrendTable } from './trend-table';
+import { Auswahl, MAX_LINIEN } from '../../core/services/auswahl';
+import { DeliktInfoPopover } from '../delikt-info-popover/delikt-info-popover';
+import { DeliktPicker } from '../delikt-picker/delikt-picker';
+import { ExplorerZustand } from '../../core/services/explorer-zustand';
+import { FilterLeiste } from '../filter-leiste/filter-leiste';
+import { HinweisListe } from '../hinweis-liste/hinweis-liste';
+import { TrendChart } from '../trend-chart/trend-chart';
+import { TrendTable } from '../trend-table/trend-table';
 
 /** Hauptseite: Delikt-Auswahl, Filter, Diagramm, Hinweise und Tabelle. */
 @Component({
