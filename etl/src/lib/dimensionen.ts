@@ -9,7 +9,7 @@ export const GESCHLECHT: DimensionWert[] = [
 
 /** Spaltenkopf-Endungen für das Geschlecht ("… | insges." / "… | männl." / …). */
 export const GESCHLECHT_KOPF: Record<string, RegExp> = {
-  insgesamt: /\| (insgesamt|insges\.|insg\.)$/,
+  insgesamt: /\| (insgesamt|insge-samt|insges\.|insg\.)$/,
   maennlich: /\| (männlich|männl\.)$/,
   weiblich: /\| (weiblich|weibl\.)$/,
 };

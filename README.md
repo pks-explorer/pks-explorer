@@ -39,9 +39,9 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 
 | ID | Quelle | Inhalt |
 |---|---|---|
-| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle`, je Jahrgang `LA-F-02`, `ST-F-01` | Deutschland ab 1987, dazu 16 Länder und 84 Städte (ab 100.000 Einwohnern, Landeshauptstädte) aus den Jahrgangstabellen: Fälle, HZ, Versuche, Aufklärung, Tatverdächtige. Dimension `region` (`DE`, Länderkennziffer, Gemeindeschlüssel). Aufgeteilt je Schlüssel |
-| `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009. Aufgeteilt je Schlüssel |
-| `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ. Aufgeteilt je Schlüssel |
+| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle`, je Jahrgang `LA-F-02`, `ST-F-01` | Deutschland ab 1987, dazu 16 Länder, 84 Städte (ab 100.000 Einwohnern, Landeshauptstädte) und rund 400 Kreise (`KR-F-01`, ausgewählte Straftaten) aus den Jahrgangstabellen: Fälle, HZ, Versuche, Aufklärung, Tatverdächtige. Dimension `region` (`DE`, Länderkennziffer, Gemeindeschlüssel). Aufgeteilt je Schlüssel |
+| `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009; Länder und Städte aus `LA-TV`/`ST-TV` (nur Anzahl). Aufgeteilt je Schlüssel |
+| `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ; Länder und Städte aus `LA-O-01`/`ST-O-01` (nur Anzahl). Aufgeteilt je Schlüssel |
 
 ## App
 

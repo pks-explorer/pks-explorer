@@ -51,3 +51,12 @@ export async function vorhandeneJahrgaenge(rawRoot: string): Promise<number[]> {
     .map((e) => Number(e.name))
     .sort((a, b) => a - b);
 }
+
+/** Wie `findeDateien`, aber eine leere Liste, wenn es keine passende Datei gibt. */
+export async function findeDateienOptional(dir: string, muster: RegExp): Promise<string[]> {
+  try {
+    return await findeDateien(dir, muster);
+  } catch {
+    return [];
+  }
+}

@@ -122,16 +122,20 @@ const HINWEISE = [
 ];
 
 /** Staatsangehörigkeit aus der Tabellennummer, Geschlecht aus dem Dateinamen. */
-function zuordnung(datei: string): { geschlecht: string; staatsangehoerigkeit: string } {
+/** Staatsangehörigkeit aus der BKA-Tabellennummer: T20 alle, T40 deutsch, T50 nichtdeutsch. */
+export function staatsangehoerigkeitAus(datei: string): string {
   const t = /-T(20|40|50)-/.exec(datei)?.[1];
   if (!t) throw new Error(`${datei}: Tabellennummer T20/T40/T50 nicht erkennbar`);
-  const staatsangehoerigkeit = { '20': 'insgesamt', '40': 'deutsch', '50': 'nichtdeutsch' }[t]!;
+  return { '20': 'insgesamt', '40': 'deutsch', '50': 'nichtdeutsch' }[t]!;
+}
+
+function zuordnung(datei: string): { geschlecht: string; staatsangehoerigkeit: string } {
   const geschlecht = /maennlich/i.test(datei)
     ? 'maennlich'
     : /weiblich/i.test(datei)
       ? 'weiblich'
       : 'insgesamt';
-  return { geschlecht, staatsangehoerigkeit };
+  return { geschlecht, staatsangehoerigkeit: staatsangehoerigkeitAus(datei) };
 }
 
 export async function parseZrTatverdaechtige(
