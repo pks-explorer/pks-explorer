@@ -2,7 +2,7 @@
   "name": "@crime-stats/app",
   "version": "0.0.0",
   "scripts": {
-    "sync-data": "node -e \"require('fs').cpSync('../data/processed','public/data',{recursive:true})\"",
+    "sync-data": "node -e \"const fs=require('fs');fs.rmSync('public/data',{recursive:true,force:true});fs.cpSync('../data/processed','public/data',{recursive:true})\"",
     "prestart": "npm run sync-data",
     "prebuild": "npm run sync-data",
     "ng": "ng",

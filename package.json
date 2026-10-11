@@ -12,6 +12,7 @@
     "build": "npm run build -w app",
     "crawl": "npm run crawl -w etl --",
     "etl": "npm run etl -w etl --",
+    "deploy": "node scripts/deploy-gh-pages.mjs",
     "typecheck": "tsc -p shared && tsc -p etl"
   },
   "devDependencies": {

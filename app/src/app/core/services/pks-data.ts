@@ -48,8 +48,14 @@ export class ParquetPksDataSource extends PksDataSource {
     return this.cached(file, () => firstValueFrom(this.http.get<T>(this.base + file)));
   }
 
+  /**
+   * index.json immer frisch laden (am Zeitstempel vorbei am Browser- und CDN-Cache): Sie verweist auf
+   * die übrigen Dateien, deren Namen einen Inhalts-Hash tragen und daher beliebig lange gecacht werden dürfen.
+   */
   index(): Promise<DataIndex> {
-    return this.get('index.json');
+    return this.cached('index.json', () =>
+      firstValueFrom(this.http.get<DataIndex>(`${this.base}index.json?t=${Date.now()}`)),
+    );
   }
 
   async straftaten(): Promise<Straftat[]> {

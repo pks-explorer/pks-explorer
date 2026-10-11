@@ -1,6 +1,12 @@
-/** Schreibt Datasets (Parquet + Metadaten), Straftatenkatalog und Index nach data/processed/. */
+/**
+ * Schreibt Datasets (Parquet + Metadaten), Straftatenkatalog, Bevölkerung und Index nach data/processed/.
+ * Alle Dateien außer index.json tragen einen Inhalts-Hash im Namen (z. B. `straftaten.3f2a9c1b.json`):
+ * Statische Hosts wie GitHub Pages cachen Dateien einige Minuten; so passen nach einem Update Metadaten
+ * und Parquet-Datei immer zusammen, und nur index.json muss frisch geladen werden.
+ */
+import { createHash } from 'node:crypto';
 import { createWriteStream } from 'node:fs';
-import { mkdir, rm, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { once } from 'node:events';
 import { DuckDBInstance } from '@duckdb/node-api';
@@ -24,6 +30,8 @@ export const ROW_GROUP_GROESSE = 25_000;
 export class Ausgabe {
   private readonly eintraege: DatasetIndexEintrag[] = [];
   private bevoelkerungsDatei?: string;
+  /** Geschriebene Dateien; alles andere im Verzeichnis stammt aus früheren Läufen. */
+  private readonly dateien = new Set<string>(['index.json']);
 
   constructor(
     private readonly dir: string,
@@ -35,9 +43,10 @@ export class Ausgabe {
     await mkdir(this.dir, { recursive: true });
     const { id } = ds.meta;
     const zeilen = sortiereNachSchluessel(ds);
-    const parquet = `${id}.parquet`;
-    await schreibeParquet(ds.meta, zeilen, path.join(this.dir, parquet));
-    await rm(path.join(this.dir, id), { recursive: true, force: true }); // Partitionen früherer Versionen
+    const tmp = path.join(this.dir, `${id}.parquet.tmp`);
+    await schreibeParquet(ds.meta, zeilen, tmp);
+    const parquet = await this.versioniert(id, 'parquet', await readFile(tmp));
+    await rm(tmp);
 
     const meta: DatasetMeta = {
       ...ds.meta,
@@ -47,8 +56,7 @@ export class Ausgabe {
         zeilen: zeilenbereiche(ds.meta.spalten, zeilen),
       },
     };
-    const datei = `${id}.json`;
-    await writeFile(path.join(this.dir, datei), JSON.stringify(meta));
+    const datei = await this.versioniert(id, 'json', JSON.stringify(meta));
 
     const { titel, bereich, ebene, jahre, kennzahlen } = meta;
     this.eintraege.push({ id, titel, bereich, ebene, datei, jahre, kennzahlen });
@@ -60,21 +68,36 @@ export class Ausgabe {
   /** Schreibt bevoelkerung.json (Bezugsgröße für Raten je Einwohner). */
   async bevoelkerung(b: Bevoelkerung): Promise<void> {
     await mkdir(this.dir, { recursive: true });
-    this.bevoelkerungsDatei = 'bevoelkerung.json';
-    await writeFile(path.join(this.dir, this.bevoelkerungsDatei), JSON.stringify(b));
+    this.bevoelkerungsDatei = await this.versioniert('bevoelkerung', 'json', JSON.stringify(b));
     console.log(`  → ${this.bevoelkerungsDatei}: ${b.zeilen.length} Zeilen`);
   }
 
-  /** Schreibt Straftatenkatalog und index.json; als Letztes aufrufen. */
+  /** Schreibt Straftatenkatalog und index.json und entfernt veraltete Dateien; als Letztes aufrufen. */
   async abschliessen(straftaten: Straftat[]): Promise<void> {
     const index: DataIndex = {
       jahrgang: this.jahrgang,
       datasets: this.eintraege,
-      straftaten: 'straftaten.json',
+      straftaten: await this.versioniert('straftaten', 'json', JSON.stringify(straftaten)),
       ...(this.bevoelkerungsDatei ? { bevoelkerung: this.bevoelkerungsDatei } : {}),
     };
-    await writeFile(path.join(this.dir, index.straftaten), JSON.stringify(straftaten));
     await writeFile(path.join(this.dir, 'index.json'), JSON.stringify(index, null, 2));
+    for (const e of await readdir(this.dir)) {
+      if (!this.dateien.has(e)) await rm(path.join(this.dir, e), { recursive: true, force: true });
+    }
+  }
+
+  /** Schreibt `<name>.<hash>.<endung>` und liefert den Dateinamen. */
+  private async versioniert(
+    name: string,
+    endung: string,
+    inhalt: string | Buffer,
+  ): Promise<string> {
+    await mkdir(this.dir, { recursive: true });
+    const hash = createHash('sha256').update(inhalt).digest('hex').slice(0, 8);
+    const datei = `${name}.${hash}.${endung}`;
+    await writeFile(path.join(this.dir, datei), inhalt);
+    this.dateien.add(datei);
+    return datei;
   }
 }
 

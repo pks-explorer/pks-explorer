@@ -26,14 +26,28 @@ npm run crawl -- --year 2023 --ohne-download # nur Inventur erstellen
 npm run etl -- --jahrgang 2024               # data/raw → data/processed (Länder/Städte aus allen Jahrgängen unter data/raw)
 npm run typecheck
 npx tsx etl/src/inspect.ts <datei.xlsx> 20   # Struktur einer XLSX-Datei ansehen
+npm run deploy                               # bauen und auf GitHub Pages (Branch gh-pages) veröffentlichen
+npm run deploy -- --nur-build                # nur bauen, mit 404.html und .nojekyll
 ```
+
+## Veröffentlichen auf GitHub Pages
+
+1. Repository auf GitHub anlegen und `git remote add origin https://github.com/<name>/<repo>.git`, dann `git push -u origin main`.
+2. Daten lokal erzeugen (`npm run crawl`, `npm run etl`) – sie sind nicht versioniert und werden mit dem Build veröffentlicht.
+3. `npm run deploy`: baut mit Basis-Pfad `/<repo>/` (bei `<name>.github.io` mit `/`, sonst `--base /pfad/`) und
+   ersetzt den Branch `gh-pages` durch einen einzigen Commit mit dem Build.
+4. Einmalig auf GitHub: Settings → Pages → „Deploy from a branch“, Branch `gh-pages`, Ordner `/ (root)`.
+
+GitHub Pages unterstützt HTTP-Range-Requests, die die App zum Lesen der Parquet-Dateien braucht, und cacht Dateien
+rund zehn Minuten. Deshalb tragen alle Datendateien außer `index.json` einen Inhalts-Hash im Namen, und die App lädt
+`index.json` immer frisch. `404.html` (Kopie von `index.html`) fängt unbekannte Pfade ab.
 
 ## Datenmodell
 
 Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` = Dimensionen (`jahr`, `region`,
-`schluessel`, …) gefolgt von Wertespalten (`faelle`, `hz`, `tv|14-16`, …). Je Dataset entstehen `<id>.parquet`
-(Zeilen, nach Straftatenschlüssel sortiert, zstd) und `<id>.json` (Metadaten inkl. Zeilenbereich je Schlüssel).
-`straftaten.json` enthält den Straftatenkatalog mit Hierarchie (`parent`) und Bezeichnungsverlauf (`namensverlauf`).
+`schluessel`, …) gefolgt von Wertespalten (`faelle`, `hz`, `tv|14-16`, …). Je Dataset entstehen `<id>.<hash>.parquet`
+(Zeilen, nach Straftatenschlüssel sortiert, zstd) und `<id>.<hash>.json` (Metadaten inkl. Zeilenbereich je Schlüssel).
+`straftaten.<hash>.json` enthält den Straftatenkatalog mit Hierarchie (`parent`) und Bezeichnungsverlauf (`namensverlauf`).
 `meta.hinweise` beschreibt methodische Brüche (z. B. Tatverdächtigenzählung ab 2009, Zensus-Basis der HZ).
 
 `bevoelkerung.json` enthält die Wohnbevölkerung (31.12. des Vorjahres) aus den BKA-Tabellen `02-BU-BV` (Bund ab 2000
