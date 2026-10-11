@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import type { DimensionDef } from '@crime-stats/shared';
-import { Auswahl } from '../../core/services/auswahl';
+import { Auswahl, type Darstellung } from '../../core/services/auswahl';
 import { ExplorerZustand } from '../../core/services/explorer-zustand';
 import { WerteAuswahl, nachGruppe } from '../werte-auswahl/werte-auswahl';
 
@@ -14,6 +14,27 @@ const PRESETS: Preset[] = [
   { label: 'Ab 1993', von: (erstes) => Math.max(erstes, 1993) },
   { label: '10 Jahre', von: (_, letztes) => letztes - 9 },
   { label: '5 Jahre', von: (_, letztes) => letztes - 4 },
+];
+
+const DARSTELLUNGEN: { id: Darstellung; label: string; titel: string; rate?: boolean }[] = [
+  { id: 'absolut', label: 'Absolut', titel: 'Werte wie in der PKS' },
+  {
+    id: 'je100k',
+    label: 'Je 100.000 Einw.',
+    titel: 'Anzahl je 100.000 Einwohner der Region bzw. Gruppe (eigene Berechnung)',
+    rate: true,
+  },
+  {
+    id: 'anteil',
+    label: '% der Bevölkerung',
+    titel: 'Anzahl in Prozent der Einwohner der Region bzw. Gruppe (eigene Berechnung)',
+    rate: true,
+  },
+  {
+    id: 'index',
+    label: 'Index',
+    titel: 'Erstes Jahr = 100 – macht Delikte unterschiedlicher Größe vergleichbar',
+  },
 ];
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));
@@ -30,6 +51,7 @@ export class FilterLeiste {
   protected readonly auswahl = inject(Auswahl);
   protected readonly z = inject(ExplorerZustand);
   protected readonly presets = PRESETS;
+  protected readonly darstellungen = DARSTELLUNGEN;
 
   protected gruppiert(d: DimensionDef) {
     return nachGruppe(d.werte ?? []);

@@ -55,8 +55,12 @@ select {
     &:last-child {
       border-right: 0;
     }
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--hover);
+    }
+    &:disabled {
+      color: var(--text-muted);
+      cursor: not-allowed;
     }
     &.aktiv {
       background: var(--selected);

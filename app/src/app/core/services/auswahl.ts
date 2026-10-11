@@ -3,7 +3,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SCHLUESSEL_INSGESAMT } from '@crime-stats/shared';
 
-export type Darstellung = 'absolut' | 'index';
+/** absolut, je 100.000 Einwohner, Anteil der Bevölkerung in % oder Index (erstes Jahr = 100). */
+export type Darstellung = 'absolut' | 'je100k' | 'anteil' | 'index';
+const DARSTELLUNGEN: readonly Darstellung[] = ['absolut', 'je100k', 'anteil', 'index'];
 
 /** Höchstzahl gleichzeitig angezeigter Linien (= Anzahl Farben der Palette). */
 export const MAX_LINIEN = 8;
@@ -26,9 +28,10 @@ export class Auswahl {
 
   readonly datasetId = computed(() => this.params().get('ds') ?? STANDARD_DATASET);
   readonly kennzahl = computed(() => this.params().get('k'));
-  readonly darstellung = computed<Darstellung>(() =>
-    this.params().get('modus') === 'index' ? 'index' : 'absolut',
-  );
+  readonly darstellung = computed<Darstellung>(() => {
+    const m = this.params().get('modus') as Darstellung | null;
+    return m && DARSTELLUNGEN.includes(m) ? m : 'absolut';
+  });
   readonly delikte = computed(() => {
     const d = this.params().get('d');
     const list = d === null ? [SCHLUESSEL_INSGESAMT] : d.split(',').filter(Boolean);

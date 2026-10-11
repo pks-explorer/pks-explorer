@@ -6,12 +6,13 @@
  */
 import path from 'node:path';
 import { parseArgs } from 'node:util';
-import type { Dataset } from '@crime-stats/shared';
+import { SCHLUESSEL_INSGESAMT, type Bevoelkerung, type Dataset } from '@crime-stats/shared';
 import { PROCESSED_DIR, RAW_DIR, rawYearDir } from './paths.js';
 import { Ausgabe } from './lib/ausgabe.js';
 import {
   downloadUrl,
   findeDatei,
+  findeDateiOptional,
   findeDateien,
   findeDateienOptional,
   vorhandeneJahrgaenge,
@@ -19,6 +20,14 @@ import {
 import { ergaenzeErlaeuterungen } from './lib/erlaeuterungen.js';
 import { fuegeRegionenHinzu, type RegionEbene, type RegionalTeil } from './lib/regionen.js';
 import { StraftatenKatalog } from './lib/straftaten.js';
+import {
+  bevoelkerungZusammenfuehren,
+  kontrolliereGegenHz,
+  parseBundBevoelkerung,
+  parseGemeindeBevoelkerung,
+  parseLaenderBevoelkerung,
+  ortsname,
+} from './parsers/bevoelkerung.js';
 import { parseDefinitionskatalog } from './parsers/definitionen-pdf.js';
 import { parseStraftatenkatalog } from './parsers/katalog-pdf.js';
 import { HINWEISE_REGIONALE_FAELLE, parseRegionaleFaelle } from './parsers/regionale-faelle.js';
@@ -78,6 +87,51 @@ async function regionaleTeile(
   return teile;
 }
 
+/**
+ * Bevölkerung: Bund nach Alter aus der aktuellen Zeitreihe (ab 2000), Länder, Kreise und Städte aus
+ * den Tabellen der einzelnen Jahrgänge. 2024 gibt es Länderzahlen nach Zensus 2011 und 2022; wie beim
+ * Bund wird die Zensus-2011-Fortschreibung verwendet, damit die Reihe vergleichbar bleibt.
+ */
+async function leseBevoelkerung(): Promise<Bevoelkerung> {
+  const teile = [await parseBundBevoelkerung(await findeDatei(raw, /^02-BU-BV-OGZ-.*\.xlsx$/i))];
+  const quellen = [`${jahrgang}: 02-BU-BV-OGZ-insg-ab-2000`];
+  // Städte über den Namen zuordnen (Schlüssel in der Städtetabelle 2024 fehlerhaft)
+  const staedteNamen = new Map(
+    (faelleDs.meta.dimensionen.find((d) => d.id === 'region')?.werte ?? [])
+      .filter((w) => w.id.length === 8)
+      .map((w) => [ortsname(w.label), w.id]),
+  );
+  for (const jahr of jahrgaenge) {
+    const dir = rawYearDir(jahr);
+    const laender = await findeDateiOptional(dir, /^03-LA-BV-insg(_2011)?[._]xls\.xlsx$/i);
+    const kreise = await findeDateiOptional(dir, /^04-KR-BV-insg.*\.xlsx$/i);
+    const staedte = await findeDateiOptional(dir, /^05-ST-BV-insg.*\.xlsx$/i);
+    if (laender) teile.push(await parseLaenderBevoelkerung(laender, jahr));
+    if (kreise) teile.push(await parseGemeindeBevoelkerung(kreise, jahr, 5));
+    if (staedte) teile.push(await parseGemeindeBevoelkerung(staedte, jahr, 8, staedteNamen));
+    const gelesen = [laender, kreise, staedte].filter((d) => d !== undefined);
+    if (gelesen.length) quellen.push(`${jahr}: ${gelesen.map((d) => path.basename(d)).join(', ')}`);
+  }
+  return bevoelkerungZusammenfuehren(teile, quellen);
+}
+
+/** Straftaten insgesamt mit Fällen und HZ je Region und Jahr (für die Kontrolle der Bevölkerung). */
+function faelleInsgesamt(ds: Dataset) {
+  const s = (id: string) => ds.meta.spalten.indexOf(id);
+  return ds.zeilen.flatMap((z) =>
+    z[s('schluessel')] === SCHLUESSEL_INSGESAMT && typeof z[s('faelle')] === 'number'
+      ? [
+          {
+            jahr: z[s('jahr')] as number,
+            region: z[s('region')] as string,
+            faelle: z[s('faelle')] as number,
+            hz: z[s('hz')] as number,
+          },
+        ]
+      : [],
+  );
+}
+
 const katalog = new StraftatenKatalog();
 const ausgabe = new Ausgabe(PROCESSED_DIR, jahrgang);
 
@@ -100,6 +154,16 @@ fuegeRegionenHinzu(faelleDs, faelleRegional, {
   hinweise: HINWEISE_REGIONALE_FAELLE,
 });
 await ausgabe.dataset(faelleDs);
+
+console.log('Lese Bevölkerung (BU-BV, LA-BV, KR-BV, ST-BV)');
+const bevoelkerung = await leseBevoelkerung();
+const abweichungen = kontrolliereGegenHz(bevoelkerung, faelleInsgesamt(faelleDs));
+const max = abweichungen[0];
+console.log(
+  `  Kontrolle gegen HZ: ${abweichungen.length} Werte, größte Abweichung ` +
+    (max ? `${(max.abweichung * 100).toFixed(2)} % (${max.region} ${max.jahr})` : '–'),
+);
+await ausgabe.bevoelkerung(bevoelkerung);
 
 console.log('Lese Tatverdächtige (ZR-TV, ZR-BZ T20/T40/T50)');
 const tvDs = await parseZrTatverdaechtige(

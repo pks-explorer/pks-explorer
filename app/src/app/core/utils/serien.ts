@@ -1,6 +1,7 @@
 import type { DimensionDef, Hinweis } from '@crime-stats/shared';
 import type { Filter } from '../models/dataset-view';
 import type { Linie, Markierung, Vergleich } from '../models/serie';
+import type { Rate } from '../models/bevoelkerung-index';
 
 export const wertLabel = (d: DimensionDef, id: string) =>
   d.werte?.find((w) => w.id === id)?.label ?? id;
@@ -108,4 +109,51 @@ export function markierungen(hinweise: Hinweis[], von: number, bis: number): Mar
         !!h.bruch && h.abJahr !== undefined && h.abJahr > von && h.abJahr <= bis,
     )
     .map((h) => ({ jahr: h.abJahr, text: h.text }));
+}
+
+/**
+ * Hinweise zu eigenen Raten je Einwohner: Berechnung, Bevölkerungsbruch 2014, fehlende Bezugsgrößen
+ * (`luecken` = mindestens eine Linie ohne Werte) und Nichtdeutsche.
+ */
+export function rateHinweise(
+  rate: Rate,
+  filter: Filter,
+  vergleich: Vergleich | undefined,
+  luecken: boolean,
+): Hinweis[] {
+  const bezug = rate === 'je100k' ? 'je 100.000 Einwohner' : 'in % der Bevölkerung';
+  const hinweise: Hinweis[] = [
+    {
+      text:
+        `Eigene Berechnung: Anzahl ${bezug} (Bevölkerung am 31.12. des Vorjahres laut BKA, Quelle Statistisches ` +
+        'Bundesamt). Die amtlichen Raten (Häufigkeitszahl, Belastungs- und Gefährdungszahlen) sind als Kennzahl ' +
+        'wählbar und können abweichen.',
+    },
+    {
+      text:
+        'Bevölkerung ab 2014 auf Basis des Zensus 2011 – rund 1,3 Mio. Einwohner weniger als nach der alten ' +
+        'Fortschreibung; Raten davor fallen dadurch etwas niedriger aus.',
+      abJahr: 2014,
+      bruch: true,
+    },
+  ];
+  if (luecken) {
+    hinweise.push({
+      text:
+        'Nicht für jede Gruppe gibt es Bevölkerungszahlen: nach Alter nur für Deutschland insgesamt, ' +
+        'nach Staatsangehörigkeit nur für Deutschland und die Länder, Länder, Städte und Kreise erst ab 2019 (einzelne Städte nicht in jedem Jahr).',
+    });
+  }
+  const staat =
+    vergleich?.dim.id === 'staatsangehoerigkeit'
+      ? vergleich.werte
+      : [filter['staatsangehoerigkeit']];
+  if (staat.includes('nichtdeutsch')) {
+    hinweise.push({
+      text:
+        'Für Nichtdeutsche keine Rate: Unter den Tatverdächtigen sind auch Personen ohne Wohnsitz in Deutschland ' +
+        '(z. B. Touristen, Durchreisende), die in der Bevölkerungszahl nicht enthalten sind.',
+    });
+  }
+  return hinweise;
 }

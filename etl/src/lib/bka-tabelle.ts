@@ -21,18 +21,23 @@ const istEins = (v: string | number | null | undefined) => v === 1 || v === '1';
 
 /**
  * Liest das erste Blatt einer BKA-Tabelle. Aufbau aller PKS-Tabellen: Titelzeilen, dann ein mehrzeiliger
- * Spaltenkopf ab der Zeile mit "Schlüssel", dann eine Zeile mit der Spaltennummerierung 1, 2, 3 …,
- * danach die Daten.
+ * Spaltenkopf ab der Zeile, deren erste Zelle auf `kopfBeginn` passt (meist "Schlüssel"), dann eine Zeile
+ * mit der Spaltennummerierung 1, 2, 3 …, danach die Daten.
  */
-export async function readBkaTabelle(file: string): Promise<BkaTabelle> {
+export async function readBkaTabelle(
+  file: string,
+  { kopfBeginn = /^Schlüssel$/ }: { kopfBeginn?: RegExp } = {},
+): Promise<BkaTabelle> {
   const ws = (await readWorkbook(file)).worksheets[0];
   const datei = path.basename(file);
   if (!ws) throw new Error(`${datei}: kein Tabellenblatt`);
 
   let kopfStart = 0;
-  for (let r = 1; r <= 30 && !kopfStart; r++)
-    if (rowValues(ws, r, 1)[0] === 'Schlüssel') kopfStart = r;
-  if (!kopfStart) throw new Error(`${datei}: Spaltenkopf "Schlüssel" nicht gefunden`);
+  for (let r = 1; r <= 30 && !kopfStart; r++) {
+    const erste = rowValues(ws, r, 1)[0];
+    if (erste !== null && kopfBeginn.test(normalizeText(String(erste)))) kopfStart = r;
+  }
+  if (!kopfStart) throw new Error(`${datei}: Spaltenkopf ${kopfBeginn} nicht gefunden`);
   let nummern = kopfStart;
   while (!istEins(rowValues(ws, nummern, 1)[0])) {
     if (++nummern > kopfStart + 12) throw new Error(`${datei}: Spaltennummerierung nicht gefunden`);

@@ -111,23 +111,22 @@
   <div class="feld">
     <span>Darstellung</span>
     <div class="segmente">
-      <button
-        type="button"
-        [class.aktiv]="auswahl.darstellung() === 'absolut'"
-        [attr.aria-pressed]="auswahl.darstellung() === 'absolut'"
-        (click)="auswahl.setDarstellung('absolut')"
-      >
-        Absolut
-      </button>
-      <button
-        type="button"
-        [class.aktiv]="auswahl.darstellung() === 'index'"
-        [attr.aria-pressed]="auswahl.darstellung() === 'index'"
-        (click)="auswahl.setDarstellung('index')"
-        title="Erstes Jahr = 100 – macht Delikte unterschiedlicher Größe vergleichbar"
-      >
-        Index
-      </button>
+      @for (d of darstellungen; track d.id) {
+        <button
+          type="button"
+          [class.aktiv]="z.darstellung() === d.id"
+          [attr.aria-pressed]="z.darstellung() === d.id"
+          [disabled]="d.rate && !z.rateMoeglich()"
+          [title]="
+            d.rate && !z.rateMoeglich()
+              ? 'Nur für Anzahlen, nicht für Quoten oder amtliche Raten'
+              : d.titel
+          "
+          (click)="auswahl.setDarstellung(d.id)"
+        >
+          {{ d.label }}
+        </button>
+      }
     </div>
   </div>
 </div>

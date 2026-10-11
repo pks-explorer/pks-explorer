@@ -191,7 +191,30 @@ export interface DataIndex {
   datasets: DatasetIndexEintrag[];
   /** Datei mit dem Straftatenkatalog (Straftat[]). */
   straftaten: string;
+  /** Datei mit den Bevölkerungszahlen (Bevoelkerung), für Raten je Einwohner. */
+  bevoelkerung?: string;
 }
+
+/**
+ * Wohnbevölkerung je Berichtsjahr, wie sie das BKA für seine Raten verwendet (Stichtag 31.12. des
+ * Vorjahres, Quelle Statistisches Bundesamt). Nicht jede Kombination gibt es: Altersgruppen nur für den Bund,
+ * Staatsangehörigkeit nur für Bund und Länder.
+ */
+export interface Bevoelkerung {
+  /** Spaltenreihenfolge der Zeilen. */
+  spalten: ['jahr', 'region', 'geschlecht', 'staatsangehoerigkeit', 'alter', 'einwohner'];
+  zeilen: [number, string, string, string, string, number][];
+  quellen: string[];
+}
+
+/** Schlüssel einer Bevölkerungszahl (Werte wie in den Datasets, "insgesamt" für nicht unterschiedene Gruppen). */
+export const bevoelkerungsSchluessel = (
+  jahr: number,
+  region: string,
+  geschlecht = 'insgesamt',
+  staatsangehoerigkeit = 'insgesamt',
+  alter = 'insgesamt',
+) => `${jahr}|${region}|${geschlecht}|${staatsangehoerigkeit}|${alter}`;
 
 /** Schlüssel für "Straftaten insgesamt". */
 export const SCHLUESSEL_INSGESAMT = '------';

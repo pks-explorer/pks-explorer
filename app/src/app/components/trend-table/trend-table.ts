@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
-import type { Einheit } from '@crime-stats/shared';
-import { formatVeraenderung, formatWert } from '../../core/utils/format';
+import { formatVeraenderung, formatWert, type AnzeigeEinheit } from '../../core/utils/format';
 import type { Serie } from '../../core/models/serie';
 import { veraenderung } from '../../core/utils/serien';
 import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive';
@@ -50,7 +49,7 @@ import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive
 export class TrendTable {
   readonly jahre = input.required<number[]>();
   readonly serien = input.required<Serie[]>();
-  readonly einheit = input.required<Einheit | 'index'>();
+  readonly einheit = input.required<AnzeigeEinheit>();
   /** Name der Kennzahl für den CSV-Export. */
   readonly kennzahlLabel = input('');
 

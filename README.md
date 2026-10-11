@@ -36,6 +36,12 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 `straftaten.json` enthält den Straftatenkatalog mit Hierarchie (`parent`) und Bezeichnungsverlauf (`namensverlauf`).
 `meta.hinweise` beschreibt methodische Brüche (z. B. Tatverdächtigenzählung ab 2009, Zensus-Basis der HZ).
 
+`bevoelkerung.json` enthält die Wohnbevölkerung (31.12. des Vorjahres) aus den BKA-Tabellen `02-BU-BV` (Bund ab 2000
+nach Alter und Geschlecht), `03-LA-BV` (Länder nach Staatsangehörigkeit), `04-KR-BV` und `05-ST-BV` (Kreise, Städte
+ab 2019). Für 2024 gilt wie bei den älteren Jahren die Zensus-2011-Fortschreibung. Die ETL prüft: Fälle ÷ Bevölkerung
+trifft die amtliche HZ (Ausnahme DE 2013, 1,8 %). In `05-ST-BV` 2024 sind die Gemeindeschlüssel ab Cottbus um eine
+Zeile verrutscht; Städte werden deshalb über den Namen zugeordnet.
+
 ### Datasets
 
 | ID | Quelle | Inhalt |
@@ -49,9 +55,12 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 Die gesamte Auswahl steht in der URL und ist damit als Link teilbar, z. B.
 `/?ds=bund-tatverdaechtige-zeitreihe&d=892000&k=tv&geschlecht=weiblich&vgl=alter&von=2000`
 (`ds` = Bereich, `d` = Straftatenschlüssel, `k` = Kennzahl, Dimensionsfilter unter ihrer ID,
-`vgl` = Dimension für den Linienvergleich, `vglw` = gewählte Vergleichswerte (z. B. Regionen), `modus=index` = erstes Jahr = 100).
+`vgl` = Dimension für den Linienvergleich, `vglw` = gewählte Vergleichswerte (z. B. Regionen), `modus` = `je100k` (je 100.000 Einwohner), `anteil` (% der Bevölkerung) oder `index` (erstes Jahr = 100)).
 
-Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`), ohne Backend: Sie lädt die
+Die Raten je Einwohner sind eigene Berechnungen (Anzahl ÷ Bevölkerung der Region bzw. Gruppe) und nur für Anzahlen
+wählbar; für Nichtdeutsche gibt es keine (Tatverdächtige ohne Wohnsitz in Deutschland sind nicht in der Bevölkerung).
+
+Die App liest Daten nur über `PksDataSource` (`app/src/app/core/services/pks-data.ts`), ohne Backend: Sie lädt die
 Metadaten und liest aus den Parquet-Dateien per HTTP-Range-Request (`hyparquet`) nur die Zeilen der gewählten Delikte
 und nur die Spalten der aktuellen Ansicht (typisch 5–100 KB je Auswahl). Der statische Host muss Range-Requests
 unterstützen (GitHub Pages, Netlify, Cloudflare Pages u. a. tun das). Für frei formulierte Auswertungen könnte später

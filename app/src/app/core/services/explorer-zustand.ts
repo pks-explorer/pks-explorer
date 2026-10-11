@@ -8,7 +8,9 @@ import {
   type Resource,
 } from '@angular/core';
 import type { Hinweis, KennzahlDef } from '@crime-stats/shared';
-import { Auswahl, MAX_LINIEN, STANDARD_VON } from './auswahl';
+import { Auswahl, MAX_LINIEN, STANDARD_VON, type Darstellung } from './auswahl';
+import type { BevoelkerungIndex, Rate } from '../models/bevoelkerung-index';
+import type { AnzeigeEinheit } from '../utils/format';
 import { DeliktInfo } from './delikt-info';
 import { StabileSlots } from '../utils/farben';
 import { DatasetView, filterDimensionen, type Filter } from '../models/dataset-view';
@@ -20,6 +22,7 @@ import {
   indexiere,
   linienBilden,
   markierungen,
+  rateHinweise,
   relevanteHinweise,
   wertHinweise,
   vergleichWerte,
@@ -31,11 +34,13 @@ const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(mi
 /** Wert einer Ressource oder `undefined` – `value()` selbst wirft im Fehlerzustand. */
 const wert = <T>(r: Resource<T>): T | undefined => (r.hasValue() ? r.value() : undefined);
 
-/** Was geladen wird bzw. zuletzt geladen wurde: Dataset, Kennzahl und Linien. */
+/** Was geladen wird bzw. zuletzt geladen wurde: Dataset, Kennzahl, Linien und ggf. Bevölkerung für Raten. */
 interface Ladestand {
   ds: DatasetView;
   kennzahl: KennzahlDef;
   linien: Linie[];
+  rate: Rate | null;
+  bevoelkerung?: BevoelkerungIndex | null;
 }
 
 /**
@@ -64,14 +69,17 @@ export class ExplorerZustand {
       const ds = wert(this.datasetRes);
       const kennzahl = this.kennzahl();
       if (!ds || !kennzahl) return undefined;
-      const linien = this.linien();
-      return { ds, kennzahl, linien };
+      return { ds, kennzahl, linien: this.linien(), rate: this.rate() };
     },
-    loader: async ({ params: { ds, kennzahl, linien } }) => {
+    loader: async ({ params }): Promise<Ladestand> => {
+      const { ds, kennzahl, linien, rate } = params;
       const schluessel = [...new Set(linien.map((l) => l.schluessel))];
       const spalten = [...new Set(linien.map((l) => ds.wertSpalte(kennzahl.id, l.filter)))];
-      await ds.laden(schluessel, spalten);
-      return { ds, kennzahl, linien };
+      const [bevoelkerung] = await Promise.all([
+        rate ? this.data.bevoelkerung() : null,
+        ds.laden(schluessel, spalten),
+      ]);
+      return { ...params, bevoelkerung };
     },
   });
   private readonly index = computed(() => wert(this.indexRes));
@@ -109,6 +117,18 @@ export class ExplorerZustand {
   readonly kennzahl = computed<KennzahlDef | undefined>(
     () => this.kennzahlen().find((k) => k.id === this.auswahl.kennzahl()) ?? this.kennzahlen()[0],
   );
+
+  /** Raten je Einwohner gibt es nur für Anzahlen (nicht für Quoten oder amtliche Raten). */
+  readonly rateMoeglich = computed(() => this.kennzahl()?.einheit === 'anzahl');
+  /** Wirksame Darstellung: Eine Rate bei einer Kennzahl ohne Anzahl wird absolut gezeigt. */
+  readonly darstellung = computed<Darstellung>(() => {
+    const d = this.auswahl.darstellung();
+    return (d === 'je100k' || d === 'anteil') && !this.rateMoeglich() ? 'absolut' : d;
+  });
+  private readonly rate = computed<Rate | null>(() => {
+    const d = this.darstellung();
+    return d === 'je100k' || d === 'anteil' ? d : null;
+  });
 
   readonly dimensionen = computed(() => {
     const m = this.meta();
@@ -211,7 +231,11 @@ export class ExplorerZustand {
     const jahre = this.zeitraumJahre();
     return g.linien.map((l) => {
       const zr = g.ds.zeitreihe(l.schluessel, g.kennzahl.id, l.filter);
-      return jahre.map((j) => zr.get(j) ?? null);
+      const werte = jahre.map((j) => zr.get(j) ?? null);
+      if (!g.rate) return werte;
+      return g.bevoelkerung
+        ? g.bevoelkerung.rate(werte, jahre, l.filter, g.rate)
+        : werte.map(() => null);
     });
   });
 
@@ -224,15 +248,24 @@ export class ExplorerZustand {
     return b ? this.zeitraumJahre().slice(b.lo, b.hi + 1) : [];
   });
 
-  readonly einheit = computed(() =>
-    this.auswahl.darstellung() === 'index' ? 'index' : (this.kennzahl()?.einheit ?? 'anzahl'),
-  );
+  /** Rate des angezeigten Stands (wechselt erst mit den geladenen Daten). */
+  private readonly angezeigteRate = computed(() => {
+    const g = this.geladen();
+    return g && g.ds === this.dataset() ? g.rate : null;
+  });
+
+  readonly einheit = computed<AnzeigeEinheit>(() => {
+    if (this.darstellung() === 'index') return 'index';
+    const rate = this.angezeigteRate();
+    if (rate) return rate === 'je100k' ? 'je_100000' : 'anteil';
+    return this.kennzahl()?.einheit ?? 'anzahl';
+  });
 
   readonly serien = computed<Serie[]>(() => {
     const b = this.bereich();
     if (!b) return [];
     const farben = this.linienFarben();
-    const index = this.auswahl.darstellung() === 'index';
+    const index = this.darstellung() === 'index';
     const linien = this.angezeigteLinien();
     return this.rohwerte().map((werte, i) => {
       const linie = linien[i]!;
@@ -266,7 +299,19 @@ export class ExplorerZustand {
     return [
       ...relevanteHinweise(m.hinweise, k.id, von, bis),
       ...wertHinweise(this.dimensionen(), this.filterWerte(), this.vergleich(), k.id),
+      ...this.rateHinweise(),
     ];
+  });
+  /** Hinweise zur eigenen Rate; der Bevölkerungsbruch nur, wenn er im angezeigten Zeitraum liegt. */
+  private readonly rateHinweise = computed<Hinweis[]>(() => {
+    const rate = this.angezeigteRate();
+    if (!rate) return [];
+    const { von, bis } = this.anzeigeZeitraum();
+    const luecken =
+      this.keineDaten() || this.serien().some((s) => s.werte.every((v) => v === null));
+    return rateHinweise(rate, this.filterWerte(), this.vergleich(), luecken).filter(
+      (h) => h.abJahr === undefined || (h.abJahr > von && h.abJahr <= bis),
+    );
   });
   readonly markierungen = computed(() => {
     const j = this.jahre();
@@ -300,10 +345,19 @@ export class ExplorerZustand {
       .map((d) => wertLabel(d, f[d.id]!));
     const teile = [k.label, ...(filterText.length ? [filterText.join(', ')] : [])];
     if (vgl) teile.push(`nach ${vgl.label}`);
-    const index = this.auswahl.darstellung() === 'index' ? ` (Index, ${von} = 100)` : '';
+    const rate = this.angezeigteRate();
+    const zusatz =
+      this.darstellung() === 'index'
+        ? ` (Index, ${von} = 100)`
+        : rate === 'je100k'
+          ? ' je 100.000 Einwohner'
+          : rate === 'anteil'
+            ? ' in % der Bevölkerung'
+            : '';
     // Beim Vergleich mit nur einem Delikt steht dessen Name im Titel, die Linien heißen nur "Männlich" usw.
     const schluessel = new Set(this.linien().map((l) => l.schluessel));
     const delikt = vgl && schluessel.size === 1 ? `${this.name([...schluessel][0]!)}: ` : '';
-    return `${delikt}${teile.join(' – ')}${index}, ${von}–${bis}`;
+    teile[0] += zusatz;
+    return `${delikt}${teile.join(' – ')}, ${von}–${bis}`;
   });
 }

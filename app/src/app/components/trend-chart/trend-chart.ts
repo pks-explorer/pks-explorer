@@ -10,9 +10,8 @@ import {
 } from '@angular/core';
 import { NgxEchartsDirective } from 'ngx-echarts';
 import type { EChartsCoreOption } from 'echarts/core';
-import type { Einheit } from '@crime-stats/shared';
 import { Theme } from '../../core/services/theme';
-import { formatAchse, formatWert } from '../../core/utils/format';
+import { formatAchse, formatWert, type AnzeigeEinheit } from '../../core/utils/format';
 import type { Markierung, Serie } from '../../core/models/serie';
 import { DeliktInfoDirective } from '../../core/directives/delikt-info.directive';
 
@@ -113,7 +112,7 @@ const einzelpunkt = (werte: (number | null)[], i: number) =>
 export class TrendChart {
   readonly jahre = input.required<number[]>();
   readonly serien = input.required<Serie[]>();
-  readonly einheit = input.required<Einheit | 'index'>();
+  readonly einheit = input.required<AnzeigeEinheit>();
   readonly markierungen = input<Markierung[]>([]);
   readonly entfernen = output<string>();
 

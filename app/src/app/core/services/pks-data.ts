@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import type { AsyncBuffer, FileMetaData } from 'hyparquet';
-import type { DataIndex, DatasetMeta, Straftat, Zelle } from '@crime-stats/shared';
+import type { Bevoelkerung, DataIndex, DatasetMeta, Straftat, Zelle } from '@crime-stats/shared';
+import { BevoelkerungIndex } from '../models/bevoelkerung-index';
 import { DatasetView, type SpaltenLeser } from '../models/dataset-view';
 
 /**
@@ -13,6 +14,8 @@ export abstract class PksDataSource {
   abstract index(): Promise<DataIndex>;
   abstract straftaten(): Promise<Straftat[]>;
   abstract dataset(id: string): Promise<DatasetView>;
+  /** Bevölkerungszahlen für Raten je Einwohner; null, wenn die Daten keine enthalten. */
+  abstract bevoelkerung(): Promise<BevoelkerungIndex | null>;
 }
 
 interface OffeneDatei {
@@ -51,6 +54,13 @@ export class ParquetPksDataSource extends PksDataSource {
 
   async straftaten(): Promise<Straftat[]> {
     return this.get((await this.index()).straftaten);
+  }
+
+  bevoelkerung(): Promise<BevoelkerungIndex | null> {
+    return this.cached('bevoelkerung', async () => {
+      const datei = (await this.index()).bevoelkerung;
+      return datei ? new BevoelkerungIndex(await this.get<Bevoelkerung>(datei)) : null;
+    });
   }
 
   dataset(id: string): Promise<DatasetView> {

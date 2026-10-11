@@ -6,6 +6,7 @@ import { once } from 'node:events';
 import { DuckDBInstance } from '@duckdb/node-api';
 import {
   kennzahlVonSpalte,
+  type Bevoelkerung,
   type DataIndex,
   type Dataset,
   type DatasetIndexEintrag,
@@ -22,6 +23,7 @@ export const ROW_GROUP_GROESSE = 25_000;
 
 export class Ausgabe {
   private readonly eintraege: DatasetIndexEintrag[] = [];
+  private bevoelkerungsDatei?: string;
 
   constructor(
     private readonly dir: string,
@@ -55,12 +57,21 @@ export class Ausgabe {
     );
   }
 
+  /** Schreibt bevoelkerung.json (Bezugsgröße für Raten je Einwohner). */
+  async bevoelkerung(b: Bevoelkerung): Promise<void> {
+    await mkdir(this.dir, { recursive: true });
+    this.bevoelkerungsDatei = 'bevoelkerung.json';
+    await writeFile(path.join(this.dir, this.bevoelkerungsDatei), JSON.stringify(b));
+    console.log(`  → ${this.bevoelkerungsDatei}: ${b.zeilen.length} Zeilen`);
+  }
+
   /** Schreibt Straftatenkatalog und index.json; als Letztes aufrufen. */
   async abschliessen(straftaten: Straftat[]): Promise<void> {
     const index: DataIndex = {
       jahrgang: this.jahrgang,
       datasets: this.eintraege,
       straftaten: 'straftaten.json',
+      ...(this.bevoelkerungsDatei ? { bevoelkerung: this.bevoelkerungsDatei } : {}),
     };
     await writeFile(path.join(this.dir, index.straftaten), JSON.stringify(straftaten));
     await writeFile(path.join(this.dir, 'index.json'), JSON.stringify(index, null, 2));
