@@ -95,5 +95,7 @@ export function normalisiereSchluessel(v: string | number | null | undefined): s
     if (exp) return `${exp[1]}**${exp[2]}`;
     return Number.isInteger(v) && v >= 0 ? String(v).padStart(6, '0') : String(v);
   }
-  return v.trim();
+  const s = v.trim();
+  // "Straftaten insgesamt" steht in manchen Tabellen mit fünf statt sechs Strichen
+  return /^-{4,}$/.test(s) ? '------' : s;
 }

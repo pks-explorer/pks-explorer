@@ -30,7 +30,8 @@ const FALLSTATUS: Record<string, string> = {
 interface Optionen {
   jahr: number;
   spalten: string[];
-  schluessel: ReadonlySet<string>;
+  /** Nur diese Straftatenschlüssel übernehmen; fehlt = alle (auch feinere Unterschlüssel). */
+  schluessel?: ReadonlySet<string>;
 }
 
 function umsetzer(t: BkaTabelle, o: Optionen) {
@@ -51,7 +52,7 @@ function umsetzer(t: BkaTabelle, o: Optionen) {
   return (v: (string | number | null)[], region: string): Zelle[][] => {
     const schluessel = normalisiereSchluessel(v[0]);
     const vollendung = FALLSTATUS[String(v[iStatus] ?? '').trim()];
-    if (!o.schluessel.has(schluessel) || !vollendung) return [];
+    if (!schluessel || (o.schluessel && !o.schluessel.has(schluessel)) || !vollendung) return [];
     const z: Zelle[] = o.spalten.map(() => null);
     const setze = (spalte: string, wert: Zelle) => (z[o.spalten.indexOf(spalte)] = wert);
     setze('jahr', o.jahr);

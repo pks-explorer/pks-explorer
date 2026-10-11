@@ -54,8 +54,8 @@ interface Optionen {
   jahr: number;
   /** Spaltenreihenfolge des Fälle-Datasets. */
   spalten: string[];
-  /** Nur diese Straftatenschlüssel übernehmen. */
-  schluessel: ReadonlySet<string>;
+  /** Nur diese Straftatenschlüssel übernehmen; fehlt = alle (auch feinere Unterschlüssel). */
+  schluessel?: ReadonlySet<string>;
 }
 
 function umsetzer(t: BkaTabelle, ebene: RegionEbene, o: Optionen) {
@@ -73,7 +73,7 @@ function umsetzer(t: BkaTabelle, ebene: RegionEbene, o: Optionen) {
 
   return (v: (string | number | null)[], region: string): Zelle[][] => {
     const schluessel = normalisiereSchluessel(v[0]);
-    if (!o.schluessel.has(schluessel)) return [];
+    if (!schluessel || (o.schluessel && !o.schluessel.has(schluessel))) return [];
     const z: Zelle[] = o.spalten.map(() => null);
     z[iJahr] = o.jahr;
     z[iRegion] = region;

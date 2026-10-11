@@ -6,7 +6,12 @@
  * Regionserkennung, Kontrolle gegen die Bundeswerte und die Dimension "region" sind hier gemeinsam.
  */
 import type { Dataset, DimensionWert, Hinweis, Zelle } from '@crime-stats/shared';
-import { readBkaTabelle, type BkaTabelle, type Zeile } from './bka-tabelle.js';
+import {
+  normalisiereSchluessel,
+  readBkaTabelle,
+  type BkaTabelle,
+  type Zeile,
+} from './bka-tabelle.js';
 import { LAENDER, REGION_DEUTSCHLAND } from './dimensionen.js';
 
 export type RegionEbene = 'laender' | 'staedte' | 'kreise';
@@ -33,8 +38,13 @@ export interface RegionalTeil {
   datei: string;
   zeilen: Zelle[][];
   regionen: DimensionWert[];
-  /** Zeilen "Bundesrepublik Deutschland" (Region "DE") – nur zur Kontrolle gegen die Bundes-Zeitreihe. */
+  /**
+   * Zeilen "Bundesrepublik Deutschland" (Region "DE"): Kontrolle gegen die Bundes-Zeitreihe bzw.
+   * Deutschland-Werte für Schlüssel, die es dort nicht gibt (feinere Unterschlüssel).
+   */
   bundZeilen: Zelle[][];
+  /** Bezeichnungen der übernommenen Straftatenschlüssel laut Tabelle. */
+  namen: Map<string, string>;
 }
 
 /** Setzt eine Tabellenzeile in null bis mehrere Datensatzzeilen für die Region um. */
@@ -100,6 +110,7 @@ export async function leseRegionaleTabelle(
     zeilen: [],
     regionen: [],
     bundZeilen: [],
+    namen: new Map(),
   };
   const regionen = new Map<string, DimensionWert>();
   for (const v of t.zeilen) {
@@ -107,6 +118,7 @@ export async function leseRegionaleTabelle(
     if (!region) continue;
     const id = region === 'DE' ? 'DE' : region.id;
     const zeilen = umsetzen(v, id);
+    if (zeilen.length) teil.namen.set(normalisiereSchluessel(v[0]), String(v[1] ?? '').trim());
     if (region === 'DE') teil.bundZeilen.push(...zeilen);
     else if (zeilen.length) {
       teil.zeilen.push(...zeilen);
@@ -148,12 +160,17 @@ export function fuegeRegionenHinzu(
     for (const w of teil.regionen) if (!regionen.has(w.id)) regionen.set(w.id, w);
     if (!jahre[teil.ebene].includes(teil.jahr)) jahre[teil.ebene].push(teil.jahr);
 
+    // Deutschland-Zeilen: vorhandene Bundeswerte kontrollieren, fehlende (feinere Unterschlüssel) ergänzen
     const verglichen = teil.bundZeilen.filter((z) => bund.has(key(z, iRegion)));
+    const ergaenzt = teil.bundZeilen.filter((z) => !bund.has(key(z, iRegion)));
+    for (const z of ergaenzt) bund.set(key(z, iRegion), z[iKontrolle]);
+    ds.zeilen.push(...ergaenzt);
     const abweichend = verglichen.filter((z) => bund.get(key(z, iRegion)) !== z[iKontrolle]);
     const kontrolle = verglichen.length
       ? `, Kontrolle Bund: ${verglichen.length - abweichend.length}/${verglichen.length} gleich`
       : '';
-    console.log(`  ${teil.jahr} ${teil.ebene}: ${teil.zeilen.length} Zeilen${kontrolle}`);
+    const plus = ergaenzt.length ? `, ${ergaenzt.length} Deutschland-Werte ergänzt` : '';
+    console.log(`  ${teil.jahr} ${teil.ebene}: ${teil.zeilen.length} Zeilen${kontrolle}${plus}`);
     if (abweichend.length) {
       console.warn(
         `    abweichend z. B.: ${abweichend
@@ -186,9 +203,13 @@ export function fuegeRegionenHinzu(
 
   const spanne = (j: number[]) => `${Math.min(...j)}–${Math.max(...j)}`;
   const vorhanden = (Object.keys(jahre) as RegionEbene[]).filter((e) => jahre[e].length);
+  const alleJahre = vorhanden.flatMap((e) => jahre[e]);
   ds.meta.hinweise.push(
     {
       text: `${vorhanden.map((e) => `${GRUPPE[e]} (${spanne(jahre[e])})`).join(', ')} stammen aus den Tabellen der jeweiligen PKS-Jahrgänge; für Deutschland reicht die Zeitreihe weiter zurück.`,
+    },
+    {
+      text: `Feinere Unterschlüssel, die die Bundes-Zeitreihe nicht enthält, gibt es auch für Deutschland nur ${spanne(alleJahre)} (Zeile „Bundesrepublik Deutschland“ der Ländertabellen).`,
     },
     ...(o.hinweise ?? []),
   );

@@ -129,7 +129,10 @@ export interface Straftat {
    * obersten 89xxxx-Summenschlüssel, die quer zur Hierarchie liegen (z. B. Gewaltkriminalität).
    */
   parent: string | null;
-  /** Summenschlüssel: 89xxxx oder mit Platzhaltern wie 4***00 (Diebstahl, Teil der Hierarchie). */
+  /**
+   * Summenschlüssel: 89xxxx, BKA-intern 9xxxxx oder mit Platzhaltern wie 4***00
+   * (Diebstahl, Teil der Hierarchie).
+   */
   summenschluessel: boolean;
   /** Verlauf der Bezeichnung, chronologisch; nur vorhanden, wenn sie sich geändert hat. */
   namensverlauf?: { vonJahr: number; bisJahr: number; name: string }[];

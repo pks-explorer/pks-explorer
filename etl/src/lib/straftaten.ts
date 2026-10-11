@@ -8,7 +8,8 @@ export function cleanName(raw: string): string {
     .replace(/\s*:\s*$/, '');
 }
 
-export const isSummenschluessel = (k: string) => k.includes('*') || k.startsWith('89');
+/** Summenschlüssel: Platzhalter (Diebstahl), 89xxxx (Standard) und 9xxxxx (BKA-intern, z. B. Drogenarten). */
+export const isSummenschluessel = (k: string) => k.includes('*') || /^(89|9)/.test(k);
 
 /** "011000" → "011", "000000" → "0" */
 const significant = (k: string) => k.replace(/0+$/, '') || '0';
@@ -29,6 +30,12 @@ function findParent(k: string, all: Set<string>): string | null {
   if (k === SCHLUESSEL_INSGESAMT) return null;
   // Platzhalter-Schlüssel bilden die Diebstahls-Hierarchie (****00 = Diebstahl insgesamt)
   if (k.includes('*')) return coveringWildcard(k, all) ?? SCHLUESSEL_INSGESAMT;
+  // Diebstahl (3…/4…): Die Stellen kodieren Ort und Gegenstand, ein Präfix ist keine Unterordnung
+  // (300100 "Kraftwagen" gehört zu 3**100, nicht zu 300000 "sonstiger einfacher Diebstahl").
+  if (/^[34]/.test(k)) {
+    const platzhalter = coveringWildcard(k, all);
+    if (platzhalter) return platzhalter;
+  }
 
   // reguläre Schlüssel (und 89er-Summenschlüssel untereinander): längster existierender Präfix
   const sig = significant(k);
@@ -38,8 +45,7 @@ function findParent(k: string, all: Set<string>): string | null {
     if (parent !== k && all.has(parent) && isSummenschluessel(parent) === summe) return parent;
   }
   if (summe) return null; // 89er-Gruppen stehen außerhalb der regulären Hierarchie
-  // Diebstahl (3…/4…) hat keinen regulären Oberschlüssel, nur Platzhalter wie 3***00
-  return (/^[34]/.test(k) && coveringWildcard(k, all)) || SCHLUESSEL_INSGESAMT;
+  return SCHLUESSEL_INSGESAMT;
 }
 
 /** Sammelt Bezeichnungen je Schlüssel und Jahr und erzeugt daraus den Straftatenkatalog. */

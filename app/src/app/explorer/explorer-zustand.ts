@@ -1,4 +1,12 @@
-import { Injectable, computed, effect, inject, linkedSignal, resource } from '@angular/core';
+import {
+  Injectable,
+  computed,
+  effect,
+  inject,
+  linkedSignal,
+  resource,
+  type Resource,
+} from '@angular/core';
 import type { Hinweis, KennzahlDef } from '@crime-stats/shared';
 import { Auswahl, MAX_LINIEN, STANDARD_VON } from '../core/auswahl';
 import { DeliktInfo } from '../core/delikt-info';
@@ -19,6 +27,9 @@ import {
 } from './serien';
 
 const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));
+
+/** Wert einer Ressource oder `undefined` – `value()` selbst wirft im Fehlerzustand. */
+const wert = <T>(r: Resource<T>): T | undefined => (r.hasValue() ? r.value() : undefined);
 
 /**
  * Daten und abgeleiteter Zustand der Explorer-Seite: lädt Index, Katalog und Dataset, löst die
@@ -43,7 +54,7 @@ export class ExplorerZustand {
   /** Lädt die Partitionen der gewählten Delikte nach (nur bei aufgeteilten Datasets). */
   private readonly ladeRes = resource({
     params: () => {
-      const ds = this.datasetRes.value();
+      const ds = wert(this.datasetRes);
       return ds ? { ds, delikte: this.auswahl.delikte() } : undefined;
     },
     loader: async ({ params }) => {
@@ -51,15 +62,19 @@ export class ExplorerZustand {
       return params.ds;
     },
   });
+  private readonly index = computed(() => wert(this.indexRes));
+  private readonly katalog = computed(() => wert(this.straftatenRes) ?? []);
+  private readonly dataset = computed(() => wert(this.datasetRes));
+
   /** Zuletzt vollständig geladener Stand – verhindert Flackern, während nachgeladen wird. */
   private readonly geladen = linkedSignal<DatasetView | undefined, DatasetView | undefined>({
-    source: () => this.ladeRes.value(),
+    source: () => wert(this.ladeRes),
     computation: (neu, vorher) => neu ?? vorher?.value,
   });
 
   constructor() {
     const info = inject(DeliktInfo);
-    effect(() => info.setKatalog(this.straftatenRes.value() ?? []));
+    effect(() => info.setKatalog(this.katalog()));
   }
 
   readonly fehler = computed(
@@ -73,8 +88,8 @@ export class ExplorerZustand {
 
   // --- Metadaten und Auswahl --------------------------------------------------------------
 
-  readonly bereiche = computed(() => this.indexRes.value()?.datasets ?? []);
-  readonly meta = computed(() => this.datasetRes.value()?.meta);
+  readonly bereiche = computed(() => this.index()?.datasets ?? []);
+  readonly meta = computed(() => this.dataset()?.meta);
   readonly kennzahlen = computed(() => this.meta()?.kennzahlen ?? []);
   readonly kennzahl = computed<KennzahlDef | undefined>(
     () => this.kennzahlen().find((k) => k.id === this.auswahl.kennzahl()) ?? this.kennzahlen()[0],
@@ -122,17 +137,17 @@ export class ExplorerZustand {
 
   /** Katalog, eingeschränkt auf Schlüssel, die im aktuellen Dataset vorkommen. */
   readonly straftaten = computed(() => {
-    const ds = this.datasetRes.value();
-    return (this.straftatenRes.value() ?? []).filter((s) => ds?.hatSchluessel(s.schluessel));
+    const ds = this.dataset();
+    return this.katalog().filter((s) => ds?.hatSchluessel(s.schluessel));
   });
   private readonly straftatByKey = computed(
-    () => new Map((this.straftatenRes.value() ?? []).map((s) => [s.schluessel, s])),
+    () => new Map(this.katalog().map((s) => [s.schluessel, s])),
   );
   readonly name = (k: string) => this.straftatByKey().get(k)?.name ?? k;
 
   /** Gewählte Delikte, die es im aktuellen Bereich nicht gibt (z. B. Diebstahl bei den Opfern). */
   readonly fehlendeDelikte = computed(() => {
-    const ds = this.datasetRes.value();
+    const ds = this.dataset();
     if (!ds) return [];
     return this.auswahl
       .delikte()
@@ -144,7 +159,7 @@ export class ExplorerZustand {
 
   /** Gewählte Delikte, die es im aktuellen Bereich gibt. */
   readonly delikteImBereich = computed(() => {
-    const ds = this.datasetRes.value();
+    const ds = this.dataset();
     return ds ? this.auswahl.delikte().filter((k) => ds.hatSchluessel(k)) : [];
   });
   /** Wie viele Vergleichswerte wählbar sind, damit es höchstens MAX_LINIEN Linien werden. */
@@ -172,7 +187,7 @@ export class ExplorerZustand {
   private readonly rohwerte = computed(() => {
     const ds = this.geladen();
     const k = this.kennzahl();
-    if (!ds || !k || ds !== this.datasetRes.value()) return [];
+    if (!ds || !k || ds !== this.dataset()) return [];
     const jahre = this.zeitraumJahre();
     return this.linien().map((l) => {
       const zr = ds.zeitreihe(l.schluessel, k.id, l.filter);

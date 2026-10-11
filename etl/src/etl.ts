@@ -52,22 +52,26 @@ async function optional<T>(
 type RegionalParser = (
   datei: string,
   ebene: RegionEbene,
-  o: { jahr: number; spalten: string[]; schluessel: ReadonlySet<string> },
+  o: { jahr: number; spalten: string[] },
 ) => Promise<RegionalTeil>;
 
-/** Liest die Jahrgangstabellen je Ebene für alle vorhandenen Jahrgänge (nur Schlüssel des Datasets). */
+/**
+ * Liest die Jahrgangstabellen je Ebene für alle vorhandenen Jahrgänge – mit allen Schlüsseln, auch
+ * feineren Unterschlüsseln, die es in der Bundes-Zeitreihe nicht gibt. Deren Bezeichnungen kommen
+ * in den Straftatenkatalog.
+ */
 async function regionaleTeile(
   ds: Dataset,
   dateien: { ebene: RegionEbene; muster: RegExp }[],
   parse: RegionalParser,
 ): Promise<RegionalTeil[]> {
-  const iKey = ds.meta.spalten.indexOf('schluessel');
-  const schluessel = new Set(ds.zeilen.map((z) => z[iKey] as string));
   const teile: RegionalTeil[] = [];
   for (const jahr of jahrgaenge) {
     for (const { ebene, muster } of dateien) {
       for (const datei of await findeDateienOptional(rawYearDir(jahr), muster)) {
-        teile.push(await parse(datei, ebene, { jahr, spalten: ds.meta.spalten, schluessel }));
+        const teil = await parse(datei, ebene, { jahr, spalten: ds.meta.spalten });
+        for (const [schluessel, name] of teil.namen) katalog.ergaenze(schluessel, jahr, name);
+        teile.push(teil);
       }
     }
   }
