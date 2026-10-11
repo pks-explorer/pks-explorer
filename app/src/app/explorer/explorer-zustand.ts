@@ -23,6 +23,7 @@ import {
   vergleichWerte,
   wertLabel,
   type Vergleich,
+  type Linie,
   type Serie,
 } from './serien';
 
@@ -30,6 +31,13 @@ const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(mi
 
 /** Wert einer Ressource oder `undefined` – `value()` selbst wirft im Fehlerzustand. */
 const wert = <T>(r: Resource<T>): T | undefined => (r.hasValue() ? r.value() : undefined);
+
+/** Was geladen wird bzw. zuletzt geladen wurde: Dataset, Kennzahl und Linien. */
+interface Ladestand {
+  ds: DatasetView;
+  kennzahl: KennzahlDef;
+  linien: Linie[];
+}
 
 /**
  * Daten und abgeleiteter Zustand der Explorer-Seite: lädt Index, Katalog und Dataset, löst die
@@ -51,23 +59,31 @@ export class ExplorerZustand {
     params: () => this.auswahl.datasetId(),
     loader: ({ params }) => this.data.dataset(params),
   });
-  /** Lädt die Partitionen der gewählten Delikte nach (nur bei aufgeteilten Datasets). */
+  /** Lädt für die angezeigten Linien die benötigten Spalten der gewählten Delikte nach. */
   private readonly ladeRes = resource({
-    params: () => {
+    params: (): Ladestand | undefined => {
       const ds = wert(this.datasetRes);
-      return ds ? { ds, delikte: this.auswahl.delikte() } : undefined;
+      const kennzahl = this.kennzahl();
+      if (!ds || !kennzahl) return undefined;
+      const linien = this.linien();
+      return { ds, kennzahl, linien };
     },
-    loader: async ({ params }) => {
-      await params.ds.laden(params.delikte);
-      return params.ds;
+    loader: async ({ params: { ds, kennzahl, linien } }) => {
+      const schluessel = [...new Set(linien.map((l) => l.schluessel))];
+      const spalten = [...new Set(linien.map((l) => ds.wertSpalte(kennzahl.id, l.filter)))];
+      await ds.laden(schluessel, spalten);
+      return { ds, kennzahl, linien };
     },
   });
   private readonly index = computed(() => wert(this.indexRes));
   private readonly katalog = computed(() => wert(this.straftatenRes) ?? []);
   private readonly dataset = computed(() => wert(this.datasetRes));
 
-  /** Zuletzt vollständig geladener Stand – verhindert Flackern, während nachgeladen wird. */
-  private readonly geladen = linkedSignal<DatasetView | undefined, DatasetView | undefined>({
+  /**
+   * Zuletzt vollständig geladener Stand. Werte und Linien werden daraus berechnet, damit die Ansicht
+   * erst wechselt, wenn die neuen Daten da sind (kein Flackern beim Nachladen).
+   */
+  private readonly geladen = linkedSignal<Ladestand | undefined, Ladestand | undefined>({
     source: () => wert(this.ladeRes),
     computation: (neu, vorher) => neu ?? vorher?.value,
   });
@@ -183,14 +199,19 @@ export class ExplorerZustand {
     this.vergleichDim() ? new Map<string, string>() : this.linienFarben(),
   );
 
-  /** Absolute Werte über den gewählten Zeitraum, noch ohne Kürzung. */
+  /** Linien des zuletzt geladenen Stands (nur aus dem aktuellen Dataset). */
+  private readonly angezeigteLinien = computed(() => {
+    const g = this.geladen();
+    return g && g.ds === this.dataset() ? g.linien : [];
+  });
+
+  /** Absolute Werte über den gewählten Zeitraum, noch ohne Kürzung (je angezeigter Linie). */
   private readonly rohwerte = computed(() => {
-    const ds = this.geladen();
-    const k = this.kennzahl();
-    if (!ds || !k || ds !== this.dataset()) return [];
+    const g = this.geladen();
+    if (!g || g.ds !== this.dataset()) return [];
     const jahre = this.zeitraumJahre();
-    return this.linien().map((l) => {
-      const zr = ds.zeitreihe(l.schluessel, k.id, l.filter);
+    return g.linien.map((l) => {
+      const zr = g.ds.zeitreihe(l.schluessel, g.kennzahl.id, l.filter);
       return jahre.map((j) => zr.get(j) ?? null);
     });
   });
@@ -213,8 +234,9 @@ export class ExplorerZustand {
     if (!b) return [];
     const farben = this.linienFarben();
     const index = this.auswahl.darstellung() === 'index';
+    const linien = this.angezeigteLinien();
     return this.rohwerte().map((werte, i) => {
-      const linie = this.linien()[i]!;
+      const linie = linien[i]!;
       const ausschnitt = werte.slice(b.lo, b.hi + 1);
       return {
         id: linie.id,

@@ -10,7 +10,7 @@ import { GridComponent, MarkLineComponent, TooltipComponent } from 'echarts/comp
 import { LabelLayout } from 'echarts/features';
 import { SVGRenderer } from 'echarts/renderers';
 import { routes } from './app.routes';
-import { JsonPksDataSource, PksDataSource } from './core/pks-data';
+import { ParquetPksDataSource, PksDataSource } from './core/pks-data';
 
 echarts.use([
   LineChart,
@@ -29,6 +29,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideEchartsCore({ echarts }),
     { provide: LOCALE_ID, useValue: 'de-DE' },
-    { provide: PksDataSource, useClass: JsonPksDataSource },
+    { provide: PksDataSource, useClass: ParquetPksDataSource },
   ],
 };

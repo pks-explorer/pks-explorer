@@ -21,6 +21,8 @@
     "@angular/router": "^22.2.0",
     "@crime-stats/shared": "*",
     "echarts": "^6.1.0",
+    "hyparquet": "1.31.2",
+    "hyparquet-compressors": "1.1.2",
     "ngx-echarts": "^22.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"

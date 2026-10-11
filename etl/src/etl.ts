@@ -99,7 +99,7 @@ fuegeRegionenHinzu(faelleDs, faelleRegional, {
   kontrollSpalte: 'faelle',
   hinweise: HINWEISE_REGIONALE_FAELLE,
 });
-await ausgabe.dataset(faelleDs, { partitioniert: true });
+await ausgabe.dataset(faelleDs);
 
 console.log('Lese Tatverdächtige (ZR-TV, ZR-BZ T20/T40/T50)');
 const tvDs = await parseZrTatverdaechtige(
@@ -123,7 +123,7 @@ fuegeRegionenHinzu(
     hinweise: [{ text: 'Länder und Städte: keine Belastungszahlen (TVBZ), nur Anzahlen.' }],
   },
 );
-await ausgabe.dataset(tvDs, { partitioniert: true });
+await ausgabe.dataset(tvDs);
 
 console.log('Lese Opfer (ZR-O, ZR-BZ T91)');
 const opferDs = await parseZrOpfer(
@@ -148,7 +148,7 @@ fuegeRegionenHinzu(
     hinweise: [{ text: 'Länder und Städte: keine Gefährdungszahlen (OGZ), nur Anzahlen.' }],
   },
 );
-await ausgabe.dataset(opferDs, { partitioniert: true });
+await ausgabe.dataset(opferDs);
 
 const straftaten = katalog.build();
 const erlaeutert = ergaenzeErlaeuterungen(straftaten, {

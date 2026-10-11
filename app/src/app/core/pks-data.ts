@@ -1,13 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import type { AsyncBuffer, FileMetaData } from 'hyparquet';
 import {
-  partitionsDatei,
   spaltenId,
   type DataIndex,
-  type Dataset,
   type DatasetMeta,
-  type DatasetPartition,
   type DimensionDef,
   type Straftat,
   type Zelle,
@@ -23,68 +21,39 @@ export type Filter = Readonly<Record<string, string>>;
 export const filterDimensionen = (meta: DatasetMeta): DimensionDef[] =>
   meta.dimensionen.filter((d) => d.werte?.length);
 
+/** Liest einen Zeilenbereich mit den angegebenen Spalten; liefert je Spalte die Werte in Zeilenreihenfolge. */
+export type SpaltenLeser = (
+  bereich: [number, number],
+  spalten: readonly string[],
+) => Promise<Record<string, Zelle[]>>;
+
 /**
- * Ein Dataset mit Schnellzugriff über Schlüssel, Jahr und Filter. Aufgeteilte Datasets laden ihre
- * Zeilen je Straftatenschlüssel erst bei Bedarf (`laden`); danach ist der Zugriff synchron.
+ * Ein Dataset mit Zugriff über Schlüssel, Jahr und Filter. Die Werte liegen spaltenweise je
+ * Straftatenschlüssel vor und werden gezielt nachgeladen (`laden`): nur die gewählten Delikte und nur
+ * die Spalten, die die aktuelle Ansicht braucht. Danach ist der Zugriff synchron.
  */
 export class DatasetView {
-  private readonly zeilenJeSchluessel = new Map<string, Zelle[][]>();
+  /** Schlüssel → Spalte → Werte (alle Spalten eines Schlüssels haben dieselbe Zeilenreihenfolge). */
+  private readonly daten = new Map<string, Map<string, Zelle[]>>();
+  /** Laufende Ladevorgänge je "schluessel|spalte". */
   private readonly ladend = new Map<string, Promise<void>>();
-  private readonly colIndex: Map<string, number>;
-  private readonly verfuegbar: ReadonlySet<string>;
   private readonly zeilenDims: DimensionDef[];
   private readonly spaltenDims: DimensionDef[];
+  /** Spalten, die jede Zeitreihe braucht: Jahr und Zeilen-Dimensionen. */
+  private readonly basisSpalten: string[];
 
   constructor(
     readonly meta: DatasetMeta,
-    zeilen: Zelle[][],
-    private readonly ladePartition?: (schluessel: string) => Promise<Zelle[][]>,
+    private readonly lesen: SpaltenLeser,
   ) {
-    this.colIndex = new Map(meta.spalten.map((s, i) => [s, i]));
-    this.einsortieren(zeilen);
-    this.verfuegbar = new Set(meta.partitionen?.schluessel ?? this.zeilenJeSchluessel.keys());
     const dims = filterDimensionen(meta);
     this.zeilenDims = dims.filter((d) => !d.inSpalte);
     this.spaltenDims = dims.filter((d) => d.inSpalte);
-  }
-
-  private col(id: string): number {
-    const i = this.colIndex.get(id);
-    if (i === undefined) throw new Error(`Spalte ${id} fehlt in ${this.meta.id}`);
-    return i;
-  }
-
-  private einsortieren(zeilen: Zelle[][]) {
-    const iKey = this.col('schluessel');
-    for (const z of zeilen) {
-      const k = z[iKey] as string;
-      const liste = this.zeilenJeSchluessel.get(k) ?? [];
-      liste.push(z);
-      this.zeilenJeSchluessel.set(k, liste);
-    }
+    this.basisSpalten = ['jahr', ...this.zeilenDims.map((d) => d.id)];
   }
 
   hatSchluessel(schluessel: string): boolean {
-    return this.verfuegbar.has(schluessel);
-  }
-
-  /** Lädt fehlende Partitionen der angegebenen Schlüssel (bei nicht aufgeteilten Datasets: nichts zu tun). */
-  async laden(schluessel: readonly string[]): Promise<void> {
-    const lader = this.ladePartition;
-    if (!lader) return;
-    await Promise.all(
-      schluessel
-        .filter((k) => this.verfuegbar.has(k) && !this.zeilenJeSchluessel.has(k))
-        .map((k) => {
-          let p = this.ladend.get(k);
-          if (!p) {
-            p = lader(k).then((z) => this.einsortieren(z));
-            p.catch(() => this.ladend.delete(k));
-            this.ladend.set(k, p);
-          }
-          return p;
-        }),
-    );
+    return schluessel in this.meta.parquet.zeilen;
   }
 
   /** Wert der Dimension laut Filter, sonst ihr Standardwert. */
@@ -92,19 +61,58 @@ export class DatasetView {
     return filter[dim.id] ?? dim.standard;
   }
 
-  zeitreihe(schluessel: string, kennzahl: string, filter: Filter = {}): Zeitreihe {
-    const iWert = this.col(
-      spaltenId(
-        kennzahl,
-        this.spaltenDims.map((d) => this.wert(filter, d) ?? ''),
-      ),
+  /** Wertespalte für Kennzahl und Filter, z. B. "tv|14-16" (Altersgruppe ist Spalten-Dimension). */
+  wertSpalte(kennzahl: string, filter: Filter = {}): string {
+    return spaltenId(
+      kennzahl,
+      this.spaltenDims.map((d) => this.wert(filter, d) ?? ''),
     );
-    const iJahr = this.col('jahr');
-    const bedingungen = this.zeilenDims.map((d) => [this.col(d.id), this.wert(filter, d)] as const);
+  }
+
+  /** Lädt fehlende Spalten der angegebenen Schlüssel (Basisspalten kommen automatisch dazu). */
+  async laden(schluessel: readonly string[], wertSpalten: readonly string[]): Promise<void> {
+    const spalten = [...new Set([...this.basisSpalten, ...wertSpalten])];
+    await Promise.all(
+      schluessel.filter((k) => this.hatSchluessel(k)).map((k) => this.ladeSchluessel(k, spalten)),
+    );
+  }
+
+  private async ladeSchluessel(schluessel: string, spalten: string[]): Promise<void> {
+    const vorhanden = this.daten.get(schluessel);
+    const fehlend = spalten.filter(
+      (s) => !vorhanden?.has(s) && !this.ladend.has(`${schluessel}|${s}`),
+    );
+    if (fehlend.length) {
+      const p = this.lesen(this.meta.parquet.zeilen[schluessel]!, fehlend).then((werte) => {
+        const ziel = this.daten.get(schluessel) ?? new Map<string, Zelle[]>();
+        for (const s of fehlend) ziel.set(s, werte[s] ?? []);
+        this.daten.set(schluessel, ziel);
+      });
+      for (const s of fehlend) this.ladend.set(`${schluessel}|${s}`, p);
+      // nach Abschluss (auch bei Fehler) nicht mehr als "ladend" führen; Fehler gibt der Aufrufer weiter
+      p.finally(() => fehlend.forEach((s) => this.ladend.delete(`${schluessel}|${s}`))).catch(
+        () => {},
+      );
+    }
+    // auch auf Ladevorgänge warten, die ein anderer Aufruf für dieselben Spalten gestartet hat
+    await Promise.all(spalten.map((s) => this.ladend.get(`${schluessel}|${s}`)));
+  }
+
+  /** Zeitreihe aus bereits geladenen Spalten; fehlt eine Spalte, ist die Reihe leer. */
+  zeitreihe(schluessel: string, kennzahl: string, filter: Filter = {}): Zeitreihe {
     const out: Zeitreihe = new Map();
-    for (const z of this.zeilenJeSchluessel.get(schluessel) ?? []) {
-      if (bedingungen.every(([i, w]) => z[i] === w))
-        out.set(z[iJahr] as number, z[iWert] as number | null);
+    const d = this.daten.get(schluessel);
+    const werte = d?.get(this.wertSpalte(kennzahl, filter));
+    const jahre = d?.get('jahr');
+    if (!werte || !jahre) return out;
+    const bedingungen = this.zeilenDims.map(
+      (dim) => [d!.get(dim.id), this.wert(filter, dim)] as const,
+    );
+    if (bedingungen.some(([spalte]) => !spalte)) return out;
+    for (let i = 0; i < jahre.length; i++) {
+      if (bedingungen.every(([spalte, w]) => spalte![i] === w)) {
+        out.set(jahre[i] as number, werte[i] as number | null);
+      }
     }
     return out;
   }
@@ -112,7 +120,7 @@ export class DatasetView {
 
 /**
  * Zugriff auf die aufbereiteten PKS-Daten. Die Komponenten kennen nur diese Schnittstelle;
- * die Implementierung (heute statische JSON-Dateien, später z. B. Parquet + DuckDB-WASM) ist austauschbar.
+ * die Implementierung ist austauschbar (heute Parquet über HTTP-Range-Requests, ohne Backend).
  */
 export abstract class PksDataSource {
   abstract index(): Promise<DataIndex>;
@@ -120,8 +128,18 @@ export abstract class PksDataSource {
   abstract dataset(id: string): Promise<DatasetView>;
 }
 
+interface OffeneDatei {
+  file: AsyncBuffer;
+  metadata: FileMetaData;
+  lesen: typeof import('hyparquet').parquetReadObjects;
+  compressors: typeof import('hyparquet-compressors').compressors;
+}
+
+/** Erste Leseanfrage am Dateiende; deckt kleine Footer in einer Anfrage ab (größere werden nachgeladen). */
+const FOOTER_ANFRAGE = 64 * 1024;
+
 @Injectable()
-export class JsonPksDataSource extends PksDataSource {
+export class ParquetPksDataSource extends PksDataSource {
   private readonly http = inject(HttpClient);
   private readonly base = 'data/';
   private readonly cache = new Map<string, Promise<unknown>>();
@@ -152,17 +170,50 @@ export class JsonPksDataSource extends PksDataSource {
     return this.cached(`view:${id}`, async () => {
       const eintrag = (await this.index()).datasets.find((d) => d.id === id);
       if (!eintrag) throw new Error(`Unbekanntes Dataset: ${id}`);
-      const ds = await this.get<Dataset>(eintrag.datei);
-      const p = ds.meta.partitionen;
-      const lader = p
-        ? (k: string) =>
-            firstValueFrom(
-              this.http.get<DatasetPartition>(
-                `${this.base}${p.verzeichnis}/${encodeURIComponent(partitionsDatei(k))}`,
-              ),
-            ).then((t) => t.zeilen)
-        : undefined;
-      return new DatasetView(ds.meta, ds.zeilen, lader);
+      const meta = await this.get<DatasetMeta>(eintrag.datei);
+      return new DatasetView(meta, this.parquetLeser(meta));
     });
+  }
+
+  /** Leser für die Parquet-Datei eines Datasets; Footer und gelesene Bereiche werden zwischengespeichert. */
+  private parquetLeser(meta: DatasetMeta): SpaltenLeser {
+    // Datei erst beim ersten Lesen öffnen; nach einem Fehler beim nächsten Lesen erneut versuchen
+    let datei: Promise<OffeneDatei> | null = null;
+    const oeffnen = () =>
+      (datei ??= (async (): Promise<OffeneDatei> => {
+        // Parquet-Bibliothek erst bei Bedarf laden (nicht im Start-Bundle)
+        const [hyparquet, { compressors }] = await Promise.all([
+          import('hyparquet'),
+          import('hyparquet-compressors'),
+        ]);
+        const file = hyparquet.cachedAsyncBuffer(
+          await hyparquet.asyncBufferFromUrl({
+            url: this.base + meta.parquet.datei,
+            byteLength: meta.parquet.bytes,
+          }),
+        );
+        const metadata = await hyparquet.parquetMetadataAsync(file, {
+          initialFetchSize: FOOTER_ANFRAGE,
+        });
+        return { file, metadata, lesen: hyparquet.parquetReadObjects, compressors };
+      })().catch((err) => {
+        datei = null;
+        throw err;
+      }));
+
+    return async ([rowStart, rowEnd], spalten) => {
+      const { file, metadata, lesen, compressors } = await oeffnen();
+      const zeilen = await lesen({
+        file,
+        metadata,
+        columns: [...spalten],
+        rowStart,
+        rowEnd,
+        compressors,
+      });
+      const out: Record<string, Zelle[]> = {};
+      for (const s of spalten) out[s] = zeilen.map((z) => (z[s] ?? null) as Zelle);
+      return out;
+    };
   }
 }

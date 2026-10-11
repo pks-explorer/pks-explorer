@@ -6,7 +6,7 @@ Visualisierung der Polizeilichen Kriminalstatistik (PKS) des BKA.
 
 ```
 data/raw/<jahrgang>/   BKA-Originale (PDF/XLSX), Ordner = URL-Pfad der BKA-Seite; inventory.json = alle Seiten + Download-Links
-data/processed/        generierte Datasets (JSON) für die App – nicht versioniert, per `npm run etl` erzeugen
+data/processed/        generierte Datasets (Parquet + Metadaten-JSON) für die App – nicht versioniert, per `npm run etl` erzeugen
 shared/                gemeinsames Datenmodell (TypeScript)
 etl/                   Crawler, Downloader und XLSX-Parser (Node + TypeScript)
 app/                   Angular-App (Explorer: Delikte, Kennzahl, Zeitraum wählen → Diagramm + Tabelle)
@@ -31,7 +31,8 @@ npx tsx etl/src/inspect.ts <datei.xlsx> 20   # Struktur einer XLSX-Datei ansehen
 ## Datenmodell
 
 Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` = Dimensionen (`jahr`, `region`,
-`schluessel`, …) gefolgt von Kennzahlen (`faelle`, `hz`, `aq`, …); `zeilen` sind Arrays in dieser Reihenfolge.
+`schluessel`, …) gefolgt von Wertespalten (`faelle`, `hz`, `tv|14-16`, …). Je Dataset entstehen `<id>.parquet`
+(Zeilen, nach Straftatenschlüssel sortiert, zstd) und `<id>.json` (Metadaten inkl. Zeilenbereich je Schlüssel).
 `straftaten.json` enthält den Straftatenkatalog mit Hierarchie (`parent`) und Bezeichnungsverlauf (`namensverlauf`).
 `meta.hinweise` beschreibt methodische Brüche (z. B. Tatverdächtigenzählung ab 2009, Zensus-Basis der HZ).
 
@@ -39,9 +40,9 @@ Jede BKA-Tabelle wird zu einem Dataset (`shared/src/model.ts`): `meta.spalten` =
 
 | ID | Quelle | Inhalt |
 |---|---|---|
-| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle`, je Jahrgang `LA-F-02`, `ST-F-01` | Deutschland ab 1987, dazu 16 Länder, 84 Städte (ab 100.000 Einwohnern, Landeshauptstädte) und rund 400 Kreise (`KR-F-01`, ausgewählte Straftaten) aus den Jahrgangstabellen: Fälle, HZ, Versuche, Aufklärung, Tatverdächtige. Dimension `region` (`DE`, Länderkennziffer, Gemeindeschlüssel). Aufgeteilt je Schlüssel |
-| `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009; Länder und Städte aus `LA-TV`/`ST-TV` (nur Anzahl). Aufgeteilt je Schlüssel |
-| `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ; Länder und Städte aus `LA-O-01`/`ST-O-01` (nur Anzahl). Aufgeteilt je Schlüssel |
+| `bund-faelle-zeitreihe` | `T01-ZR-Bund-Fälle`, je Jahrgang `LA-F-02`, `ST-F-01` | Deutschland ab 1987, dazu 16 Länder, 84 Städte (ab 100.000 Einwohnern, Landeshauptstädte) und rund 400 Kreise (`KR-F-01`, ausgewählte Straftaten) aus den Jahrgangstabellen: Fälle, HZ, Versuche, Aufklärung, Tatverdächtige. Dimension `region` (`DE`, Länderkennziffer, Gemeindeschlüssel) |
+| `bund-tatverdaechtige-zeitreihe` | `ZR-TV-01…09`, `ZR-BZ-01…03` | Bund, 1987–2024: Tatverdächtige nach Geschlecht, Staatsangehörigkeit und 20 Altersgruppen; TVBZ ab 2009; Länder und Städte aus `LA-TV`/`ST-TV` (nur Anzahl) |
+| `bund-opfer-zeitreihe` | `ZR-O-01…03`, `ZR-BZ-04…06` | Bund, 2000–2024: Opfer nach Alter, Geschlecht und Versuch/Vollendung; OGZ; Länder und Städte aus `LA-O-01`/`ST-O-01` (nur Anzahl) |
 
 ## App
 
@@ -50,5 +51,8 @@ Die gesamte Auswahl steht in der URL und ist damit als Link teilbar, z. B.
 (`ds` = Bereich, `d` = Straftatenschlüssel, `k` = Kennzahl, Dimensionsfilter unter ihrer ID,
 `vgl` = Dimension für den Linienvergleich, `vglw` = gewählte Vergleichswerte (z. B. Regionen), `modus=index` = erstes Jahr = 100).
 
-Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`); die heutige Implementierung lädt die
-JSON-Dateien und kann später z. B. durch Parquet + DuckDB-WASM ersetzt werden.
+Die App liest Daten nur über `PksDataSource` (`app/src/app/core/pks-data.ts`), ohne Backend: Sie lädt die
+Metadaten und liest aus den Parquet-Dateien per HTTP-Range-Request (`hyparquet`) nur die Zeilen der gewählten Delikte
+und nur die Spalten der aktuellen Ansicht (typisch 5–100 KB je Auswahl). Der statische Host muss Range-Requests
+unterstützen (GitHub Pages, Netlify, Cloudflare Pages u. a. tun das). Für frei formulierte Auswertungen könnte später
+DuckDB-WASM dieselben Parquet-Dateien lesen.

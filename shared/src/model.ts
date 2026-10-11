@@ -90,32 +90,33 @@ export interface DatasetMeta {
   spalten: string[];
   jahre: number[];
   hinweise: Hinweis[];
-  /** Große Datasets sind je Straftatenschlüssel in eigene Dateien aufgeteilt. */
-  partitionen?: Partitionierung;
+  /** Wo die Zeilen liegen (die Metadaten-Datei selbst enthält keine Zeilen). */
+  parquet: ParquetQuelle;
 }
 
-export interface Partitionierung {
-  nach: 'schluessel';
-  /** Verzeichnis relativ zu data/processed. */
-  verzeichnis: string;
-  /** Vorhandene Schlüssel (je eine Datei, siehe `partitionsDatei`). */
-  schluessel: string[];
-}
-
-/** Inhalt einer Partitionsdatei: Zeilen im Format von `meta.spalten`. */
-export interface DatasetPartition {
-  zeilen: Zelle[][];
+/**
+ * Zeilen eines Datasets als Parquet-Datei, sortiert nach Straftatenschlüssel. Die App liest per
+ * HTTP-Range-Request nur den Zeilenbereich der gewählten Delikte und nur die benötigten Spalten.
+ */
+export interface ParquetQuelle {
+  /** Dateiname relativ zu data/processed. */
+  datei: string;
+  /** Dateigröße in Bytes (erspart dem Leser eine zusätzliche HEAD-Anfrage). */
+  bytes: number;
+  /** Zeilenbereich je Straftatenschlüssel: [erste Zeile, Ende) (Ende exklusiv). */
+  zeilen: Record<string, [number, number]>;
 }
 
 /** ID einer Wertespalte, z. B. "tv|14-16" (Kennzahl tv, Altersgruppe 14–16). */
 export const spaltenId = (kennzahl: string, spaltenWerte: string[] = []) =>
   [kennzahl, ...spaltenWerte].join('|');
 
-/** Dateiname einer Partition; "*" ist in Dateinamen nicht überall erlaubt. */
-export const partitionsDatei = (schluessel: string) => `${schluessel.replace(/\*/g, 'x')}.json`;
+/** Kennzahl einer Wertespalte ("tv|14-16" → "tv"). */
+export const kennzahlVonSpalte = (spalte: string) => spalte.split('|')[0]!;
 
+/** Dataset im ETL vor dem Schreiben: Zeilen im Speicher, Parquet-Datei entsteht erst bei der Ausgabe. */
 export interface Dataset {
-  meta: DatasetMeta;
+  meta: Omit<DatasetMeta, 'parquet'>;
   zeilen: Zelle[][];
 }
 
@@ -177,6 +178,7 @@ export interface DatasetIndexEintrag {
   titel: string;
   bereich: string;
   ebene: Ebene;
+  /** Metadaten-Datei (DatasetMeta als JSON) relativ zu data/processed. */
   datei: string;
   jahre: number[];
   kennzahlen: KennzahlDef[];

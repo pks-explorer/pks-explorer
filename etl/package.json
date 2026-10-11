@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@crime-stats/shared": "*",
+    "@duckdb/node-api": "1.5.5-r.5",
     "exceljs": "^4.4.0",
     "pdfjs-dist": "^6.4.299"
   }
