@@ -37,6 +37,8 @@ npm run deploy -- --nur-build                # nur bauen, mit 404.html und .noje
 3. `npm run deploy`: baut mit Basis-Pfad `/<repo>/` (bei `<name>.github.io` mit `/`, sonst `--base /pfad/`) und
    ersetzt den Branch `gh-pages` durch einen einzigen Commit mit dem Build.
 4. Einmalig auf GitHub: Settings → Pages → „Deploy from a branch“, Branch `gh-pages`, Ordner `/ (root)`.
+5. Eigene Domain (optional): Datei `CNAME` mit dem Domainnamen im Projektordner anlegen, DNS beim Registrar auf
+   GitHub Pages zeigen lassen und `npm run deploy` ausführen – der Basis-Pfad ist dann `/`.
 
 GitHub Pages unterstützt HTTP-Range-Requests, die die App zum Lesen der Parquet-Dateien braucht, und cacht Dateien
 rund zehn Minuten. Deshalb tragen alle Datendateien außer `index.json` einen Inhalts-Hash im Namen, und die App lädt
